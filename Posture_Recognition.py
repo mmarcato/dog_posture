@@ -13,9 +13,9 @@ import matplotlib.pyplot as plt
 from datetime import timedelta
 import sklearn.preprocessing 
 
-
+# Directory containing the data in structure (Dog name -> DC_Device -> Files )
 dir_base = "Z:\\Tyndall\\IGDB\\Observational Study\\Data Collection\\Study\\Subjects"
-dir_base = 'N:\\Subjects'
+#dir_base = 'N:\\Subjects'
 subjects = os.listdir(dir_base)[1:]
 dcs = ['DC1', 'DC2']
 bps = ['Back', 'Chest', 'Neck']
@@ -23,10 +23,12 @@ bps = ['Back', 'Chest', 'Neck']
 # ------------------------------------------------------------------------- #
 #                               Importing data                              #    
 # ------------------------------------------------------------------------- #
-f_name = 'N:\\Subjects\\_Timestamps.csv'
+
+#                Importing  file containing the behaviours marked           #
+f_name = 'Z:\\Tyndall\\IGDB\\Observational Study\\Data Collection\\Study\\Subjects\\_Timestamps.csv'
 df_ts = pd.read_csv(f_name, skiprows = 2, usecols =['Episodes', 'Behaviours'])
 
-#                   Importing position and episode info                     #    
+#           Importing position and episode info for each dog                #    
 df_ep, df_pos = {}, {}
 for subj in subjects:
     df_ep[subj], df_pos[subj] = {},{}
@@ -182,6 +184,13 @@ df_feat = df_feat.take(np.random.permutation(len(df_feat)))
 
 y = df_feat.loc[:, 'Type'].values
 
+# Stratified holdout   
+ss = StratifiedShuffleSplit(n_splits = 1, train_size = 0.8)
+# Stratified k-fold cross-validation
+kf = StratifiedKFold(n_splits = 10)
+
+
+print('PIPELINE 1')
 # Creating pipeline
 PL1 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
@@ -189,25 +198,22 @@ PL1 = Pipeline([
         ('estimator', LogisticRegression() )       
         ])
     
-# Stratified holdout   
-ss = StratifiedShuffleSplit(n_splits = 1, train_size = 0.8)
-# Stratified k-fold cross-validation
-kf = StratifiedKFold(n_splits = 10)
+print('ss', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=ss)))
+print('kv', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=kf)))
+print('10 folds', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=10)))
 
-np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=ss))
-np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=kf))
-np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=10))
-
+print('PIPELINE 2')
 PL2 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
         ('pca', PCA(n_components = 100)),
         ('estimator', LogisticRegression() )       
         ])
-np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=ss))
-np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=kf))
-np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=10))   
+print('ss',np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=ss)))
+print('kv', np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=kf)))
+print('10 folds', np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=10)))
    
+print('PIPELINE 3')
 PL3 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
@@ -215,19 +221,20 @@ PL3 = Pipeline([
         ('estimator', RandomForestClassifier() )       
         ]) 
     
-np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=ss))
-np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=kf))
-np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=10))   
+print('ss',np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=ss)))
+print('kv', np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=kf)))
+print('10 folds',np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=10)))
 
-PL3 = Pipeline([
+print('PIPELINE 4')
+PL4 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
         ('pca', PCA(n_components = 50)),
         ('estimator', RandomForestClassifier() )       
         ]) 
-np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=ss))
-np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=kf))
-np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=10)) 
+print('ss',np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=ss)))
+print('kv', np.mean(cros)s_val_score(PL4, df_feat, y, scoring="accuracy", cv=kf))
+print('10 folds',np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=10)))
    
 # ------------------------------------------------------------------------- #
 # Machine Learning - Tutorial https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60                          #    
