@@ -16,5 +16,5 @@
 
 * Script: 
     * From Data Collection: reads Summary as csv files, import 'BT Start' and 'BT Finish' for each dog
-    * From Raw: create new df with Actigraph data within the 'BT Start' and 'BT Finish' times
+    * From Raw Actigraph files: creates new df with Actigraph data within time 'BT Start' and 'BT Finish'
     * Save new df as csv in dir_new ('Subject/DC_Actigraph/') and appropriate name ('YYYY-MM-DD_BodyPart')
