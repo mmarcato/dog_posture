@@ -160,6 +160,7 @@ from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import cross_val_predict
+from sklearn.ensemble import RandomForestClassifier
 
 from sklearn.metrics import confusion_matrix
 from sklearn.dummy import DummyClassifier
@@ -233,7 +234,7 @@ PL4 = Pipeline([
         ('estimator', RandomForestClassifier() )       
         ]) 
 print('ss',np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=ss)))
-print('kv', np.mean(cros)s_val_score(PL4, df_feat, y, scoring="accuracy", cv=kf))
+print('kv', np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=kf)))
 print('10 folds',np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=10)))
    
 # ------------------------------------------------------------------------- #
@@ -242,7 +243,6 @@ print('10 folds',np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv
 
 #       Splitting DF into Test and Train before starting                   #
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
 df_feat['Type'].value_counts()
 
 X = df_feat.loc[:, feat].values
