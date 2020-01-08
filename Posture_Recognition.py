@@ -191,7 +191,7 @@ ss = StratifiedShuffleSplit(n_splits = 1, train_size = 0.8)
 kf = StratifiedKFold(n_splits = 10)
 
 
-print('PIPELINE 1')
+print('PIPELINE 1 - LogReg')
 # Creating pipeline
 PL1 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
@@ -203,7 +203,7 @@ print('ss', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=ss))
 print('kv', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=kf)))
 print('10 folds', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=10)))
 
-print('PIPELINE 2')
+print('PIPELINE 2 - PCA 100 + LogReg')
 PL2 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
@@ -214,7 +214,7 @@ print('ss',np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=ss)))
 print('kv', np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=kf)))
 print('10 folds', np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=10)))
    
-print('PIPELINE 3')
+print('PIPELINE 3 - PCA 100 + RF')
 PL3 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
@@ -226,7 +226,7 @@ print('ss',np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=ss)))
 print('kv', np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=kf)))
 print('10 folds',np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=10)))
 
-print('PIPELINE 4')
+print('PIPELINE 4 - PCA 50 + RF')
 PL4 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
