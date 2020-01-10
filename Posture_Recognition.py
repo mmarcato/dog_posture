@@ -14,8 +14,8 @@ from datetime import timedelta
 import sklearn.preprocessing 
 
 # Directory containing the data in structure (Dog name -> DC_Device -> Files )
-dir_base = "Z:\\Tyndall\\IGDB\\Observational Study\\Data Collection\\Study\\Subjects"
-#dir_base = 'N:\\Subjects'
+#dir_base = "Z:\\Tyndall\\IGDB\\Observational Study\\Data Collection\\Study\\Subjects"
+dir_base = 'E:\\Subjects'
 subjects = os.listdir(dir_base)[1:]
 dcs = ['DC1', 'DC2']
 bps = ['Back', 'Chest', 'Neck']
@@ -191,17 +191,13 @@ ss = StratifiedShuffleSplit(n_splits = 1, train_size = 0.8)
 kf = StratifiedKFold(n_splits = 10)
 
 
-print('PIPELINE 1 - LogReg')
-# Creating pipeline
+# Creating pipelines
+print()
 PL1 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
         ('estimator', LogisticRegression() )       
         ])
-    
-print('ss', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=ss)))
-print('kv', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=kf)))
-print('10 folds', np.mean(cross_val_score(PL1, df_feat, y, scoring="accuracy", cv=10)))
 
 print('PIPELINE 2 - PCA 100 + LogReg')
 PL2 = Pipeline([
@@ -210,10 +206,7 @@ PL2 = Pipeline([
         ('pca', PCA(n_components = 100)),
         ('estimator', LogisticRegression() )       
         ])
-print('ss',np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=ss)))
-print('kv', np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=kf)))
-print('10 folds', np.mean(cross_val_score(PL2, df_feat, y, scoring="accuracy", cv=10)))
-   
+
 print('PIPELINE 3 - PCA 100 + RF')
 PL3 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
@@ -221,11 +214,6 @@ PL3 = Pipeline([
         ('pca', PCA(n_components = 100)),
         ('estimator', RandomForestClassifier() )       
         ]) 
-    
-print('ss',np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=ss)))
-print('kv', np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=kf)))
-print('10 folds',np.mean(cross_val_score(PL3, df_feat, y, scoring="accuracy", cv=10)))
-
 print('PIPELINE 4 - PCA 50 + RF')
 PL4 = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
@@ -233,10 +221,14 @@ PL4 = Pipeline([
         ('pca', PCA(n_components = 50)),
         ('estimator', RandomForestClassifier() )       
         ]) 
-print('ss',np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=ss)))
-print('kv', np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=kf)))
-print('10 folds',np.mean(cross_val_score(PL4, df_feat, y, scoring="accuracy", cv=10)))
-   
+
+# arranging pipelines in a list
+PLS = {PL1: 'PIPELINE 1 - LogReg']
+for PL in PLS.keys:
+    print('ss',np.mean(cross_val_score(PL, df_feat, y, scoring="accuracy", cv=ss)))
+    print('kv', np.mean(cross_val_score(PL, df_feat, y, scoring="accuracy", cv=kf)))
+    print('10 folds',np.mean(cross_val_score(PL, df_feat, y, scoring="accuracy", cv=10)))
+
 # ------------------------------------------------------------------------- #
 # Machine Learning - Tutorial https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60                          #    
 # ------------------------------------------------------------------------- # 
