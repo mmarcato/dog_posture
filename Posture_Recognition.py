@@ -223,8 +223,8 @@ PL4 = Pipeline([
         ]) 
 
 # arranging pipelines in a list
-PLS = {PL1: 'PIPELINE 1 - LogReg']
-for PL in PLS.keys:
+#I NEVER FINISHED THIS BECAUSE I FOUND THE OTHER FILE!
+for PL in PLS:
     print('ss',np.mean(cross_val_score(PL, df_feat, y, scoring="accuracy", cv=ss)))
     print('kv', np.mean(cross_val_score(PL, df_feat, y, scoring="accuracy", cv=kf)))
     print('10 folds',np.mean(cross_val_score(PL, df_feat, y, scoring="accuracy", cv=10)))
