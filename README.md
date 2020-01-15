@@ -1,4 +1,4 @@
-# Posture_Recognition
+# dog_posture
 * Inputs: 
     * **dir_base**: directory containing data organised in folders by Dog_Name
 
@@ -8,7 +8,7 @@
         * It is automatically created using file. Path 'Study//TimeStamps//Template.csv'
 
 
-# Split_File 
+# split_file 
 * Inputs:
     * **dir_base**: file path to 'Data Collection - Summary.csv'
     * **dir_raw**: directory containing Actigraph data organised in folders by Date 
