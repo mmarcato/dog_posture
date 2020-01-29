@@ -44,18 +44,16 @@ def pipe_perf (df, feat, label, pipes, cv):
         # Parameters above can be calculated with function, however, it is not that easy to access the data 
         # from it and it takes longer to calculate than the above
         
-        #d = classification_report(y, cross_val_predict(pipe, X, y, cv= cv ), output_dict = True)
+        d = classification_report(y, cross_val_predict(pipe, X, y, cv= cv ), output_dict = True)
 
         score = cross_validate(pipe, X, y, cv= cv, return_train_score=True )
                                                 
-        perf.append([label, name, no, cv,
-                            100*np.mean(score['test_score']), 100*np.mean(score['train_score']), 
-                            np.mean(score['fit_time']), np.mean(score['score_time'])    ])
-                              
-        cols = ( 'Classifier', 'Pipeline', 'Examples', 'CV', 'Accuracy (%)', 'Precision (%)', 'Recall (%)', 'F1(%)', 'test_score (%)',\
-                     'train_score (%)', 'fit_time (s)', 'score_time (s)' )
-        
-    return(pd.DataFrame(perf, columns = cols, index = 'Name'))
+        perf.append([label, name, no[0], str(cv)] + \
+                        list(np.mean(list(score.values()), axis = 1)) + \
+                            list(d['macro avg'].values()))                       
+        cols = ( ['Classifier', 'Pipeline', 'Examples', 'CV'] + list(score.keys()) + list(d['macro avg'].keys()) )
+
+    return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'))
 
 
 def plot_perf (pipes, perf):

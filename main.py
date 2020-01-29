@@ -64,7 +64,8 @@ df_feat.dropna(axis = 0, inplace = True)
 # Deleting rows with Moving 
 df_feat = df_feat[df_feat['Position'] != 'moving']
 # Shuffling data
-df_feat = df_feat.take(np.random.permutation(len(df_feat)))
+df_feat = df_feat.take(np.random.RandomState(seed=42).permutation(len(df_feat)))
+
 
 # Checking no of examples per category after cleaning
 print('\n\n\tNumber of Examples in clean dataframe\n')
@@ -77,11 +78,11 @@ print( df_feat['Type'].value_counts())
 # ------------------------------------------------------------------------- # 
 # ------------------------------------------------------------------------- #
 pipes = learn.simple_pipes(feat)
-cv = StratifiedKFold(n_splits = 10)
+cv = StratifiedKFold(n_splits = 10, random_state = 42, shuffle = True)
 
 df_pos_bal = data_prep.balance_df(df_feat, 'Position')
 print( df_pos_bal['Position'].value_counts(), '\n')
-d, cm = evaluate.pipe_perf(df_pos_bal, feat, 'Position', pipes, cv)
+pp = evaluate.pipe_perf(df_pos_bal, feat, 'Position', pipes, cv)
 
 # ------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------- #
