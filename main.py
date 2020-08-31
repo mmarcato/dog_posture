@@ -27,6 +27,9 @@ logger.addHandler(file_handler)
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import GroupKFold
 
+%reload_ext autoreload
+%autoreload 2
+
 # ------------------------------------------------------------------------- #
 #                          Importing local modules                          #    
 # ------------------------------------------------------------------------- #
@@ -57,13 +60,14 @@ t_time = timedelta(seconds = .25) #transition time between positions
 feat = ['mean','std', 'median', 'min', 'max']
 df_feat = data_prep.simple_features(subjects, dcs, df_pos, df_imu, feat, w_size, w_offset, t_time)
 df_feat.to_csv('%s//df1.csv' % dir_dfs)
+
 # Shuffling data
 df_feat = df_feat.take(np.random.RandomState(seed=42).permutation(len(df_feat)))
 
 # Checking no of examples per category 
 logger.info('\n\tNumber of Examples in raw dataframe\n')
 print(df_feat['Position'].value_counts(), '\n')
-print( df_feat['Type'].value_counts())
+print(df_feat['Type'].value_counts())
 
 
 
@@ -79,6 +83,7 @@ df_pos_bal = data_prep.balance_df(df_feat, 'Position')
 print( df_pos_bal['Position'].value_counts(), '\n')
 pp = evaluate.pipe_perf(df_pos_bal, feat, 'Position', pipes, cv)
 
+
 # ------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------- #
 #                        Machine Learning - Label 'Type'                    #    
@@ -86,7 +91,6 @@ pp = evaluate.pipe_perf(df_pos_bal, feat, 'Position', pipes, cv)
 # ------------------------------------------------------------------------- #
 
 df_type_bal = data_prep.balance_df(df_feat, 'Type')
-print( df_type_bal['Position'].value_counts(), '\n')
 print( df_type_bal['Type'].value_counts())
 cm = evaluate.pipe_perf(df_type_bal, feat, 'Type', pipes, cv)
 
@@ -98,30 +102,26 @@ cm = evaluate.pipe_perf(df_type_bal, feat, 'Type', pipes, cv)
 # ------------------------------------------------------------------------- #
 df_dyn_bal = data_prep.balance_df(df_feat[df_feat['Type'] == 'dynamic'],'Position')
 print(df_dyn_bal['Position'].value_counts())
-evaluate.pipe_perf(df_dyn_bal, 'Position')
+dp = evaluate.pipe_perf(df_dyn_bal, feat, 'Position', pipes, cv)
+
 
 # ------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------- #
 #           Machine Learning - Label 'Position' |'static'                   #    
 # ------------------------------------------------------------------------- # 
 # ------------------------------------------------------------------------- #
-df_dyn_bal = data_prep.balance_df(df_feat[df_feat['Type'] == 'static'],'Position')
+df_stat_bal = data_prep.balance_df(df_feat[df_feat['Type'] == 'static'],'Position')
 print(df_dyn_bal['Position'].value_counts())
-learn.simple_pipes(df_dyn_bal, 'Position')
+sp = evaluate.pipe_perf(df_stat_bal, feat, 'Position', pipes, cv)
 
 
 # ------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------- #
-#                    Machine Learning - Organising stuff                    #    
+#       Machine Learning - Organising stuff for improved datasets           #    
 # ------------------------------------------------------------------------- # 
 # ------------------------------------------------------------------------- #
-
-
 group = df.loc[:, 'Dog']
 #gkf = list(GroupKFold(n_splits = 5).split(x,y, group)
 kf = StratifiedKFold(n_splits = 10)
-
-
-
 simple(df, label, pipes, cv)
 

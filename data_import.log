@@ -407,3 +407,73 @@ INFO:data_import:Number of Files: 29 	Number of Dogs: 26
 2020-08-31 16:12:47,088:data_import:	 Zeb DC2
 2020-08-31 16:12:48,856:data_import:	 Zodiac DC1
 2020-08-31 16:12:50,554:data_import:	 Zodiac DC2
+2020-08-31 21:28:53,471:data_import:Added timestamps for Douglas DC1
+2020-08-31 21:28:53,531:data_import:Added timestamps for Dugg DC1
+2020-08-31 21:28:53,580:data_import:Added timestamps for Dugg DC2
+2020-08-31 21:28:53,621:data_import:Added timestamps for Earl DC1
+2020-08-31 21:28:53,647:data_import:Added timestamps for Ebbi DC2
+2020-08-31 21:28:53,707:data_import:Added timestamps for Edrick DC1
+2020-08-31 21:28:53,721:data_import:Added timestamps for Edrick DC2
+2020-08-31 21:28:53,790:data_import:Added timestamps for Eldin DC1
+2020-08-31 21:28:53,910:data_import:Added timestamps for Elf DC1
+2020-08-31 21:28:53,931:data_import:Added timestamps for Eliza DC2
+2020-08-31 21:28:53,949:data_import:Added timestamps for Emmy DC2
+2020-08-31 21:28:53,975:data_import:Added timestamps for Errie DC2
+2020-08-31 21:28:53,999:data_import:Added timestamps for Esme DC1
+2020-08-31 21:28:54,038:data_import:Added timestamps for Evie DC1
+2020-08-31 21:28:54,067:data_import:Added timestamps for Fargo DC1
+2020-08-31 21:28:54,086:data_import:Added timestamps for Fawn DC1
+2020-08-31 21:28:54,109:data_import:Added timestamps for Fawn DC2
+2020-08-31 21:28:54,129:data_import:Added timestamps for Flora DC1
+2020-08-31 21:28:54,148:data_import:Added timestamps for Goober DC1
+2020-08-31 21:28:54,166:data_import:Added timestamps for Herbie DC1
+2020-08-31 21:28:54,219:data_import:Added timestamps for Jane DC2
+2020-08-31 21:28:54,236:data_import:Added timestamps for Jazzi DC2
+2020-08-31 21:28:54,259:data_import:Added timestamps for Josie DC2
+2020-08-31 21:28:54,301:data_import:Added timestamps for Judson DC2
+2020-08-31 21:28:54,326:data_import:Added timestamps for July DC2
+2020-08-31 21:28:54,360:data_import:Added timestamps for Kirby DC2
+2020-08-31 21:28:54,382:data_import:Added timestamps for Zac DC1
+2020-08-31 21:28:54,406:data_import:Added timestamps for Zeb DC1
+2020-08-31 21:28:54,510:data_import:Added timestamps for Zodiac DC1
+2020-08-31 21:28:54,512:data_import:	 Douglas DC1
+2020-08-31 21:28:55,998:data_import:	 Douglas DC2
+2020-08-31 21:28:57,551:data_import:	 Dugg DC1
+2020-08-31 21:28:59,185:data_import:	 Dugg DC2
+2020-08-31 21:29:00,608:data_import:	 Earl DC1
+2020-08-31 21:29:01,854:data_import:	 Earl DC2
+2020-08-31 21:29:03,097:data_import:	 Ebbi DC1
+2020-08-31 21:29:04,533:data_import:	 Ebbi DC2
+2020-08-31 21:29:05,819:data_import:	 Edrick DC1
+2020-08-31 21:29:06,933:data_import:	 Edrick DC2
+2020-08-31 21:29:07,968:data_import:	 Eldin DC1
+2020-08-31 21:29:09,175:data_import:	 Eldin DC2
+2020-08-31 21:29:10,460:data_import:	 Elf DC1
+2020-08-31 21:29:11,613:data_import:	 Elf DC2
+2020-08-31 21:29:12,796:data_import:	 Eliza DC1
+2020-08-31 21:29:13,971:data_import:	 Eliza DC2
+2020-08-31 21:29:15,167:data_import:	 Emmy DC1
+2020-08-31 21:29:16,430:data_import:	 Emmy DC2
+2020-08-31 21:29:17,807:data_import:	 Esme DC1
+2020-08-31 21:29:18,979:data_import:	 Evie DC1
+2020-08-31 21:29:20,424:data_import:	 Fargo DC2
+2020-08-31 21:29:21,731:data_import:	 Fawn DC1
+2020-08-31 21:29:23,386:data_import:	 Fawn DC2
+2020-08-31 21:29:24,661:data_import:	 Flora DC2
+2020-08-31 21:29:26,261:data_import:	 Goober DC1
+2020-08-31 21:29:27,561:data_import:	 Herbie DC1
+2020-08-31 21:29:28,709:data_import:	 Idris DC2
+2020-08-31 21:29:29,766:data_import:	 Jane DC2
+2020-08-31 21:29:30,968:data_import:	 July DC2
+2020-08-31 21:29:32,134:data_import:	 Junior DC2
+2020-08-31 21:29:33,311:data_import:	 Kacie DC2
+2020-08-31 21:29:34,423:data_import:	 Kali DC1
+2020-08-31 21:29:35,463:data_import:	 Kelvin DC2
+2020-08-31 21:29:36,576:data_import:	 Kirby DC2
+2020-08-31 21:29:38,033:data_import:	 Milo DC1
+2020-08-31 21:29:39,174:data_import:	 Minnie DC1
+2020-08-31 21:29:40,399:data_import:	 Zac DC1
+2020-08-31 21:29:41,872:data_import:	 Zeb DC1
+2020-08-31 21:29:43,137:data_import:	 Zeb DC2
+2020-08-31 21:29:44,714:data_import:	 Zodiac DC1
+2020-08-31 21:29:45,795:data_import:	 Zodiac DC2
