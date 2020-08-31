@@ -6,7 +6,7 @@ def simple_features(subjects, dcs, df_pos, df_imu, feat, w_size, w_offset, t_tim
     objecst:
         subjects: list of all name of dogs
         dcs: list of all dcs to be included
-        df_pos: dataframe with columns 'Position', 'Pos-VT'and 'Duration
+        df_pos: dataframe with columns 'Position', 'Pos-VT'and 'Duration'
         df_imu: dataframe containing Actigraph data
     params:
         w_size = size of the window 
@@ -39,8 +39,12 @@ def simple_features(subjects, dcs, df_pos, df_imu, feat, w_size, w_offset, t_tim
                     df_l2.append( pd.concat(df_l1, axis = 1, keys = feat, \
                         names = ['Statistics','BodyParts', 'Sensor Axis'])\
                         .assign(Dog = subj, DC = dc, Position = df_pos[subj][dc]['Position'][(s_time-t_time)], Type = df_pos[subj][dc]['Type'][(s_time-t_time)]))  
-              
+        
     df = pd.concat(df_l2)
+    # Deleting rows with nan 
+    df.dropna(axis = 0, inplace = True)
+    # Deleting rows with 'Moving'
+    df = df[df['Position'] != 'moving']
     return (df)
 
 
