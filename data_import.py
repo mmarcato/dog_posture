@@ -60,9 +60,10 @@ def timestamps (subjects, dcs, dir_base):
                             'moving': 'dynamic'}
 
                 df_pos[subj][dc]['Type'] = df_pos[subj][dc]['Position'].map(pos_type)
+                logger.info('Added timestamps for {} {}'.format(subj, dc))
 
     df_info = pd.DataFrame(stats, columns = ['Subject', 'DC', 'Date', 'Start time'])
-    #logger.info('Added data for {}'.format(df_info['Subject'].values))
+
     return(df_info, df_pos, df_ep)
         
 def actigraph(subjects, dcs, dir_base):
@@ -77,7 +78,7 @@ def actigraph(subjects, dcs, dir_base):
                 df_imu[subj][dc] = None
                 # If this the path to data exists
                 if os.path.isdir('%s\\%s\\%s_Actigraph' % (dir_base, subj, dc[-1])):
-                    print('\t', subj, dc)
+                    logger.info('\t {} {}'.format(subj, dc))
                     # Looping through all bps
                     for bp in bps:   
                             # Find file path for each bp

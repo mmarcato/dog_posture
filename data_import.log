@@ -2,3 +2,408 @@ INFO:data_import:Number of Files: 29
 	Number of Dogs: 26
 INFO:data_import:Number of Files: 29 	Number of Dogs: 26
 2020-01-15 18:55:51,962:data_import:Number of Files: 29 	Number of Dogs: 26
+2020-01-29 14:59:37,435:data_import:Added  timestamps for ['Douglas' 'Dugg' 'Dugg' 'Earl' 'Ebbi' 'Edrick' 'Edrick' 'Eldin' 'Elf'
+ 'Eliza' 'Emmy' 'Errie' 'Esme' 'Evie' 'Fargo' 'Fawn' 'Fawn' 'Flora'
+ 'Goober' 'Herbie' 'Jane' 'Jazzi' 'Josie' 'Judson' 'July' 'Kirby' 'Zac'
+ 'Zeb' 'Zodiac']
+2020-01-29 14:59:37,435:data_import:Added  timestamps for ['Douglas' 'Dugg' 'Dugg' 'Earl' 'Ebbi' 'Edrick' 'Edrick' 'Eldin' 'Elf'
+ 'Eliza' 'Emmy' 'Errie' 'Esme' 'Evie' 'Fargo' 'Fawn' 'Fawn' 'Flora'
+ 'Goober' 'Herbie' 'Jane' 'Jazzi' 'Josie' 'Judson' 'July' 'Kirby' 'Zac'
+ 'Zeb' 'Zodiac']
+2020-01-29 15:01:33,940:data_import:Added  timestamps for ['Douglas' 'Dugg' 'Dugg' 'Earl' 'Ebbi' 'Edrick' 'Edrick' 'Eldin' 'Elf'
+ 'Eliza' 'Emmy' 'Errie' 'Esme' 'Evie' 'Fargo' 'Fawn' 'Fawn' 'Flora'
+ 'Goober' 'Herbie' 'Jane' 'Jazzi' 'Josie' 'Judson' 'July' 'Kirby' 'Zac'
+ 'Zeb' 'Zodiac']
+2020-01-29 15:01:33,940:data_import:Added  timestamps for ['Douglas' 'Dugg' 'Dugg' 'Earl' 'Ebbi' 'Edrick' 'Edrick' 'Eldin' 'Elf'
+ 'Eliza' 'Emmy' 'Errie' 'Esme' 'Evie' 'Fargo' 'Fawn' 'Fawn' 'Flora'
+ 'Goober' 'Herbie' 'Jane' 'Jazzi' 'Josie' 'Judson' 'July' 'Kirby' 'Zac'
+ 'Zeb' 'Zodiac']
+2020-01-29 15:02:15,093:data_import:Added  timestamps for Douglas
+2020-01-29 15:02:15,093:data_import:Added  timestamps for Douglas
+2020-01-29 15:02:15,093:data_import:Added  timestamps for Douglas
+2020-01-29 15:02:15,171:data_import:Added  timestamps for Dugg
+2020-01-29 15:02:15,171:data_import:Added  timestamps for Dugg
+2020-01-29 15:02:15,171:data_import:Added  timestamps for Dugg
+2020-01-29 15:02:15,255:data_import:Added  timestamps for Dugg
+2020-01-29 15:02:15,255:data_import:Added  timestamps for Dugg
+2020-01-29 15:02:15,255:data_import:Added  timestamps for Dugg
+2020-01-29 15:02:15,392:data_import:Added  timestamps for Earl
+2020-01-29 15:02:15,392:data_import:Added  timestamps for Earl
+2020-01-29 15:02:15,392:data_import:Added  timestamps for Earl
+2020-01-29 15:02:15,464:data_import:Added  timestamps for Ebbi
+2020-01-29 15:02:15,464:data_import:Added  timestamps for Ebbi
+2020-01-29 15:02:15,464:data_import:Added  timestamps for Ebbi
+2020-01-29 15:02:15,538:data_import:Added  timestamps for Edrick
+2020-01-29 15:02:15,538:data_import:Added  timestamps for Edrick
+2020-01-29 15:02:15,538:data_import:Added  timestamps for Edrick
+2020-01-29 15:02:15,606:data_import:Added  timestamps for Edrick
+2020-01-29 15:02:15,606:data_import:Added  timestamps for Edrick
+2020-01-29 15:02:15,606:data_import:Added  timestamps for Edrick
+2020-01-29 15:02:15,676:data_import:Added  timestamps for Eldin
+2020-01-29 15:02:15,676:data_import:Added  timestamps for Eldin
+2020-01-29 15:02:15,676:data_import:Added  timestamps for Eldin
+2020-01-29 15:02:15,797:data_import:Added  timestamps for Elf
+2020-01-29 15:02:15,797:data_import:Added  timestamps for Elf
+2020-01-29 15:02:15,797:data_import:Added  timestamps for Elf
+2020-01-29 15:02:15,923:data_import:Added  timestamps for Eliza
+2020-01-29 15:02:15,923:data_import:Added  timestamps for Eliza
+2020-01-29 15:02:15,923:data_import:Added  timestamps for Eliza
+2020-01-29 15:02:15,995:data_import:Added  timestamps for Emmy
+2020-01-29 15:02:15,995:data_import:Added  timestamps for Emmy
+2020-01-29 15:02:15,995:data_import:Added  timestamps for Emmy
+2020-01-29 15:02:16,073:data_import:Added  timestamps for Errie
+2020-01-29 15:02:16,073:data_import:Added  timestamps for Errie
+2020-01-29 15:02:16,073:data_import:Added  timestamps for Errie
+2020-01-29 15:02:16,167:data_import:Added  timestamps for Esme
+2020-01-29 15:02:16,167:data_import:Added  timestamps for Esme
+2020-01-29 15:02:16,167:data_import:Added  timestamps for Esme
+2020-01-29 15:02:16,318:data_import:Added  timestamps for Evie
+2020-01-29 15:02:16,318:data_import:Added  timestamps for Evie
+2020-01-29 15:02:16,318:data_import:Added  timestamps for Evie
+2020-01-29 15:02:16,394:data_import:Added  timestamps for Fargo
+2020-01-29 15:02:16,394:data_import:Added  timestamps for Fargo
+2020-01-29 15:02:16,394:data_import:Added  timestamps for Fargo
+2020-01-29 15:02:16,558:data_import:Added  timestamps for Fawn
+2020-01-29 15:02:16,558:data_import:Added  timestamps for Fawn
+2020-01-29 15:02:16,558:data_import:Added  timestamps for Fawn
+2020-01-29 15:02:16,640:data_import:Added  timestamps for Fawn
+2020-01-29 15:02:16,640:data_import:Added  timestamps for Fawn
+2020-01-29 15:02:16,640:data_import:Added  timestamps for Fawn
+2020-01-29 15:02:16,716:data_import:Added  timestamps for Flora
+2020-01-29 15:02:16,716:data_import:Added  timestamps for Flora
+2020-01-29 15:02:16,716:data_import:Added  timestamps for Flora
+2020-01-29 15:02:16,793:data_import:Added  timestamps for Goober
+2020-01-29 15:02:16,793:data_import:Added  timestamps for Goober
+2020-01-29 15:02:16,793:data_import:Added  timestamps for Goober
+2020-01-29 15:02:16,865:data_import:Added  timestamps for Herbie
+2020-01-29 15:02:16,865:data_import:Added  timestamps for Herbie
+2020-01-29 15:02:16,865:data_import:Added  timestamps for Herbie
+2020-01-29 15:02:16,945:data_import:Added  timestamps for Jane
+2020-01-29 15:02:16,945:data_import:Added  timestamps for Jane
+2020-01-29 15:02:16,945:data_import:Added  timestamps for Jane
+2020-01-29 15:02:17,025:data_import:Added  timestamps for Jazzi
+2020-01-29 15:02:17,025:data_import:Added  timestamps for Jazzi
+2020-01-29 15:02:17,025:data_import:Added  timestamps for Jazzi
+2020-01-29 15:02:17,100:data_import:Added  timestamps for Josie
+2020-01-29 15:02:17,100:data_import:Added  timestamps for Josie
+2020-01-29 15:02:17,100:data_import:Added  timestamps for Josie
+2020-01-29 15:02:17,171:data_import:Added  timestamps for Judson
+2020-01-29 15:02:17,171:data_import:Added  timestamps for Judson
+2020-01-29 15:02:17,171:data_import:Added  timestamps for Judson
+2020-01-29 15:02:17,296:data_import:Added  timestamps for July
+2020-01-29 15:02:17,296:data_import:Added  timestamps for July
+2020-01-29 15:02:17,296:data_import:Added  timestamps for July
+2020-01-29 15:02:17,367:data_import:Added  timestamps for Kirby
+2020-01-29 15:02:17,367:data_import:Added  timestamps for Kirby
+2020-01-29 15:02:17,367:data_import:Added  timestamps for Kirby
+2020-01-29 15:02:17,439:data_import:Added  timestamps for Zac
+2020-01-29 15:02:17,439:data_import:Added  timestamps for Zac
+2020-01-29 15:02:17,439:data_import:Added  timestamps for Zac
+2020-01-29 15:02:17,563:data_import:Added  timestamps for Zeb
+2020-01-29 15:02:17,563:data_import:Added  timestamps for Zeb
+2020-01-29 15:02:17,563:data_import:Added  timestamps for Zeb
+2020-01-29 15:02:17,689:data_import:Added  timestamps for Zodiac
+2020-01-29 15:02:17,689:data_import:Added  timestamps for Zodiac
+2020-01-29 15:02:17,689:data_import:Added  timestamps for Zodiac
+2020-01-29 15:03:04,395:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:04,395:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:04,395:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:04,395:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:04,521:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:04,521:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:04,521:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:04,521:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:04,601:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:04,601:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:04,601:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:04,601:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:04,753:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:04,753:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:04,753:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:04,753:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:04,834:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:04,834:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:04,834:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:04,834:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:04,911:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:04,911:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:04,911:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:04,911:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:04,981:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:04,981:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:04,981:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:04,981:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:05,059:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:05,059:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:05,059:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:05,059:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:05,203:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:05,203:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:05,203:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:05,203:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:05,372:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:05,372:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:05,372:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:05,372:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:05,456:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:05,456:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:05,456:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:05,456:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:05,530:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:05,530:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:05,530:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:05,530:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:05,603:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:05,603:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:05,603:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:05,603:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:05,752:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:05,752:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:05,752:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:05,752:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:05,825:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:05,825:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:05,825:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:05,825:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:05,957:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:05,957:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:05,957:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:05,957:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:06,051:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:06,051:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:06,051:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:06,051:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:06,146:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:06,146:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:06,146:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:06,146:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:06,220:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:06,220:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:06,220:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:06,220:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:06,303:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:06,303:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:06,303:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:06,303:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:06,399:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:06,399:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:06,399:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:06,399:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:06,488:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:06,488:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:06,488:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:06,488:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:06,582:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:06,582:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:06,582:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:06,582:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:06,658:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:06,658:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:06,658:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:06,658:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:06,816:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:06,816:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:06,816:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:06,816:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:06,900:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:06,900:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:06,900:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:06,900:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:06,998:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:06,998:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:06,998:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:06,998:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:07,183:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:07,183:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:07,183:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:07,183:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:07,332:data_import:Added  timestamps for Zodiac DC1
+2020-01-29 15:03:07,332:data_import:Added  timestamps for Zodiac DC1
+2020-01-29 15:03:07,332:data_import:Added  timestamps for Zodiac DC1
+2020-01-29 15:03:07,332:data_import:Added  timestamps for Zodiac DC1
+2020-01-29 15:03:07,538:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:07,538:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:07,538:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:07,538:data_import:Added  timestamps for Douglas DC1
+2020-01-29 15:03:07,676:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:07,676:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:07,676:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:07,676:data_import:Added  timestamps for Dugg DC1
+2020-01-29 15:03:07,798:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:07,798:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:07,798:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:07,798:data_import:Added  timestamps for Dugg DC2
+2020-01-29 15:03:08,001:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:08,001:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:08,001:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:08,001:data_import:Added  timestamps for Earl DC1
+2020-01-29 15:03:08,102:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:08,102:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:08,102:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:08,102:data_import:Added  timestamps for Ebbi DC2
+2020-01-29 15:03:08,189:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:08,189:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:08,189:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:08,189:data_import:Added  timestamps for Edrick DC1
+2020-01-29 15:03:08,270:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:08,270:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:08,270:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:08,270:data_import:Added  timestamps for Edrick DC2
+2020-01-29 15:03:08,348:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:08,348:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:08,348:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:08,348:data_import:Added  timestamps for Eldin DC1
+2020-01-29 15:03:08,478:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:08,478:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:08,478:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:08,478:data_import:Added  timestamps for Elf DC1
+2020-01-29 15:03:08,606:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:08,606:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:08,606:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:08,606:data_import:Added  timestamps for Eliza DC2
+2020-01-29 15:03:08,678:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:08,678:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:08,678:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:08,678:data_import:Added  timestamps for Emmy DC2
+2020-01-29 15:03:08,755:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:08,755:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:08,755:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:08,755:data_import:Added  timestamps for Errie DC2
+2020-01-29 15:03:08,834:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:08,834:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:08,834:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:08,834:data_import:Added  timestamps for Esme DC1
+2020-01-29 15:03:08,977:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:08,977:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:08,977:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:08,977:data_import:Added  timestamps for Evie DC1
+2020-01-29 15:03:09,079:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:09,079:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:09,079:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:09,079:data_import:Added  timestamps for Fargo DC1
+2020-01-29 15:03:09,235:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:09,235:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:09,235:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:09,235:data_import:Added  timestamps for Fawn DC1
+2020-01-29 15:03:09,321:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:09,321:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:09,321:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:09,321:data_import:Added  timestamps for Fawn DC2
+2020-01-29 15:03:09,408:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:09,408:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:09,408:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:09,408:data_import:Added  timestamps for Flora DC1
+2020-01-29 15:03:09,492:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:09,492:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:09,492:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:09,492:data_import:Added  timestamps for Goober DC1
+2020-01-29 15:03:09,569:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:09,569:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:09,569:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:09,569:data_import:Added  timestamps for Herbie DC1
+2020-01-29 15:03:09,659:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:09,659:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:09,659:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:09,659:data_import:Added  timestamps for Jane DC2
+2020-01-29 15:03:09,756:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:09,756:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:09,756:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:09,756:data_import:Added  timestamps for Jazzi DC2
+2020-01-29 15:03:09,853:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:09,853:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:09,853:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:09,853:data_import:Added  timestamps for Josie DC2
+2020-01-29 15:03:09,935:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:09,935:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:09,935:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:09,935:data_import:Added  timestamps for Judson DC2
+2020-01-29 15:03:10,063:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:10,063:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:10,063:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:10,063:data_import:Added  timestamps for July DC2
+2020-01-29 15:03:10,145:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:10,145:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:10,145:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:10,145:data_import:Added  timestamps for Kirby DC2
+2020-01-29 15:03:10,223:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:10,223:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:10,223:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:10,223:data_import:Added  timestamps for Zac DC1
+2020-01-29 15:03:10,365:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:10,365:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:10,365:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:10,365:data_import:Added  timestamps for Zeb DC1
+2020-01-29 15:03:10,528:data_import:Added  timestamps for Zodiac DC1
+2020-01-29 15:03:10,528:data_import:Added  timestamps for Zodiac DC1
+2020-01-29 15:03:10,528:data_import:Added  timestamps for Zodiac DC1
+2020-01-29 15:03:10,528:data_import:Added  timestamps for Zodiac DC1
+2020-08-31 16:11:28,401:data_import:Added timestamps for Douglas DC1
+2020-08-31 16:11:28,439:data_import:Added timestamps for Dugg DC1
+2020-08-31 16:11:28,479:data_import:Added timestamps for Dugg DC2
+2020-08-31 16:11:28,521:data_import:Added timestamps for Earl DC1
+2020-08-31 16:11:28,548:data_import:Added timestamps for Ebbi DC2
+2020-08-31 16:11:28,572:data_import:Added timestamps for Edrick DC1
+2020-08-31 16:11:28,587:data_import:Added timestamps for Edrick DC2
+2020-08-31 16:11:28,610:data_import:Added timestamps for Eldin DC1
+2020-08-31 16:11:28,629:data_import:Added timestamps for Elf DC1
+2020-08-31 16:11:28,644:data_import:Added timestamps for Eliza DC2
+2020-08-31 16:11:28,660:data_import:Added timestamps for Emmy DC2
+2020-08-31 16:11:28,679:data_import:Added timestamps for Errie DC2
+2020-08-31 16:11:28,695:data_import:Added timestamps for Esme DC1
+2020-08-31 16:11:28,721:data_import:Added timestamps for Evie DC1
+2020-08-31 16:11:28,737:data_import:Added timestamps for Fargo DC1
+2020-08-31 16:11:28,752:data_import:Added timestamps for Fawn DC1
+2020-08-31 16:11:28,767:data_import:Added timestamps for Fawn DC2
+2020-08-31 16:11:28,783:data_import:Added timestamps for Flora DC1
+2020-08-31 16:11:28,799:data_import:Added timestamps for Goober DC1
+2020-08-31 16:11:28,814:data_import:Added timestamps for Herbie DC1
+2020-08-31 16:11:28,830:data_import:Added timestamps for Jane DC2
+2020-08-31 16:11:28,844:data_import:Added timestamps for Jazzi DC2
+2020-08-31 16:11:28,876:data_import:Added timestamps for Josie DC2
+2020-08-31 16:11:28,893:data_import:Added timestamps for Judson DC2
+2020-08-31 16:11:28,908:data_import:Added timestamps for July DC2
+2020-08-31 16:11:28,929:data_import:Added timestamps for Kirby DC2
+2020-08-31 16:11:28,944:data_import:Added timestamps for Zac DC1
+2020-08-31 16:11:28,959:data_import:Added timestamps for Zeb DC1
+2020-08-31 16:11:28,975:data_import:Added timestamps for Zodiac DC1
+2020-08-31 16:11:28,976:data_import:	 Douglas DC1
+2020-08-31 16:11:30,824:data_import:	 Douglas DC2
+2020-08-31 16:11:32,281:data_import:	 Dugg DC1
+2020-08-31 16:11:33,611:data_import:	 Dugg DC2
+2020-08-31 16:11:34,706:data_import:	 Earl DC1
+2020-08-31 16:11:35,996:data_import:	 Earl DC2
+2020-08-31 16:11:37,436:data_import:	 Ebbi DC1
+2020-08-31 16:11:38,787:data_import:	 Ebbi DC2
+2020-08-31 16:11:40,216:data_import:	 Edrick DC1
+2020-08-31 16:11:41,372:data_import:	 Edrick DC2
+2020-08-31 16:11:42,809:data_import:	 Eldin DC1
+2020-08-31 16:11:44,224:data_import:	 Eldin DC2
+2020-08-31 16:11:45,571:data_import:	 Elf DC1
+2020-08-31 16:11:46,902:data_import:	 Elf DC2
+2020-08-31 16:11:48,811:data_import:	 Eliza DC1
+2020-08-31 16:11:52,126:data_import:	 Eliza DC2
+2020-08-31 16:11:55,349:data_import:	 Emmy DC1
+2020-08-31 16:11:58,435:data_import:	 Emmy DC2
+2020-08-31 16:12:02,276:data_import:	 Esme DC1
+2020-08-31 16:12:05,111:data_import:	 Evie DC1
+2020-08-31 16:12:07,806:data_import:	 Fargo DC2
+2020-08-31 16:12:10,353:data_import:	 Fawn DC1
+2020-08-31 16:12:15,122:data_import:	 Fawn DC2
+2020-08-31 16:12:18,157:data_import:	 Flora DC2
+2020-08-31 16:12:23,008:data_import:	 Goober DC1
+2020-08-31 16:12:27,126:data_import:	 Herbie DC1
+2020-08-31 16:12:29,239:data_import:	 Idris DC2
+2020-08-31 16:12:31,103:data_import:	 Jane DC2
+2020-08-31 16:12:32,711:data_import:	 July DC2
+2020-08-31 16:12:34,528:data_import:	 Junior DC2
+2020-08-31 16:12:35,869:data_import:	 Kacie DC2
+2020-08-31 16:12:37,169:data_import:	 Kali DC1
+2020-08-31 16:12:38,476:data_import:	 Kelvin DC2
+2020-08-31 16:12:39,909:data_import:	 Kirby DC2
+2020-08-31 16:12:41,243:data_import:	 Milo DC1
+2020-08-31 16:12:42,603:data_import:	 Minnie DC1
+2020-08-31 16:12:43,950:data_import:	 Zac DC1
+2020-08-31 16:12:45,611:data_import:	 Zeb DC1
+2020-08-31 16:12:47,088:data_import:	 Zeb DC2
+2020-08-31 16:12:48,856:data_import:	 Zodiac DC1
+2020-08-31 16:12:50,554:data_import:	 Zodiac DC2

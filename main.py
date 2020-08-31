@@ -13,6 +13,7 @@ from datetime import timedelta
 from importlib import reload
 import logging  # debug, info,warning, error, critical
 
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -25,6 +26,7 @@ logger.addHandler(file_handler)
 
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import GroupKFold
+
 # ------------------------------------------------------------------------- #
 #                          Importing local modules                          #    
 # ------------------------------------------------------------------------- #
@@ -35,7 +37,8 @@ import evaluate
 # ------------------------------------------------------------------------- #
 #                          Initializing parameters                          #    
 # ------------------------------------------------------------------------- #
-dir_base = 'D:\\Study\\Subjects'
+dir_dfs = 'C:\\Users\\marinara.marcato\\Scripts\\dog_posture\\dfs'
+dir_base = 'C:\\Users\\marinara.marcato\\Data\\Subjects'
 subjects = os.listdir(dir_base)[1:]
 dcs = ['DC1', 'DC2']
 # ------------------------------------------------------------------------- #
@@ -48,29 +51,21 @@ df_imu = data_import.actigraph(subjects, dcs, dir_base)
 # ------------------------------------------------------------------------- #           
 # Setting parameters: window size, window offset and transition time 
 w_size = 100 # equivalent to 1second as data is recorded at 100Hz
-w_offset = timedelta(seconds = .25)
-t_time = timedelta(seconds = .25)
+w_offset = timedelta(seconds = .25) #offset from start time for the value to be taken
+t_time = timedelta(seconds = .25) #transition time between positions
 
 feat = ['mean','std', 'median', 'min', 'max']
 df_feat = data_prep.simple_features(subjects, dcs, df_pos, df_imu, feat, w_size, w_offset, t_time)
-
-# Checking no of examples per category 
-print('\n\tNumber of Examples in raw dataframe\n')
-print(df_feat['Position'].value_counts(), '\n')
-print( df_feat['Type'].value_counts())
-
-# Deleting rows with nan 
-df_feat.dropna(axis = 0, inplace = True)
-# Deleting rows with Moving 
-df_feat = df_feat[df_feat['Position'] != 'moving']
+df_feat.to_csv('%s//df1.csv' % dir_dfs)
 # Shuffling data
 df_feat = df_feat.take(np.random.RandomState(seed=42).permutation(len(df_feat)))
 
-
-# Checking no of examples per category after cleaning
-print('\n\n\tNumber of Examples in clean dataframe\n')
-print( df_feat['Position'].value_counts(), '\n')
+# Checking no of examples per category 
+logger.info('\n\tNumber of Examples in raw dataframe\n')
+print(df_feat['Position'].value_counts(), '\n')
 print( df_feat['Type'].value_counts())
+
+
 
 # ------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------- #
