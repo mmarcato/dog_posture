@@ -1,0 +1,47 @@
+2020-09-09 12:26:53,814 INFO: df1 
+
+	 Dataset created with simple_feature parameters: 
+
+df_name: df1, w_size: 100, w_offset: 0:00:00.250000, t_time: 0:00:00.250000
+2020-09-09 12:26:53,831 INFO: df1 
+
+	 Number of Examples in raw dataframe 
+ standing            15269
+walking              8509
+sitting              6662
+lying down           4334
+s-sniffing floor      690
+w-sniffing floor      469
+jumping down          291
+jumping up            153
+body shake            137
+Name: Position, dtype: int64 
+
+ static     26955
+dynamic     9559
+Name: Type, dtype: int64 
+2020-09-09 12:26:54,318 INFO: df1 
+
+	 Including data from  
+ Dog      DC 
+Douglas  DC1    2549
+Dugg     DC1    2276
+         DC2    1856
+Earl     DC1    2369
+Ebbi     DC2    1674
+Edrick   DC1    1671
+         DC2     807
+Eldin    DC1    1837
+Elf      DC1    2276
+Esme     DC1    1931
+Evie     DC1     845
+Fawn     DC1    1834
+         DC2    1505
+Goober   DC1    2253
+Herbie   DC1    1071
+Jane     DC2    1498
+July     DC2    3826
+Kirby    DC2    1215
+Zac      DC1    1000
+Zodiac   DC1    2221
+dtype: int64

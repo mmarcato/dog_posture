@@ -42,16 +42,7 @@ df_imu = imports.actigraph(subjects, dcs, base_dir)
 # ------------------------------------------------------------------------- #
 #                           Feature Engineering                             #    
 # ------------------------------------------------------------------------- #           
-df1 = process.simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_offset, t_time)
-print(df3['Position'].value_counts(), '\n')
-print(df3['Type'].value_counts())
-
-# Shuffling data
-df_feat = df_feat.take(np.random.RandomState(seed=42).permutation(len(df_feat)))
-
-# Checking no of examples per category 
-logger.info('Number of Examples in raw dataframe\n')
-
+df3 = process.simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_offset, t_time)
 
 # ------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------- #

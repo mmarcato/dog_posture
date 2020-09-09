@@ -4,10 +4,6 @@ from setup import log
 
 logger = log(__name__)
 
-def dummy():
-    print('Hello dummy')
-    logger.info('\n\t Creating Dataset with the following feature parameters: ')
-
 def simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_offset, t_time):
     '''     Extract 'mean','std', 'median', 'min', 'max' from df_imu 
             based on timestamps for positions in df_pos
@@ -55,18 +51,20 @@ def simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_of
     df.dropna(axis = 0, inplace = True)
     # Deleting rows with 'Moving'
     df = df[df['Position'] != 'moving']
-
-    #df.to_csv('%s\\%s.csv' % (df_dir, df_name))
     
-    #logger.info('\n\t Dataset created with feature parameters: \n df_name: {}, w_size: {}, w_offset: {}, t_time: {}'.format(df_name, w_size, w_offset, t_time))
-    #logger.info('\n\t Number of Examples in raw dataframe \n {} \n\n {} '.format(df['Position'].value_counts(), df['Type'].value_counts()))
+    df.to_csv('%s\\%s.csv' % (df_dir, df_name))
+    df_logger = log(df_name, log_file = '%s\\%s.log' % (df_dir, df_name))
+    df_logger.info('\n\t Dataset created with simple_feature parameters: \n\ndf_name: {}, w_size: {}, w_offset: {}, t_time: {}'.format(df_name, w_size, w_offset, t_time))
+    df_logger.info('\n\t Number of Examples in raw dataframe \n {} \n\n {} '.format(df['Position'].value_counts(), df['Type'].value_counts()))
+    df_logger.info('\n\t Including data from  \n {}'.format( df.groupby(['Dog', 'DC']).size() ))
+    logger.info('\t {}: Dataset created with simple_feature parameters'.format(df_name))
 
     return (df)
 
 def error_check (df):
-    x = df.groupby(['Dog', 'Position'], as_index = False).agg(['count'])
+    x = df.groupby(['Dog', 'Position', ], as_index = False).agg(['count'])
     y = x.groupby(['Position'], as_index = False).agg(['mean', 'median', 'std'])
-    print(y)
+    return(x,y)
 
 def split (df, test_dogs ):
     df_test  = 0

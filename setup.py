@@ -35,8 +35,8 @@ w_size:     window size - for feature calculation, considering that raw data are
 w_offset:   window offset - for resampling, taken from start_time + t_time + w_size/2 * as feature are calculated from centre of window
 '''
 df_dir = 'C:\\Users\\marinara.marcato\\Scripts\\dog_posture\\dfs'
-df_name = 'df1'
-w_size = 100
+df_name = 'df2'
+w_size = 50
 w_offset = timedelta(seconds = .25)
 t_time = timedelta(seconds = .25)
 

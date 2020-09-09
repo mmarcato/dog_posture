@@ -1,6 +1,6 @@
-2020-09-08 12:26:25,592 INFO: __main__ 
+2020-09-09 12:10:27,787 INFO: __main__ 
 Module imports successful
-2020-09-08 12:26:33,049 INFO: imports 
+2020-09-09 12:10:29,257 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -32,5 +32,56 @@ Module imports successful
 26      Zac  DC1  29/07/2019   15:02:37
 27      Zeb  DC1  22/05/2019   14:51:27
 28   Zodiac  DC1  20/05/2019   14:13:22
-2020-09-08 12:27:36,454 INFO: imports 
+2020-09-09 12:11:27,961 INFO: imports 
 	 Imported Actigraph data
+2020-09-09 12:12:47,039 INFO: process 
+
+	 Dataset df3 created with simple_feature parameters
+2020-09-09 12:14:14,951 INFO: process 
+
+	 Dataset df3 created with simple_feature parameters
+2020-09-09 12:20:47,493 INFO: __main__ 
+Module imports successful
+2020-09-09 12:20:48,944 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11    Errie  DC2  20/11/2019   15:34:47
+12     Esme  DC1  13/06/2019   14:20:06
+13     Evie  DC1  29/07/2019   14:18:49
+14    Fargo  DC1  23/05/2019   13:54:52
+15     Fawn  DC1  29/05/2019   14:58:17
+16     Fawn  DC2  17/07/2019   13:35:14
+17    Flora  DC1  23/05/2019   14:26:31
+18   Goober  DC1  29/07/2019   13:39:35
+19   Herbie  DC1  29/07/2019   15:42:14
+20     Jane  DC2  08/01/2020   13:53:52
+21    Jazzi  DC2  20/11/2019   14:17:08
+22    Josie  DC2  20/11/2019   14:43:14
+23   Judson  DC2  20/11/2019   15:10:18
+24     July  DC2  08/01/2020   13:02:41
+25    Kirby  DC2  08/01/2020   13:26:21
+26      Zac  DC1  29/07/2019   15:02:37
+27      Zeb  DC1  22/05/2019   14:51:27
+28   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-09 12:21:48,725 INFO: imports 
+	 Imported Actigraph data
+2020-09-09 12:23:21,704 INFO: process 
+
+	 Dataset df3 created with simple_feature parameters
+2020-09-09 12:26:54,969 INFO: process 
+
+	 Dataset df1 created with simple_feature parameters
+2020-09-09 12:28:55,962 INFO: process 
+
+	 Dataset df2 created with simple_feature parameters
