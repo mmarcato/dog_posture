@@ -57,30 +57,30 @@ def timestamps (subjects, dcs, base_dir):
     logger.info('\t Imported Timestamps for \n{}'.format(df_info))
 
     return(df_info, df_pos, df_ep)
-        
-def actigraph(subjects, dcs, base_dir):
+
+def actigraph(df_info, base_dir):
     df_imu = {}
     bps = ['Back', 'Chest', 'Neck']
     print('\nRetrieving Actigraph files - IMU Data')
-    for subj in subjects:
+    for subj in df_info['Subject'].unique():
         df_imu[subj] = {}       
         # Iterating through data collections
-        for dc in dcs:
-                df_list= []
-                df_imu[subj][dc] = None
-                # If this the path to data exists
-                if os.path.isdir('%s\\%s\\%s_Actigraph' % (base_dir, subj, dc[-1])):
-                    # Looping through all bps
-                    for bp in bps:   
-                            # Find file path for each bp
-                            f_name =  glob.glob('%s\\%s\\%s_Actigraph\\*_%s.csv' % (base_dir, subj, dc[-1], bp))
-                        
-                            df_list.append(pd.read_csv(f_name[0], index_col = ['Timestamp'], parse_dates = [0], \
-                                    date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f'))\
-                                    .drop(['Temperature'], axis = 1))
-                    # Concatenating dataframes for different body parts in one single dataframe
-                    # Results in one dataframe per dog per data collection
-                    df_imu[subj][dc] = pd.concat(df_list, axis = 1, keys = bps, \
-                    names = ['Body Parts', 'Sensor Axis'])
+        for dc in df_info[df_info.Subject == subj]['DC']:
+            df_list= []
+            df_imu[subj][dc] = None
+            # If this the path to data exists
+            if os.path.isdir('%s\\%s\\%s_Actigraph' % (base_dir, subj, dc[-1])):
+                # Looping through all bps
+                for bp in bps:   
+                        # Find file path for each bp
+                        f_name =  glob.glob('%s\\%s\\%s_Actigraph\\*_%s.csv' % (base_dir, subj, dc[-1], bp))
+                    
+                        df_list.append(pd.read_csv(f_name[0], index_col = ['Timestamp'], parse_dates = [0], \
+                                date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f'))\
+                                .drop(['Temperature'], axis = 1))
+                # Concatenating dataframes for different body parts in one single dataframe
+                # Results in one dataframe per dog per data collection
+                df_imu[subj][dc] = pd.concat(df_list, axis = 1, keys = bps, \
+                names = ['Body Parts', 'Sensor Axis'])
     logger.info('\t Imported Actigraph data')
     return(df_imu)

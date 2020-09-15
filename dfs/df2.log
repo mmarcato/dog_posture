@@ -1,0 +1,94 @@
+2020-09-09 12:28:55,899 INFO: df2 
+
+	 Dataset created with simple_feature parameters: 
+
+df_name: df2, w_size: 50, w_offset: 0:00:00.250000, t_time: 0:00:00.250000
+2020-09-09 12:28:55,951 INFO: df2 
+
+	 Number of Examples in raw dataframe 
+ standing            15568
+walking              8744
+sitting              6802
+lying down           4418
+s-sniffing floor      728
+w-sniffing floor      491
+jumping down          320
+jumping up            201
+body shake            177
+Name: Position, dtype: int64 
+
+ static     27516
+dynamic     9933
+Name: Type, dtype: int64 
+2020-09-09 12:28:55,961 INFO: df2 
+
+	 Including data from  
+ Dog      DC 
+Douglas  DC1    2655
+Dugg     DC1    2342
+         DC2    1906
+Earl     DC1    2423
+Ebbi     DC2    1702
+Edrick   DC1    1706
+         DC2     817
+Eldin    DC1    1892
+Elf      DC1    2332
+Esme     DC1    1981
+Evie     DC1     860
+Fawn     DC1    1878
+         DC2    1551
+Goober   DC1    2323
+Herbie   DC1    1098
+Jane     DC2    1543
+July     DC2    3856
+Kirby    DC2    1267
+Zac      DC1    1024
+Zodiac   DC1    2293
+dtype: int64
+2020-09-15 10:29:52,103 INFO: df2 
+
+	 Dataset created with simple_feature parameters: 
+
+df_name: df2, w_size: 50, w_offset: 0:00:00.250000, t_time: 0:00:00.250000
+2020-09-15 10:29:52,126 INFO: df2 
+
+	 Number of Examples in raw dataframe 
+ standing            15568
+walking              8744
+sitting              6802
+lying down           4418
+s-sniffing floor      728
+w-sniffing floor      491
+jumping down          320
+jumping up            201
+body shake            177
+Name: Position, dtype: int64 
+
+ static     27516
+dynamic     9933
+Name: Type, dtype: int64 
+2020-09-15 10:29:52,196 INFO: df2 
+
+	 Including data from  
+ Dog      DC 
+Douglas  DC1    2655
+Dugg     DC1    2342
+         DC2    1906
+Earl     DC1    2423
+Ebbi     DC2    1702
+Edrick   DC1    1706
+         DC2     817
+Eldin    DC1    1892
+Elf      DC1    2332
+Esme     DC1    1981
+Evie     DC1     860
+Fawn     DC1    1878
+         DC2    1551
+Goober   DC1    2323
+Herbie   DC1    1098
+Jane     DC2    1543
+July     DC2    3856
+Kirby    DC2    1267
+Zac      DC1    1024
+Zodiac   DC1    2293
+dtype: int64

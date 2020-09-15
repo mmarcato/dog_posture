@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from setup import log
+from math import ceil
 
 logger = log(__name__)
 
@@ -62,14 +63,23 @@ def simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_of
     return (df)
 
 def error_check (df):
-    x = df.groupby(['Dog', 'Position', ], as_index = False).agg(['count'])
+    w = df.groupby(['Dog', 'Position', 'DC'], as_index = False).agg(['count'])
+    x = df.groupby(['Dog', 'Position'], as_index = False).agg(['count'])
     y = x.groupby(['Position'], as_index = False).agg(['mean', 'median', 'std'])
-    return(x,y)
+    return(w,x,y)
 
-def split (df, test_dogs ):
-    df_test  = 0
-    df_train = 0
-
+def split (df):
+    size_total = df['Dog'].unique().size
+    size_test = ceil(size_total * 0.2)
+    w = df.groupby(['Dog', 'Position'], as_index = False).size().reset_index(name='counts')
+    w.groupby(['Dog']).size().reset_index(name='counts')
+    x = w.groupby(['Dog'])['Dog', 'Position', 'counts'].filter(lambda x: len(x) == 9)
+    if (size_test == x['Dog'].unique().size) :
+        x.groupby(['Position'], as_index = False)['counts'].sum().sort_values('counts')
+        dogs_test  = x['Dog'].unique()
+    df_test = df[df.Dog.isin(dogs_test)]
+    df_dev = df[~df.Dog.isin(dogs_test)]
+    return(df_test, df_dev)
 
 def balance (df, label):
     '''

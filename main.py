@@ -30,6 +30,8 @@ import imports
 import process
 import learn
 import evaluate
+import math
+import time
 
 logger = log(__name__)
 logger.info('Module imports successful')
@@ -37,12 +39,22 @@ logger.info('Module imports successful')
 #                            Importing raw data                             #    
 # ------------------------------------------------------------------------- #
 df_info, df_pos, df_ep = imports.timestamps(subjects, dcs, base_dir)
-df_imu = imports.actigraph(subjects, dcs, base_dir)
+df_imu = imports.actigraph(df_info, base_dir)
 
 # ------------------------------------------------------------------------- #
 #                           Feature Engineering                             #    
-# ------------------------------------------------------------------------- #           
-df3 = process.simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_offset, t_time)
+# ------------------------------------------------------------------------- #    
+df_feat = process.label(subjects, dcs, df_pos, df_imu, )       
+df_feat = process.simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_offset, t_time)
+df_dev, df_test = process.split(df_feat)
+
+
+%reload_ext autoreload
+%autoreload 2
+import process
+w, x, y = process.error_check(df3)
+
+
 
 # ------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------- #
