@@ -1,47 +1,51 @@
-2020-09-09 12:26:53,814 INFO: df1 
+2020-11-12 23:22:12,258 INFO: df1 
 
 	 Dataset created with simple_feature parameters: 
 
-df_name: df1, w_size: 100, w_offset: 0:00:00.250000, t_time: 0:00:00.250000
-2020-09-09 12:26:53,831 INFO: df1 
+df_name: df1, w_size: 100, w_offset: 0:00:00.250000us, t_time: 0:00:00.250000us
+2020-11-12 23:22:12,311 INFO: df1 
 
 	 Number of Examples in raw dataframe 
- standing            15269
-walking              8509
-sitting              6662
-lying down           4334
-s-sniffing floor      690
-w-sniffing floor      469
-jumping down          291
-jumping up            153
-body shake            137
+ standing            13914
+walking              9190
+sitting              7707
+lying down           5001
+w-sniffing floor      960
+s-sniffing floor      725
+jumping up            174
+body shake             99
+jumping down           56
 Name: Position, dtype: int64 
 
- static     26955
-dynamic     9559
+ static     27347
+dynamic    10479
 Name: Type, dtype: int64 
-2020-09-09 12:26:54,318 INFO: df1 
+2020-11-12 23:22:12,338 INFO: df1 
 
 	 Including data from  
  Dog      DC 
-Douglas  DC1    2549
-Dugg     DC1    2276
-         DC2    1856
-Earl     DC1    2369
-Ebbi     DC2    1674
-Edrick   DC1    1671
-         DC2     807
-Eldin    DC1    1837
-Elf      DC1    2276
-Esme     DC1    1931
-Evie     DC1     845
-Fawn     DC1    1834
-         DC2    1505
-Goober   DC1    2253
-Herbie   DC1    1071
-Jane     DC2    1498
-July     DC2    3826
-Kirby    DC2    1215
-Zac      DC1    1000
-Zodiac   DC1    2221
+Douglas  DC1    2543
+Dugg     DC1    1877
+         DC2    1853
+Earl     DC1    2358
+Ebbi     DC2    1651
+Edrick   DC1    1663
+         DC2     890
+Eldin    DC1    1828
+Elf      DC1    2262
+Esme     DC1    1924
+Evie     DC1     841
+Fawn     DC1    1825
+         DC2    1257
+Goober   DC1    2235
+Herbie   DC1    1065
+Irrie    DC2    1147
+Jane     DC2    1495
+Jazzi    DC2    1338
+Josie    DC2     999
+Judson   DC2    1040
+July     DC2    1317
+Kirby    DC2    1210
+Zac      DC1     994
+Zodiac   DC1    2214
 dtype: int64
