@@ -40,12 +40,16 @@ logger.info('Module imports successful')
 # ------------------------------------------------------------------------- #
 df_info, df_pos, df_ep = imports.timestamps(subjects, dcs, base_dir)
 df_imu = imports.actigraph(df_info, base_dir)
+df_raw = process.label(df_info, df_pos, df_imu, df_dir)
 
 # ------------------------------------------------------------------------- #
 #                           Feature Engineering                             #    
 # ------------------------------------------------------------------------- #    
-df_feat = process.label(subjects, dcs, df_pos, df_imu, )       
-df_feat = process.simple_features(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_offset, t_time)
+df_raw = imports.posture(df_dir)       
+df_feat = process.simple_features(df_raw, df_dir, df_name, w_size, w_offset, t_time)
+
+
+df_feat = process.simple_features1(subjects, dcs, df_pos, df_imu, df_dir, df_name, w_size, w_offset, t_time)
 df_dev, df_test = process.split(df_feat)
 
 

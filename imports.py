@@ -5,7 +5,7 @@ from setup import log
 
 logger = log(__name__)
 
-def timestamps (subjects, dcs, base_dir): 
+def timestamps(subjects, dcs, base_dir): 
     '''
     import timestamps files and organised data into and return:
 
@@ -13,7 +13,7 @@ def timestamps (subjects, dcs, base_dir):
     df_pos: df indexed by 'Timestamps' containing 'Position', 'Pos-VT', 'Duration', 'Type'
     df_stats: df containing 'Subject', 'DC', 'Date', 'Start time' 
     '''
-    print('\nRetrieving Timestamp files - Episode and Position Data') 
+    print('\nImporting Timestamp files - Episode and Position Data') 
     stats = []
     df_ep, df_pos = {},{}
     for subj in subjects:
@@ -38,7 +38,7 @@ def timestamps (subjects, dcs, base_dir):
                 
                 # Read the position Virtual Time (VT) 
                 df_pos[subj][dc] = pd.read_csv(f_name, skiprows = 6, usecols = ['Position', 'Pos-VT']).dropna()
-                # Create new column for the position Real Time (RT)
+                # Create new column for the position Real Time (RT) and sets it as the index
                 df_pos[subj][dc].index = dt + pd.to_timedelta(df_pos[subj][dc]['Pos-VT'])         
                 # Create new column for the position Duration
                 df_pos[subj][dc]['Duration'] = df_pos[subj][dc].index.to_series().diff().shift(-1) 
@@ -61,7 +61,8 @@ def timestamps (subjects, dcs, base_dir):
 def actigraph(df_info, base_dir):
     df_imu = {}
     bps = ['Back', 'Chest', 'Neck']
-    print('\nRetrieving Actigraph files - IMU Data')
+    print('\nImporting Actigraph files - IMU Data')
+    logger.info('\t Started Importing Actigraph data')
     for subj in df_info['Subject'].unique():
         df_imu[subj] = {}       
         # Iterating through data collections
@@ -82,5 +83,11 @@ def actigraph(df_info, base_dir):
                 # Results in one dataframe per dog per data collection
                 df_imu[subj][dc] = pd.concat(df_list, axis = 1, keys = bps, \
                 names = ['Body Parts', 'Sensor Axis'])
-    logger.info('\t Imported Actigraph data')
+                # Change column names to be bodypart.sen.axis (Back.Acc.X)
+                df_imu[subj][dc].columns = [f'{i}.{j[:3]}.{j[-1]}' for i,j in df_imu[subj][dc].columns]
+    logger.info('\t Finished Importing Actigraph data')
     return(df_imu)
+
+def posture(df_dir, df_name = 'df_raw'):
+    return(pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), index_col = ['Timestamp'], parse_dates = [0], \
+                                date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f')))

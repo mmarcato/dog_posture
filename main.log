@@ -135,3 +135,2044 @@ Module imports successful
 	 Imported Actigraph data
 2020-09-15 13:29:45,547 INFO: imports 
 	 Imported Actigraph data
+2020-09-15 13:31:45,244 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 13:31:45,244 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 13:31:45,244 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:09:24,242 INFO: __main__ 
+Module imports successful
+2020-09-15 18:10:51,467 INFO: __main__ 
+Module imports successful
+2020-09-15 18:10:51,467 INFO: __main__ 
+Module imports successful
+2020-09-15 18:10:52,750 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13    Fargo  DC1  23/05/2019   13:54:52
+14     Fawn  DC1  29/05/2019   14:58:17
+15     Fawn  DC2  17/07/2019   13:35:14
+16    Flora  DC1  23/05/2019   14:26:31
+17   Goober  DC1  29/07/2019   13:39:35
+18   Herbie  DC1  29/07/2019   15:42:14
+19    Irrie  DC2  20/11/2019   15:34:47
+20     Jane  DC2  08/01/2020   13:53:52
+21    Jazzi  DC2  20/11/2019   14:17:08
+22    Josie  DC2  20/11/2019   14:43:14
+23   Judson  DC2  20/11/2019   15:10:18
+24     July  DC2  08/01/2020   13:02:41
+25    Kirby  DC2  08/01/2020   13:26:21
+26      Zac  DC1  29/07/2019   15:02:37
+27      Zeb  DC1  22/05/2019   14:51:27
+28   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:10:52,750 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13    Fargo  DC1  23/05/2019   13:54:52
+14     Fawn  DC1  29/05/2019   14:58:17
+15     Fawn  DC2  17/07/2019   13:35:14
+16    Flora  DC1  23/05/2019   14:26:31
+17   Goober  DC1  29/07/2019   13:39:35
+18   Herbie  DC1  29/07/2019   15:42:14
+19    Irrie  DC2  20/11/2019   15:34:47
+20     Jane  DC2  08/01/2020   13:53:52
+21    Jazzi  DC2  20/11/2019   14:17:08
+22    Josie  DC2  20/11/2019   14:43:14
+23   Judson  DC2  20/11/2019   15:10:18
+24     July  DC2  08/01/2020   13:02:41
+25    Kirby  DC2  08/01/2020   13:26:21
+26      Zac  DC1  29/07/2019   15:02:37
+27      Zeb  DC1  22/05/2019   14:51:27
+28   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:10:52,750 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13    Fargo  DC1  23/05/2019   13:54:52
+14     Fawn  DC1  29/05/2019   14:58:17
+15     Fawn  DC2  17/07/2019   13:35:14
+16    Flora  DC1  23/05/2019   14:26:31
+17   Goober  DC1  29/07/2019   13:39:35
+18   Herbie  DC1  29/07/2019   15:42:14
+19    Irrie  DC2  20/11/2019   15:34:47
+20     Jane  DC2  08/01/2020   13:53:52
+21    Jazzi  DC2  20/11/2019   14:17:08
+22    Josie  DC2  20/11/2019   14:43:14
+23   Judson  DC2  20/11/2019   15:10:18
+24     July  DC2  08/01/2020   13:02:41
+25    Kirby  DC2  08/01/2020   13:26:21
+26      Zac  DC1  29/07/2019   15:02:37
+27      Zeb  DC1  22/05/2019   14:51:27
+28   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:11:47,228 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:11:47,228 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:11:47,228 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:20:48,495 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13     Fawn  DC1  29/05/2019   14:58:17
+14     Fawn  DC2  17/07/2019   13:35:14
+15   Goober  DC1  29/07/2019   13:39:35
+16   Herbie  DC1  29/07/2019   15:42:14
+17    Irrie  DC2  20/11/2019   15:34:47
+18     Jane  DC2  08/01/2020   13:53:52
+19    Jazzi  DC2  20/11/2019   14:17:08
+20    Josie  DC2  20/11/2019   14:43:14
+21   Judson  DC2  20/11/2019   15:10:18
+22     July  DC2  08/01/2020   13:02:41
+23    Kirby  DC2  08/01/2020   13:26:21
+24      Zac  DC1  29/07/2019   15:02:37
+25      Zeb  DC1  22/05/2019   14:51:27
+26   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:20:48,495 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13     Fawn  DC1  29/05/2019   14:58:17
+14     Fawn  DC2  17/07/2019   13:35:14
+15   Goober  DC1  29/07/2019   13:39:35
+16   Herbie  DC1  29/07/2019   15:42:14
+17    Irrie  DC2  20/11/2019   15:34:47
+18     Jane  DC2  08/01/2020   13:53:52
+19    Jazzi  DC2  20/11/2019   14:17:08
+20    Josie  DC2  20/11/2019   14:43:14
+21   Judson  DC2  20/11/2019   15:10:18
+22     July  DC2  08/01/2020   13:02:41
+23    Kirby  DC2  08/01/2020   13:26:21
+24      Zac  DC1  29/07/2019   15:02:37
+25      Zeb  DC1  22/05/2019   14:51:27
+26   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:20:48,495 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13     Fawn  DC1  29/05/2019   14:58:17
+14     Fawn  DC2  17/07/2019   13:35:14
+15   Goober  DC1  29/07/2019   13:39:35
+16   Herbie  DC1  29/07/2019   15:42:14
+17    Irrie  DC2  20/11/2019   15:34:47
+18     Jane  DC2  08/01/2020   13:53:52
+19    Jazzi  DC2  20/11/2019   14:17:08
+20    Josie  DC2  20/11/2019   14:43:14
+21   Judson  DC2  20/11/2019   15:10:18
+22     July  DC2  08/01/2020   13:02:41
+23    Kirby  DC2  08/01/2020   13:26:21
+24      Zac  DC1  29/07/2019   15:02:37
+25      Zeb  DC1  22/05/2019   14:51:27
+26   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:20:48,495 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13     Fawn  DC1  29/05/2019   14:58:17
+14     Fawn  DC2  17/07/2019   13:35:14
+15   Goober  DC1  29/07/2019   13:39:35
+16   Herbie  DC1  29/07/2019   15:42:14
+17    Irrie  DC2  20/11/2019   15:34:47
+18     Jane  DC2  08/01/2020   13:53:52
+19    Jazzi  DC2  20/11/2019   14:17:08
+20    Josie  DC2  20/11/2019   14:43:14
+21   Judson  DC2  20/11/2019   15:10:18
+22     July  DC2  08/01/2020   13:02:41
+23    Kirby  DC2  08/01/2020   13:26:21
+24      Zac  DC1  29/07/2019   15:02:37
+25      Zeb  DC1  22/05/2019   14:51:27
+26   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:20:48,495 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13     Fawn  DC1  29/05/2019   14:58:17
+14     Fawn  DC2  17/07/2019   13:35:14
+15   Goober  DC1  29/07/2019   13:39:35
+16   Herbie  DC1  29/07/2019   15:42:14
+17    Irrie  DC2  20/11/2019   15:34:47
+18     Jane  DC2  08/01/2020   13:53:52
+19    Jazzi  DC2  20/11/2019   14:17:08
+20    Josie  DC2  20/11/2019   14:43:14
+21   Judson  DC2  20/11/2019   15:10:18
+22     July  DC2  08/01/2020   13:02:41
+23    Kirby  DC2  08/01/2020   13:26:21
+24      Zac  DC1  29/07/2019   15:02:37
+25      Zeb  DC1  22/05/2019   14:51:27
+26   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-15 18:21:28,971 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:21:28,971 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:21:28,971 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:21:28,971 INFO: imports 
+	 Imported Actigraph data
+2020-09-15 18:21:28,971 INFO: imports 
+	 Imported Actigraph data
+2020-09-16 14:07:38,141 INFO: __main__ 
+Module imports successful
+2020-09-16 14:07:40,201 INFO: imports 
+	 Imported Timestamps for 
+    Subject   DC        Date Start time
+0   Douglas  DC1  20/05/2019   13:36:29
+1      Dugg  DC1  22/05/2019   14:15:42
+2      Dugg  DC2  17/07/2019   14:50:56
+3      Earl  DC1  20/05/2019   15:28:25
+4      Ebbi  DC2  31/07/2019   14:14:49
+5    Edrick  DC1  13/06/2019   13:38:51
+6    Edrick  DC2  31/07/2019   13:36:06
+7     Eldin  DC1  29/05/2019   14:19:18
+8       Elf  DC1  22/05/2019   15:27:46
+9     Eliza  DC2  08/12/2019   13:50:00
+10     Emmy  DC2  08/12/2019   14:21:07
+11     Esme  DC1  13/06/2019   14:20:06
+12     Evie  DC1  29/07/2019   14:18:49
+13     Fawn  DC1  29/05/2019   14:58:17
+14     Fawn  DC2  17/07/2019   13:35:14
+15   Goober  DC1  29/07/2019   13:39:35
+16   Herbie  DC1  29/07/2019   15:42:14
+17    Irrie  DC2  20/11/2019   15:34:47
+18     Jane  DC2  08/01/2020   13:53:52
+19    Jazzi  DC2  20/11/2019   14:17:08
+20    Josie  DC2  20/11/2019   14:43:14
+21   Judson  DC2  20/11/2019   15:10:18
+22     July  DC2  08/01/2020   13:02:41
+23    Kirby  DC2  08/01/2020   13:26:21
+24      Zac  DC1  29/07/2019   15:02:37
+25      Zeb  DC1  22/05/2019   14:51:27
+26   Zodiac  DC1  20/05/2019   14:13:22
+2020-09-16 14:08:23,092 INFO: imports 
+	 Imported Actigraph data
+2020-09-17 08:42:13,389 INFO: imports 
+	 Imported Actigraph data
+2020-09-17 08:42:13,389 INFO: imports 
+	 Imported Actigraph data
+2020-09-17 08:52:09,152 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:09,152 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:09,152 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:09,152 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:09,152 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:09,152 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:52:49,991 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:53:22,381 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 08:59:43,992 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:00:19,635 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,255 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:15,265 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:41:17,803 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 09:47:40,498 INFO: __main__ 
+Module imports successful
+2020-09-17 09:47:40,540 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 09:47:40,541 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 09:47:41,951 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 10:45:36,958 INFO: __main__ 
+Module imports successful
+2020-09-17 10:45:36,982 INFO: imports 
+	 Imported Timestamps for 
+   Subject   DC        Date Start time
+0  Douglas  DC1  20/05/2019   13:36:29
+2020-09-17 10:45:36,982 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 10:45:38,090 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 12:22:39,987 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 12:22:39,987 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 12:22:39,987 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 12:22:39,987 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-17 12:22:41,808 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 12:22:41,808 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 12:22:41,808 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 12:22:41,808 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 13:14:28,896 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 14:43:01,723 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-17 15:08:10,348 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 07:56:11,259 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:00:46,639 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:07:10,068 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:09:01,130 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 08:14:21,678 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 08:14:21,678 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 08:14:21,678 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 08:14:21,678 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 08:14:21,808 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 08:14:21,808 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 08:14:21,808 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 08:14:21,808 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 08:14:24,738 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 08:14:24,738 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 08:14:24,738 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 08:14:24,738 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 08:30:59,692 INFO: __main__ 
+Module imports successful
+2020-09-18 08:30:59,889 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 08:30:59,890 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 08:31:03,630 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 08:59:37,080 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 08:59:37,094 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 08:59:39,580 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 09:02:59,001 INFO: __main__ 
+Module imports successful
+2020-09-18 09:02:59,626 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 09:02:59,626 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 09:03:04,754 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 12:23:26,858 INFO: __main__ 
+Module imports successful
+2020-09-18 12:23:26,932 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 12:23:26,933 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 12:23:29,607 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 13:54:56,846 INFO: __main__ 
+Module imports successful
+2020-09-18 13:54:56,846 INFO: __main__ 
+Module imports successful
+2020-09-18 13:54:56,935 INFO: imports 
+	 Imported Timestamps for 
+  Subject   DC        Date Start time
+0    Dugg  DC1  22/05/2019   14:15:42
+1    Dugg  DC2  17/07/2019   14:50:56
+2020-09-18 13:54:56,936 INFO: imports 
+	 Started Importing Actigraph data
+2020-09-18 13:54:59,085 INFO: imports 
+	 Finished Importing Actigraph data
+2020-09-18 13:55:49,060 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:55:49,060 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:55:49,060 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:55:49,060 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:55:49,060 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 13:57:02,394 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters
+2020-09-18 14:03:00,385 INFO: process 
+	 df2: Dataset created with simple_feature parameters

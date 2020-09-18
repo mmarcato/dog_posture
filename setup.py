@@ -20,8 +20,8 @@ def log(name, log_file = 'C:\\Users\\marinara.marcato\\Scripts\\dog_posture\\mai
 #                          Data Importing parameters                        #    
 # ------------------------------------------------------------------------- #
 base_dir = 'C:\\Users\\marinara.marcato\\Data\\Subjects'
-subjects = os.listdir(base_dir)[1:]
-#subjects = ['Douglas', ]
+#subjects = os.listdir(base_dir)[1:]
+subjects = ['Dugg']
 dcs = ['DC1', 'DC2']
 
 # ------------------------------------------------------------------------- #
