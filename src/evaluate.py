@@ -9,12 +9,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from sklearn.decomposition import PCA
+
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import cross_val_predict
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 
-def pipe_perf (df, feat, label, pipes, cv):     
+from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import GroupKFold
+
+
+def pipe_perf (df, feat, cv, label, pipes):     
     '''
         Evaluate pipes and plot 
         params:
@@ -23,37 +29,47 @@ def pipe_perf (df, feat, label, pipes, cv):
             pipes: dictionary of keys(pipeline name) and value(actual pipeline)
             cv: cross validation splitting strategy to be used
     '''        
-    no = df[label].value_counts()
+    df = df_dev
     X = df.loc[:, feat]
     y = df.loc[:, label].values
-    
+
     print('Classifying', label , '\nbased on features', feat,\
          '\nusing pipelines', list(pipes.keys()), '\nCross Val Strategy', cv)
     
-    perf = []             
+    perf = []       
+    reports = {}
+    scores = {}      
     for name, pipe in pipes.items():
         #[[TN, FP], [FN, TP]] = confusion_matrix( y, (cross_val_predict(pipe, X, y, cv = cv)))
+        '''
+        performance measurements: accuracy, precision, recall and f1 are calculated based on the confusion matrix
+        http://scikit-learn.org/stable/modules/model_evaluation.html#scoring-parameter
+        http://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py                                   
+        accuracy = (TN+TP)/(TN+TP+FN+FP) 
+        precision = (TP)/(TP+FP) 
+        recall = (TP)/(TP+FN) 
+        f1 = 2*precision*recall/(precision + recall) 
+        Parameters above can be calculated with function, however, it is not that easy to access the data 
+        from it and it takes longer to calculate than the above
+         '''
+        report = classification_report(y, cross_val_predict(pipe, X, y, cv=GroupKFold(n_splits = 10), groups = df_dev.loc[:,'Dog'], n_jobs = -1), output_dict = True)
 
-        # performance measurements: accuracy, precision, recall and f1 are calculated based on the confusion matrix
-        # http://scikit-learn.org/stable/modules/model_evaluation.html#scoring-parameter
-        # http://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py                                   
-        #accuracy = (TN+TP)/(TN+TP+FN+FP) 
-        #precision = (TP)/(TP+FP) 
-        #recall = (TP)/(TP+FN) 
-        #f1 = 2*precision*recall/(precision + recall) 
-        # Parameters above can be calculated with function, however, it is not that easy to access the data 
-        # from it and it takes longer to calculate than the above
-        
-        d = classification_report(y, cross_val_predict(pipe, X, y, cv= cv ), output_dict = True)
+        reports[name] = report
 
-        score = cross_validate(pipe, X, y, cv= cv, return_train_score=True )
+        score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, return_train_score=True )
                                                 
-        perf.append([label, name, no[0], str(cv)] + \
+        perf.append([label, name, df.shape, str(cv)] + \
                         list(np.mean(list(score.values()), axis = 1)) + \
-                            list(d['macro avg'].values()))                       
-        cols = ( ['Classifier', 'Pipeline', 'Examples', 'CV'] + list(score.keys()) + list(d['macro avg'].keys()) )
+                            list(report['weighted avg'].values()))                       
+        cols = ( ['Classifier', 'Pipeline', 'Examples', 'CV'] + list(score.keys()) + list(report['weighted avg'].keys()) )
+ 
+        scores[name] = score
 
-    return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'))
+        print(perf)
+
+
+    return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), repots, scores)
+    
 
 
 def plot_perf (pipes, perf):

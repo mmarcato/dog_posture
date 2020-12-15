@@ -101,6 +101,7 @@ def label(df_info, df_pos, df_imu, df_dir):
         df_dir: directory to save new dataframe
 
     '''
+    logger.info('\t Started creating labeled raw data')
     df_list = []  
     for subj in df_info['Subject'].unique():        
         # Iterating through data collections
@@ -122,6 +123,7 @@ def label(df_info, df_pos, df_imu, df_dir):
     # Deleting rows with 'Moving'
     df = df[df['Position'] != 'moving']
     df.to_csv('%s\\%s.csv' % (df_dir, 'df_raw'))
+    logger.info('\t Finished creating labeled raw data')
     return(df)
 
 

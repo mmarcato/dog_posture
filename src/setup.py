@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import timedelta
 import logging
 import os
+from sklearn.feature_selection import SelectKBest, f_regression
     
 ''' this file contains parameters for the posture recognition algorithm
 '''
@@ -35,8 +36,8 @@ w_size:     window size - for feature calculation, considering that raw data are
 w_offset:   window offset - for resampling, taken from start_time + t_time + w_size/2 * as feature are calculated from centre of window
 '''
 df_dir = 'C:\\Users\\marinara.marcato\\Project\\Scripts\\dog_posture\\dfs'
-df_name = 'df1'
-w_size = 100
+df_name = 'df_31'
+w_size = 25
 w_offset = timedelta(seconds = .25)
 t_time = timedelta(seconds = .25)
 
