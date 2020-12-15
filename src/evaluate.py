@@ -18,7 +18,54 @@ from sklearn.metrics import classification_report
 
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import GroupKFold
+<<<<<<< HEAD
 
+=======
+from sklearn.model_selection import GridSearchCV
+
+# Caching Modules
+import joblib
+from shutil import rmtree
+
+class gs_results:
+    # Storing Grid Search results
+    def __init__(self, gs):
+        self.cv_results_ = gs.cv_results_
+        self.best_estimator_ = gs.best_estimator_
+        self.best_params_ = gs.best_params_
+        self.best_score_ = gs.best_score_
+
+def gs_output(gs):
+    '''
+        Printing key metricts from the best estimator selected by GS algorithm
+    '''
+    best_idx_ = np.argmax(gs.cv_results_['mean_test_score'])
+    print("Best Estimator \nTest mean: %f\t std: %f\nTrain mean: %f \t std:  %f\nparameters: %s" % \
+        (np.max(gs.cv_results_['mean_test_score']), gs.cv_results_['std_test_score'][best_idx_],\
+        gs.cv_results_['mean_train_score'][best_idx_],  gs.cv_results_['std_train_score'][best_idx_],\
+        gs.best_params_))
+
+def gs_dump(gs, gs_name, gs_dir, memory, location):    
+# Saving Grid Search Results to pickle file 
+    joblib.dump(gs, '{}/{}.pkl'.format(gs_dir, gs_name), compress = 1 )
+    memory.clear()
+    rmtree(location)
+
+def gs_load(gs_name, gs_dir ):
+    gs = joblib.load('{}/{}.pkl'.format(gs_dir, gs_name))
+    gs_output(gs)
+    return(gs)
+
+def gs_perf (gs_pipe, gs_params, df):
+    '''
+        WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FILES
+    '''
+    gs_rf = GridSearchCV(gs_pipe, n_jobs = -1 , \
+        cv = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog']), \
+            scoring = 'f1_weighted', param_grid = gs_params, return_train_score = True)
+    gs_rf.fit(X,y, groups = df_dev.loc[:,'Dog'])
+    return(gs_output(gs_rf))
+>>>>>>> 724cdbf... test movels saved
 
 def pipe_perf (df, feat, cv, label, pipes):     
     '''
@@ -56,7 +103,15 @@ def pipe_perf (df, feat, cv, label, pipes):
 
         reports[name] = report
 
+<<<<<<< HEAD
         score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, return_train_score=True )
+=======
+        print(report)
+
+        score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, return_train_score=True )
+
+        print(score)
+>>>>>>> 724cdbf... test movels saved
                                                 
         perf.append([label, name, df.shape, str(cv)] + \
                         list(np.mean(list(score.values()), axis = 1)) + \
@@ -64,14 +119,21 @@ def pipe_perf (df, feat, cv, label, pipes):
         cols = ( ['Classifier', 'Pipeline', 'Examples', 'CV'] + list(score.keys()) + list(report['weighted avg'].keys()) )
  
         scores[name] = score
+<<<<<<< HEAD
 
         print(perf)
 
 
     return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), repots, scores)
     
+=======
+
+        print(perf)
+>>>>>>> 724cdbf... test movels saved
 
 
+    return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), repots, scores)
+    
 def plot_perf (pipes, perf):
     # Plotting the graph for visual performance comparison 
     width = .9/len(pipes)

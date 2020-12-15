@@ -121,15 +121,26 @@ def distribution (df, df_desc):
     return(df.groupby(['Position', 'Dog']).size().reset_index(name='count'))
 
 
+<<<<<<< HEAD
 def split (df):
     '''
         split the dataset into development and validation sets respecting the groups (dogs)
         selects dogs for the validation set that have all 9 body positions 
+=======
+def split (df, prop):
+    '''
+        split the dataset into development and test sets respecting the groups (dogs)
+        selects dogs for the test set that have all 9 body positions 
+>>>>>>> 724cdbf... test movels saved
     '''
     # total number of unique dogs
     size_total = df['Dog'].unique().size
     # 20% of total number of unique dogs
+<<<<<<< HEAD
     size_test = round(size_total * 0.2)
+=======
+    size_test = round(size_total * prop)
+>>>>>>> 724cdbf... test movels saved
 
     df_counts = df.groupby(['Dog','Position']).size().reset_index(name = 'Counts')
     df_summary = df_counts.groupby('Dog').sum()
@@ -145,9 +156,26 @@ def split (df):
     logger.info('\t Percentage in Test Set: {} \n\t Percentage in Dev Set: {}\n'.format(df_test.shape[0]/(df_test.shape[0]+df_dev.shape[0]), df_dev.shape[0]/(df_test.shape[0]+df_dev.shape[0])) )
     return(df_dev, df_test)
 
+def split_dev(df): 
+    '''
+<<<<<<< HEAD
+=======
+        split the dataset into development (train + validation) and test sets respecting the groups (dogs)
+        selects dogs for the test set that have all 9 body positions 
+    '''
+    # total number of unique dogs
 
+    
+    df_test = df[df.Dog.isin(dogs_test)]
+    df_val = df[df.Dog.isin(dogs_val)]
+    df_train = df[df.Dog.isin(dogs_train)]
+
+    logger.info('\t Number in Test Set: {} \n\t Number in Dev Set: {}'.format(df_test.shape[0], df_dev.shape[0]) )
+    logger.info('\t Percentage in Test Set: {} \n\t Percentage in Dev Set: {}\n'.format(df_test.shape[0]/(df_test.shape[0]+df_dev.shape[0]), df_dev.shape[0]/(df_test.shape[0]+df_dev.shape[0])) )
+    return(df_train, df_val, df_test)  
 def balance (df, label):
     '''
+>>>>>>> 724cdbf... test movels saved
         Balances df based on label
         Naive Undersampling, does not take into account the dogs  
     '''

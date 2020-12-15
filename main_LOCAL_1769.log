@@ -683,8 +683,6 @@ Modules imported
 2020-11-19 18:40:44,739 INFO: imports 
 	 Finished creating labeled raw data
 2020-11-19 19:20:35,109 INFO: imports 
-<<<<<<< HEAD
-=======
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -826,7 +824,6 @@ Modules imported
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
 2020-11-19 19:20:35,109 INFO: imports 
->>>>>>> 724cdbf... test movels saved
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -920,9 +917,6 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
-2020-11-19 19:20:35,109 INFO: imports 
-=======
 2020-11-19 19:21:08,608 INFO: imports 
 	 Started creating labeled raw data
 2020-11-19 19:21:08,608 INFO: imports 
@@ -933,169 +927,6 @@ Modules imported
 	 Started creating labeled raw data
 2020-11-19 19:21:08,608 INFO: imports 
 	 Started creating labeled raw data
-2020-11-19 19:25:38,722 INFO: imports 
->>>>>>> 724cdbf... test movels saved
-	 Imported Timestamps for 
-    Subject   DC        Date Start time
-0   Douglas  DC1  20/05/2019   13:36:29
-1      Dugg  DC1  22/05/2019   14:15:42
-2      Dugg  DC2  17/07/2019   14:50:56
-3      Earl  DC1  20/05/2019   15:28:25
-4      Ebbi  DC2  31/07/2019   14:14:49
-5    Edrick  DC1  13/06/2019   13:38:51
-6    Edrick  DC2  31/07/2019   13:36:06
-7     Eldin  DC1  29/05/2019   14:19:18
-8       Elf  DC1  22/05/2019   15:27:46
-9     Eliza  DC2  08/12/2019   13:50:00
-10     Emmy  DC2  08/12/2019   14:21:07
-11     Esme  DC1  13/06/2019   14:20:06
-12     Evie  DC1  29/07/2019   14:18:49
-13     Fawn  DC1  29/05/2019   14:58:17
-14     Fawn  DC2  17/07/2019   13:35:14
-15   Goober  DC1  29/07/2019   13:39:35
-16  Harmony  DC1  18/09/2019   14:38:57
-17    Harry  DC1  18/09/2019   13:56:00
-18   Harvey  DC1  18/09/2019   14:21:40
-19   Herbie  DC1  29/07/2019   15:42:14
-20    Idris  DC1  06/11/2019   13:58:18
-21   Illana  DC1  18/12/2019   13:08:40
-22    Irrie  DC2  20/11/2019   15:34:47
-23     Jane  DC2  08/01/2020   13:53:52
-24    Jazzi  DC2  20/11/2019   14:17:08
-25   Jessie  DC1  13/12/2019   14:07:16
-26    Josie  DC2  20/11/2019   14:43:14
-27      Joy  DC1  01/11/2019   15:09:01
-28   Judson  DC2  20/11/2019   15:10:18
-29     July  DC2  08/01/2020   13:02:41
-30   Junior  DC1  06/11/2019   13:29:02
-31     Kain  DC1  18/12/2019   14:35:47
-32   Kaiser  DC1  13/12/2019   14:36:49
-33    Katie  DC1  12/12/2019   14:38:08
-34   Kelvin  DC1  01/11/2019   14:16:40
-35    Kirby  DC2  08/01/2020   13:26:21
-36    Lexie  DC1  12/12/2019   13:12:41
-37    Meeko  DC1  18/12/2019   14:06:41
-38      Meg  DC1  12/12/2019   13:40:24
-39     Tosh  DC1  12/12/2019   14:13:15
-40      Zac  DC1  29/07/2019   15:02:37
-41   Zander  DC1  13/12/2019   15:37:45
-42      Zeb  DC1  22/05/2019   14:51:27
-43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
-2020-11-19 19:20:35,109 INFO: imports 
-=======
-2020-11-19 19:25:38,722 INFO: imports 
->>>>>>> 724cdbf... test movels saved
-	 Imported Timestamps for 
-    Subject   DC        Date Start time
-0   Douglas  DC1  20/05/2019   13:36:29
-1      Dugg  DC1  22/05/2019   14:15:42
-2      Dugg  DC2  17/07/2019   14:50:56
-3      Earl  DC1  20/05/2019   15:28:25
-4      Ebbi  DC2  31/07/2019   14:14:49
-5    Edrick  DC1  13/06/2019   13:38:51
-6    Edrick  DC2  31/07/2019   13:36:06
-7     Eldin  DC1  29/05/2019   14:19:18
-8       Elf  DC1  22/05/2019   15:27:46
-9     Eliza  DC2  08/12/2019   13:50:00
-10     Emmy  DC2  08/12/2019   14:21:07
-11     Esme  DC1  13/06/2019   14:20:06
-12     Evie  DC1  29/07/2019   14:18:49
-13     Fawn  DC1  29/05/2019   14:58:17
-14     Fawn  DC2  17/07/2019   13:35:14
-15   Goober  DC1  29/07/2019   13:39:35
-16  Harmony  DC1  18/09/2019   14:38:57
-17    Harry  DC1  18/09/2019   13:56:00
-18   Harvey  DC1  18/09/2019   14:21:40
-19   Herbie  DC1  29/07/2019   15:42:14
-20    Idris  DC1  06/11/2019   13:58:18
-21   Illana  DC1  18/12/2019   13:08:40
-22    Irrie  DC2  20/11/2019   15:34:47
-23     Jane  DC2  08/01/2020   13:53:52
-24    Jazzi  DC2  20/11/2019   14:17:08
-25   Jessie  DC1  13/12/2019   14:07:16
-26    Josie  DC2  20/11/2019   14:43:14
-27      Joy  DC1  01/11/2019   15:09:01
-28   Judson  DC2  20/11/2019   15:10:18
-29     July  DC2  08/01/2020   13:02:41
-30   Junior  DC1  06/11/2019   13:29:02
-31     Kain  DC1  18/12/2019   14:35:47
-32   Kaiser  DC1  13/12/2019   14:36:49
-33    Katie  DC1  12/12/2019   14:38:08
-34   Kelvin  DC1  01/11/2019   14:16:40
-35    Kirby  DC2  08/01/2020   13:26:21
-36    Lexie  DC1  12/12/2019   13:12:41
-37    Meeko  DC1  18/12/2019   14:06:41
-38      Meg  DC1  12/12/2019   13:40:24
-39     Tosh  DC1  12/12/2019   14:13:15
-40      Zac  DC1  29/07/2019   15:02:37
-41   Zander  DC1  13/12/2019   15:37:45
-42      Zeb  DC1  22/05/2019   14:51:27
-43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
-2020-11-19 19:20:35,109 INFO: imports 
-=======
-2020-11-19 19:25:38,722 INFO: imports 
->>>>>>> 724cdbf... test movels saved
-	 Imported Timestamps for 
-    Subject   DC        Date Start time
-0   Douglas  DC1  20/05/2019   13:36:29
-1      Dugg  DC1  22/05/2019   14:15:42
-2      Dugg  DC2  17/07/2019   14:50:56
-3      Earl  DC1  20/05/2019   15:28:25
-4      Ebbi  DC2  31/07/2019   14:14:49
-5    Edrick  DC1  13/06/2019   13:38:51
-6    Edrick  DC2  31/07/2019   13:36:06
-7     Eldin  DC1  29/05/2019   14:19:18
-8       Elf  DC1  22/05/2019   15:27:46
-9     Eliza  DC2  08/12/2019   13:50:00
-10     Emmy  DC2  08/12/2019   14:21:07
-11     Esme  DC1  13/06/2019   14:20:06
-12     Evie  DC1  29/07/2019   14:18:49
-13     Fawn  DC1  29/05/2019   14:58:17
-14     Fawn  DC2  17/07/2019   13:35:14
-15   Goober  DC1  29/07/2019   13:39:35
-16  Harmony  DC1  18/09/2019   14:38:57
-17    Harry  DC1  18/09/2019   13:56:00
-18   Harvey  DC1  18/09/2019   14:21:40
-19   Herbie  DC1  29/07/2019   15:42:14
-20    Idris  DC1  06/11/2019   13:58:18
-21   Illana  DC1  18/12/2019   13:08:40
-22    Irrie  DC2  20/11/2019   15:34:47
-23     Jane  DC2  08/01/2020   13:53:52
-24    Jazzi  DC2  20/11/2019   14:17:08
-25   Jessie  DC1  13/12/2019   14:07:16
-26    Josie  DC2  20/11/2019   14:43:14
-27      Joy  DC1  01/11/2019   15:09:01
-28   Judson  DC2  20/11/2019   15:10:18
-29     July  DC2  08/01/2020   13:02:41
-30   Junior  DC1  06/11/2019   13:29:02
-31     Kain  DC1  18/12/2019   14:35:47
-32   Kaiser  DC1  13/12/2019   14:36:49
-33    Katie  DC1  12/12/2019   14:38:08
-34   Kelvin  DC1  01/11/2019   14:16:40
-35    Kirby  DC2  08/01/2020   13:26:21
-36    Lexie  DC1  12/12/2019   13:12:41
-37    Meeko  DC1  18/12/2019   14:06:41
-38      Meg  DC1  12/12/2019   13:40:24
-39     Tosh  DC1  12/12/2019   14:13:15
-40      Zac  DC1  29/07/2019   15:02:37
-41   Zander  DC1  13/12/2019   15:37:45
-42      Zeb  DC1  22/05/2019   14:51:27
-43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
-2020-11-19 19:21:08,608 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:21:08,608 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:21:08,608 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:21:08,608 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:21:08,608 INFO: imports 
-	 Started creating labeled raw data
-=======
->>>>>>> 724cdbf... test movels saved
 2020-11-19 19:25:38,722 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -1190,21 +1021,7 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:25:38,722 INFO: imports 
-=======
-2020-11-19 19:25:41,001 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:25:41,001 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:25:41,001 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:25:41,001 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:25:41,001 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:28:20,825 INFO: imports 
->>>>>>> 724cdbf... test movels saved
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1251,11 +1068,7 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:25:38,722 INFO: imports 
-=======
-2020-11-19 19:28:20,825 INFO: imports 
->>>>>>> 724cdbf... test movels saved
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1302,11 +1115,7 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:25:38,722 INFO: imports 
-=======
-2020-11-19 19:28:20,825 INFO: imports 
->>>>>>> 724cdbf... test movels saved
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1353,7 +1162,6 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:25:41,001 INFO: imports 
 	 Started creating labeled raw data
 2020-11-19 19:25:41,001 INFO: imports 
@@ -1364,8 +1172,6 @@ Modules imported
 	 Started creating labeled raw data
 2020-11-19 19:25:41,001 INFO: imports 
 	 Started creating labeled raw data
-=======
->>>>>>> 724cdbf... test movels saved
 2020-11-19 19:28:20,825 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -1460,21 +1266,7 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:28:20,825 INFO: imports 
-=======
-2020-11-19 19:28:21,676 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:28:21,676 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:28:21,676 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:28:21,676 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:28:21,676 INFO: imports 
-	 Started creating labeled raw data
-2020-11-19 19:29:39,641 INFO: imports 
->>>>>>> 724cdbf... test movels saved
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1521,11 +1313,7 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:28:20,825 INFO: imports 
-=======
-2020-11-19 19:29:39,641 INFO: imports 
->>>>>>> 724cdbf... test movels saved
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1572,7 +1360,6 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:28:20,825 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -1677,8 +1464,6 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-=======
->>>>>>> 724cdbf... test movels saved
 2020-11-19 19:29:39,641 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -2008,7 +1793,6 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-<<<<<<< HEAD
 2020-11-19 19:29:39,641 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -2056,8 +1840,6 @@ Modules imported
 41   Zander  DC1  13/12/2019   15:37:45
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
-=======
->>>>>>> 724cdbf... test movels saved
 2020-11-19 19:29:41,876 INFO: imports 
 	 Started creating labeled raw data
 2020-11-19 19:29:41,876 INFO: imports 
@@ -2216,7 +1998,6 @@ Modules imported
 	 Percentage in Dev Set: 0.6998862667045778
 
 2020-11-26 11:44:28,251 INFO: __main__ 
-<<<<<<< HEAD
 Modules imported
 2020-11-26 11:48:44,893 INFO: __main__ 
 Modules imported
@@ -2232,23 +2013,6 @@ Modules imported
 Modules imported
 2020-11-26 18:58:24,476 INFO: __main__ 
 Modules imported
-=======
-Modules imported
-2020-11-26 11:48:44,893 INFO: __main__ 
-Modules imported
-2020-11-26 12:14:44,851 INFO: __main__ 
-Modules imported
-2020-11-26 14:31:59,588 INFO: __main__ 
-Modules imported
-2020-11-26 14:37:07,288 INFO: __main__ 
-Modules imported
-2020-11-26 16:39:39,328 INFO: __main__ 
-Modules imported
-2020-11-26 17:37:12,671 INFO: __main__ 
-Modules imported
-2020-11-26 18:58:24,476 INFO: __main__ 
-Modules imported
->>>>>>> 724cdbf... test movels saved
 2020-11-26 18:58:24,476 INFO: __main__ 
 Modules imported
 2020-11-26 19:03:24,569 INFO: process 
@@ -2471,8 +2235,6 @@ df_31: Dataset created. See log for parameter details
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2488,543 +2250,231 @@ df_31: Dataset created. See log for parameter details
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
-
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
-
-<<<<<<< HEAD
-=======
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
-
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
-
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
-
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
-
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
-
-df_31: Dataset created. See log for parameter details
-2020-11-27 12:41:03,100 INFO: process 
-
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
 
-<<<<<<< HEAD
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -3321,319 +2771,6 @@ df_21: Dataset created. See log for parameter details
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
 
-=======
-df_21: Dataset created. See log for parameter details
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,552 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
->>>>>>> 724cdbf... test movels saved
 2020-11-27 12:51:27,555 INFO: process 
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
@@ -3758,7 +2895,6 @@ df_21: Dataset created. See log for parameter details
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
 
-<<<<<<< HEAD
 2020-11-27 12:51:27,555 INFO: process 
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
@@ -3784,964 +2920,9 @@ df_21: Dataset created. See log for parameter details
 	 Percentage in Dev Set: 0.7572187104930468
 
 2020-11-27 12:51:27,555 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 16:00:40,643 INFO: __main__ 
-Modules imported
-2020-11-27 16:05:48,107 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 16:05:48,107 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 21:07:44,012 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 21:07:44,033 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-27 21:08:07,114 INFO: process 
-	 Number in Test Set: 14071 
-	 Number in Dev Set: 44045
-2020-11-27 21:08:07,114 INFO: process 
-	 Percentage in Test Set: 0.24211920985614976 
-	 Percentage in Dev Set: 0.7578807901438502
-
-2020-11-27 21:08:41,719 INFO: process 
-	 Number in Test Set: 16888 
-	 Number in Dev Set: 39374
-2020-11-27 21:08:41,720 INFO: process 
-	 Percentage in Test Set: 0.30016707546834454 
-	 Percentage in Dev Set: 0.6998329245316555
-
-2020-11-27 23:24:49,122 INFO: __main__ 
-Modules imported
-2020-11-27 23:25:05,515 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-27 23:25:05,515 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-11-28 01:43:57,009 INFO: __main__ 
-Modules imported
-2020-11-28 01:45:09,776 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-11-28 01:45:09,776 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-02 14:03:26,303 INFO: __main__ 
-Modules imported
-2020-12-02 14:03:26,527 INFO: __main__ 
-Modules imported
-2020-12-02 14:03:26,527 INFO: __main__ 
-Modules imported
-2020-12-02 14:09:29,102 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-02 18:11:39,765 INFO: __main__ 
-Modules imported
-2020-12-02 18:11:39,765 INFO: __main__ 
-Modules imported
-2020-12-02 18:11:39,765 INFO: __main__ 
-Modules imported
-2020-12-02 18:12:18,834 INFO: __main__ 
-Modules imported
-2020-12-02 18:12:18,834 INFO: __main__ 
-Modules imported
-2020-12-02 18:12:18,834 INFO: __main__ 
-Modules imported
-2020-12-02 18:12:18,834 INFO: __main__ 
-Modules imported
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:19:55,166 INFO: process 
-df_32: Dataset created. See log for parameter details
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 18:25:05,316 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 21:05:57,621 INFO: __main__ 
-Modules imported
-2020-12-02 21:07:47,830 INFO: __main__ 
-Modules imported
-2020-12-02 21:08:16,982 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 21:08:16,982 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-02 21:23:00,888 INFO: __main__ 
-Modules imported
-2020-12-02 21:23:38,796 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-02 21:23:38,796 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-03 09:54:53,653 INFO: __main__ 
-Modules imported
-2020-12-03 09:55:10,126 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-03 09:55:10,127 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-03 11:47:23,656 INFO: __main__ 
-Modules imported
-2020-12-03 11:48:22,666 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-03 11:48:22,666 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-07 12:56:15,202 INFO: __main__ 
-Modules imported
-2020-12-07 14:54:33,347 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-07 14:54:33,349 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-07 14:56:45,082 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-07 14:56:45,082 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2020-12-07 18:51:12,316 INFO: __main__ 
-Modules imported
-2020-12-07 18:54:23,759 INFO: process 
-df_12: Dataset created. See log for parameter details
-2020-12-07 18:58:13,918 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 18:58:13,919 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,400 INFO: process 
-	 Number in Test Set: 8624 
-	 Number in Dev Set: 20090
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:11:20,401 INFO: process 
-	 Percentage in Test Set: 0.3003412969283277 
-	 Percentage in Dev Set: 0.6996587030716723
-
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:22:01,486 INFO: process 
-df_11: Dataset created. See log for parameter details
-2020-12-07 19:30:28,810 INFO: __main__ 
-Modules imported
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:05:20,874 INFO: process 
-df_21: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:14:57,449 INFO: process 
-df_22: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:19:12,643 INFO: process 
-df_31: Dataset created. See log for parameter details
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,889 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
 
-=======
 2020-11-27 16:00:40,643 INFO: __main__ 
 Modules imported
 2020-11-27 16:05:48,107 INFO: process 
@@ -5760,7 +3941,6 @@ df_31: Dataset created. See log for parameter details
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
 
->>>>>>> 724cdbf... test movels saved
 2020-12-07 20:22:39,893 INFO: process 
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
@@ -5793,71 +3973,6 @@ df_31: Dataset created. See log for parameter details
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
 
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-07 20:22:39,893 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-<<<<<<< HEAD
 2020-12-07 20:22:39,893 INFO: process 
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
@@ -5937,140 +4052,4 @@ Modules imported
 2020-12-09 01:03:31,338 INFO: process 
 	 Percentage in Test Set: 0.24247806957614845 
 	 Percentage in Dev Set: 0.7575219304238515
-=======
-2020-12-07 21:19:54,520 INFO: __main__ 
-Modules imported
-2020-12-07 21:20:09,479 INFO: process 
-	 Number in Test Set: 14403 
-	 Number in Dev Set: 44922
-2020-12-07 21:20:09,480 INFO: process 
-	 Percentage in Test Set: 0.2427812895069532 
-	 Percentage in Dev Set: 0.7572187104930468
-
-2020-12-09 01:03:31,264 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2020-12-09 01:03:31,338 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-04 10:29:08,839 INFO: __main__ 
-Modules imported
-2021-01-04 10:30:02,040 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-04 10:30:02,040 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-04 10:30:33,419 INFO: __main__ 
-Modules imported
-2021-01-04 10:30:33,419 INFO: __main__ 
-Modules imported
-2021-01-04 10:32:58,752 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-04 10:32:58,752 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-04 12:11:53,643 INFO: __main__ 
-Modules imported
-2021-01-04 12:12:05,195 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-04 12:12:05,195 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-05 09:44:24,571 INFO: __main__ 
-Modules imported
-2021-01-05 09:45:12,673 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-05 09:45:12,673 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-05 17:15:23,453 INFO: process 
-	 Number in Test Set: 16888 
-	 Number in Dev Set: 39374
-2021-01-05 17:15:23,488 INFO: process 
-	 Percentage in Test Set: 0.30016707546834454 
-	 Percentage in Dev Set: 0.6998329245316555
-
-2021-01-06 11:36:27,671 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-06 11:36:27,721 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-06 23:51:49,953 INFO: __main__ 
-Modules imported
-2021-01-07 01:18:53,866 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-07 01:18:53,866 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-07 01:18:53,868 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-07 01:18:53,868 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-07 01:21:53,489 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-07 01:21:53,489 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-07 01:21:53,489 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-07 01:21:53,489 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-07 10:42:43,622 INFO: process 
-	 Number in Test Set: 16888 
-	 Number in Dev Set: 39374
-2021-01-07 10:42:43,622 INFO: process 
-	 Number in Test Set: 16888 
-	 Number in Dev Set: 39374
-2021-01-07 10:42:43,623 INFO: process 
-	 Percentage in Test Set: 0.30016707546834454 
-	 Percentage in Dev Set: 0.6998329245316555
-
-2021-01-07 10:42:43,623 INFO: process 
-	 Percentage in Test Set: 0.30016707546834454 
-	 Percentage in Dev Set: 0.6998329245316555
-
-2021-01-07 15:10:06,477 INFO: __main__ 
-Modules imported
-2021-01-07 15:10:30,285 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-07 15:10:30,285 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-12 16:51:21,599 INFO: process 
-	 Number in Test Set: 35492 
-	 Number in Dev Set: 110880
-2021-01-12 16:51:21,631 INFO: process 
-	 Percentage in Test Set: 0.24247806957614845 
-	 Percentage in Dev Set: 0.7575219304238515
-
-2021-01-12 16:51:21,881 INFO: process 
-	 Number in Test Set: 39004 
-	 Number in Dev Set: 71876
-2021-01-12 16:51:21,881 INFO: process 
-	 Percentage in Test Set: 0.3517676767676768 
-	 Percentage in Dev Set: 0.6482323232323233
->>>>>>> 724cdbf... test movels saved
 

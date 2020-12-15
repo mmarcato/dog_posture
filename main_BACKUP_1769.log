@@ -826,7 +826,7 @@ Modules imported
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
 2020-11-19 19:20:35,109 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -934,7 +934,7 @@ Modules imported
 2020-11-19 19:21:08,608 INFO: imports 
 	 Started creating labeled raw data
 2020-11-19 19:25:38,722 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -985,7 +985,7 @@ Modules imported
 2020-11-19 19:20:35,109 INFO: imports 
 =======
 2020-11-19 19:25:38,722 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1036,7 +1036,7 @@ Modules imported
 2020-11-19 19:20:35,109 INFO: imports 
 =======
 2020-11-19 19:25:38,722 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1095,7 +1095,7 @@ Modules imported
 2020-11-19 19:21:08,608 INFO: imports 
 	 Started creating labeled raw data
 =======
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 2020-11-19 19:25:38,722 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -1204,7 +1204,7 @@ Modules imported
 2020-11-19 19:25:41,001 INFO: imports 
 	 Started creating labeled raw data
 2020-11-19 19:28:20,825 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1255,7 +1255,7 @@ Modules imported
 2020-11-19 19:25:38,722 INFO: imports 
 =======
 2020-11-19 19:28:20,825 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1306,7 +1306,7 @@ Modules imported
 2020-11-19 19:25:38,722 INFO: imports 
 =======
 2020-11-19 19:28:20,825 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1365,7 +1365,7 @@ Modules imported
 2020-11-19 19:25:41,001 INFO: imports 
 	 Started creating labeled raw data
 =======
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 2020-11-19 19:28:20,825 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -1474,7 +1474,7 @@ Modules imported
 2020-11-19 19:28:21,676 INFO: imports 
 	 Started creating labeled raw data
 2020-11-19 19:29:39,641 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1525,7 +1525,7 @@ Modules imported
 2020-11-19 19:28:20,825 INFO: imports 
 =======
 2020-11-19 19:29:39,641 INFO: imports 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 	 Imported Timestamps for 
     Subject   DC        Date Start time
 0   Douglas  DC1  20/05/2019   13:36:29
@@ -1678,7 +1678,7 @@ Modules imported
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
 =======
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 2020-11-19 19:29:39,641 INFO: imports 
 	 Imported Timestamps for 
     Subject   DC        Date Start time
@@ -2057,7 +2057,7 @@ Modules imported
 42      Zeb  DC1  22/05/2019   14:51:27
 43   Zodiac  DC1  20/05/2019   14:13:22
 =======
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 2020-11-19 19:29:41,876 INFO: imports 
 	 Started creating labeled raw data
 2020-11-19 19:29:41,876 INFO: imports 
@@ -2248,7 +2248,7 @@ Modules imported
 Modules imported
 2020-11-26 18:58:24,476 INFO: __main__ 
 Modules imported
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 2020-11-26 18:58:24,476 INFO: __main__ 
 Modules imported
 2020-11-26 19:03:24,569 INFO: process 
@@ -2488,7 +2488,7 @@ df_31: Dataset created. See log for parameter details
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2497,7 +2497,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2506,7 +2506,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2515,7 +2515,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2524,7 +2524,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2533,7 +2533,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2542,7 +2542,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2551,7 +2551,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2560,7 +2560,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2569,7 +2569,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2578,7 +2578,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2587,7 +2587,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2596,7 +2596,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2605,7 +2605,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2614,7 +2614,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:41:03,100 INFO: process 
@@ -2623,7 +2623,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_31: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2632,7 +2632,7 @@ df_31: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2641,7 +2641,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2650,7 +2650,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2659,7 +2659,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2668,7 +2668,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2677,7 +2677,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2686,7 +2686,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2695,7 +2695,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2704,7 +2704,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2713,7 +2713,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2722,7 +2722,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2731,7 +2731,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2740,7 +2740,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2749,7 +2749,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2758,7 +2758,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2767,7 +2767,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2776,7 +2776,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2785,7 +2785,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2794,7 +2794,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2803,7 +2803,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2812,7 +2812,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2821,7 +2821,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2830,7 +2830,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2839,7 +2839,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2848,7 +2848,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2857,7 +2857,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2866,7 +2866,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2875,7 +2875,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2884,7 +2884,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2893,7 +2893,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2902,7 +2902,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2911,7 +2911,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2920,7 +2920,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2929,7 +2929,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2938,7 +2938,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2947,7 +2947,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2956,7 +2956,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2965,7 +2965,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2974,7 +2974,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2983,7 +2983,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -2992,7 +2992,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -3001,7 +3001,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -3010,7 +3010,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -3019,7 +3019,7 @@ df_21: Dataset created. See log for parameter details
 =======
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
 df_21: Dataset created. See log for parameter details
 2020-11-27 12:45:28,210 INFO: process 
@@ -3633,7 +3633,7 @@ df_21: Dataset created. See log for parameter details
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 2020-11-27 12:51:27,555 INFO: process 
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
@@ -5760,7 +5760,7 @@ df_31: Dataset created. See log for parameter details
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
 
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 2020-12-07 20:22:39,893 INFO: process 
 	 Percentage in Test Set: 0.2427812895069532 
 	 Percentage in Dev Set: 0.7572187104930468
@@ -6072,5 +6072,5 @@ Modules imported
 2021-01-12 16:51:21,881 INFO: process 
 	 Percentage in Test Set: 0.3517676767676768 
 	 Percentage in Dev Set: 0.6482323232323233
->>>>>>> 724cdbf... test movels saved
+>>>>>>> grid search results saved properly
 
