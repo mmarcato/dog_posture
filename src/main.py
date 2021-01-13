@@ -9,13 +9,6 @@ import os
 import glob
 import numpy as np
 import pandas as pd
-<<<<<<< HEAD
-#import math
-#import time
-#import matplotlib.pyplot as plt
-#from datetime import timedelta
-=======
->>>>>>> 724cdbf... test movels saved
 from importlib import reload
 
 # Caching Modules
@@ -28,12 +21,9 @@ memory = joblib.Memory(location=location, verbose=10)
 #                            Importing ML modules                           #    
 # ------------------------------------------------------------------------- #
 
-<<<<<<< HEAD
-=======
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import LeaveOneGroupOut
 from sklearn.model_selection import GridSearchCV
->>>>>>> 724cdbf... test movels saved
 from sklearn.model_selection import GroupKFold
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -45,11 +35,6 @@ from sklearn.ensemble import GradientBoostingClassifier
 # ------------------------------------------------------------------------- #
 #                          Importing local modules                          #    
 # ------------------------------------------------------------------------- #
-<<<<<<< HEAD
-%reload_ext autoreload
-%autoreload 2
-=======
->>>>>>> 724cdbf... test movels saved
 from setup import *
 import imports
 import process
@@ -70,40 +55,20 @@ df_imu = imports.actigraph(df_info, base_dir)
 df_raw = imports.label(df_info, df_pos, df_imu, df_dir)
 # importing created raw dataset - shortcut for all the processes above
 df_raw = imports.posture(df_dir, 'df_raw')
-<<<<<<< HEAD
-
-=======
->>>>>>> 724cdbf... test movels saved
 # ------------------------------------------------------------------------- #
 #                           Feature Engineering                             #    
 # ------------------------------------------------------------------------- # 
 # creating dataset with features with user defined settings 
 print(df_name, w_size, w_offset, t_time)
 df_feat = process.features(df_raw, df_dir, df_name, w_size, w_offset, t_time)
-<<<<<<< HEAD
-# importing previously created datasets
-df_feat = imports.posture(df_dir, 'df_32')  
-=======
 '''
 # importing previously created datasets
 df_feat = imports.posture(df_dir, df_fname)  
->>>>>>> 724cdbf... test movels saved
 # visualising feature distribution  
 df_dist = process.distribution(df_feat, 'Original Dataset')
 
 
 # ------------------------------------------------------------------------- #
-<<<<<<< HEAD
-#                            Data Visualisation                             #    
-# ------------------------------------------------------------------------- # 
-
-# creating dev and test sets
-df_dev, df_val = process.split(df_feat)
-
-# visualising feature distribution for dev and test sets
-process.distribution(df_dev, 'Development Dataset')
-process.distribution(df_val, 'Validation Dataset')
-=======
 #                            Data Visualisations                             #    
 # ------------------------------------------------------------------------- # 
 
@@ -119,7 +84,6 @@ process.distribution(df_test, 'Test Dataset')
 process.distribution(df_train, 'Train Dataset')
 process.distribution(df_val, 'Validation Dataset')
 process.distribution(df_test, 'Test Dataset')
->>>>>>> 724cdbf... test movels saved
 
 
 # ------------------------------------------------------------------------- #
@@ -127,12 +91,9 @@ process.distribution(df_test, 'Test Dataset')
 # ------------------------------------------------------------------------- # 
 # select feature names
 feat = df_dev.columns[:-4]
-<<<<<<< HEAD
-=======
 # Removing all Magnetometer features 
 features = [x for x in feat if "Mag" not in x]
 
->>>>>>> 724cdbf... test movels saved
 # select features
 X = df_dev.loc[:, feat]
 # setting label
@@ -140,25 +101,12 @@ label = 'Position'
 # select label
 y = df_dev.loc[:, label].values
 # setting a cv strategy that accounts for dogs
-<<<<<<< HEAD
-cv = GroupKFold(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog'])
-=======
 cv0 = GroupKFold(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog'])
 cv1 = LeaveOneGroupOut(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog'])
->>>>>>> 724cdbf... test movels saved
 
 
 %reload_ext autoreload
 %autoreload 2
-<<<<<<< HEAD
-import learn
-import evaluate
-
-pipes = learn.pipes(feat)
-pp_dev = evaluate.pipe_perf(df_dev, feat, 'Position', pipes)
-
-
-=======
 import setup
 import learn
 import evaluate
@@ -229,7 +177,6 @@ evaluate.print_cv(gs)
 
 ## developing main code for functions to work from separate files
 pp_dev = evaluate.gs_perf(df_dev, feat, cv, 'Position', pipes)
->>>>>>> 724cdbf... test movels saved
 
 
 # ---------------       using naive balanced dataset      --------------------- #

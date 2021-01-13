@@ -18,9 +18,6 @@ from sklearn.metrics import classification_report
 
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import GroupKFold
-<<<<<<< HEAD
-
-=======
 from sklearn.model_selection import GridSearchCV
 
 # Caching Modules
@@ -65,7 +62,6 @@ def gs_perf (gs_pipe, gs_params, df):
             scoring = 'f1_weighted', param_grid = gs_params, return_train_score = True)
     gs_rf.fit(X,y, groups = df_dev.loc[:,'Dog'])
     return(gs_output(gs_rf))
->>>>>>> 724cdbf... test movels saved
 
 def pipe_perf (df, feat, cv, label, pipes):     
     '''
@@ -103,15 +99,11 @@ def pipe_perf (df, feat, cv, label, pipes):
 
         reports[name] = report
 
-<<<<<<< HEAD
-        score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, return_train_score=True )
-=======
         print(report)
 
         score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, return_train_score=True )
 
         print(score)
->>>>>>> 724cdbf... test movels saved
                                                 
         perf.append([label, name, df.shape, str(cv)] + \
                         list(np.mean(list(score.values()), axis = 1)) + \
@@ -119,17 +111,8 @@ def pipe_perf (df, feat, cv, label, pipes):
         cols = ( ['Classifier', 'Pipeline', 'Examples', 'CV'] + list(score.keys()) + list(report['weighted avg'].keys()) )
  
         scores[name] = score
-<<<<<<< HEAD
 
         print(perf)
-
-
-    return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), repots, scores)
-    
-=======
-
-        print(perf)
->>>>>>> 724cdbf... test movels saved
 
 
     return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), repots, scores)

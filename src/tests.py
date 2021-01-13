@@ -1,9 +1,6 @@
 ''' Implementing grid search function'''
 
-<<<<<<< HEAD
-=======
 from sklearn.preprocessing import StandardScaler
->>>>>>> 724cdbf... test movels saved
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
@@ -11,27 +8,6 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.feature_selection import SelectKBest
 from sklearn.decomposition import PCA
 from sklearn.decomposition import TruncatedSVD
-<<<<<<< HEAD
-
-
-
-RF = Pipeline([
-    ('selector', DataFrameSelector(feat,'float64')),
-#    ('reduce_dim', PCA()), # use the explained variance, 95% variance explained
-    ('estimator', RandomForestClassifier() )       
-]) 
-
-RF_params = {
-#    'reduce_dim__n_components': [0.95, 80], 
-    'estimator__n_estimators' : [100, 250, 500, 750, 1000], 
-    'estimator__max_depth' : [5, 10, 20, 50 ]
-}
-
-grid_RF3 = GridSearchCV(RF, n_jobs =-1 , \
-    cv = GroupKFold(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog']), \
-        scoring = 'f1_weighted' , param_grid = RF_params, return_train_score = True)
-grid_RF3.fit(X,y, groups = df_dev.loc[:,'Dog'])
-=======
 from sklearn.pipeline import Pipeline
 from learn import DataFrameSelector 
 from sklearn.model_selection import GroupKFold
@@ -71,7 +47,6 @@ grid_RF6 = GridSearchCV(RF, n_jobs =-1 , \
     cv = cv, \
     scoring = 'f1_weighted' , param_grid = RF_params, return_train_score = True)
 grid_RF6.fit(X,y, groups = df_dev.loc[:,'Dog'])
->>>>>>> 724cdbf... test movels saved
 print("Best: %f using %s" % (grid_RF3.best_score_, grid_RF3.best_params_))
 
 grid_RF4 = GridSearchCV(RF, n_jobs =-1 , \
@@ -80,16 +55,6 @@ grid_RF4 = GridSearchCV(RF, n_jobs =-1 , \
 grid_RF4.fit(X,y, groups = df_dev.loc[:,'Dog'])
 print("Best: %f using %s" % (grid_RF4.best_score_, grid_RF4.best_params_))
 
-<<<<<<< HEAD
-grid_RF5 = GridSearchCV(RF, n_jobs =-1 , \
-    cv = GroupKFold(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog']), \
-        scoring = 'f1_weighted' , param_grid = RF_params, return_train_score = True)
-grid_RF5.fit(X,y, groups = df_dev.loc[:,'Dog'])
-print("Best: %f using %s" % (grid_RF5.best_score_, grid_RF5.best_params_))
-
-
-=======
->>>>>>> 724cdbf... test movels saved
 GB = Pipeline([
     ('selector', DataFrameSelector(feat,'float64')),
     ('reduce_dim', PCA()),  # SelectKBest(f_regression, k=50)],)
@@ -103,10 +68,6 @@ GB_params = {
 }
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 724cdbf... test movels saved
 start = time()
 GB_grid= GridSearchCV(GB, n_jobs = -1 , \
     cv = GroupKFold(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog']), \
@@ -155,43 +116,11 @@ GB_grid_cached.fit(X,y)
 end = time()
 print(end-start)
 
-<<<<<<< HEAD
-memory.clear(warn=False)
-rmtree(location)
-
-###########################
-
-
-def gs_results(GS, df_name):
-    print("Best: %f using %s" % (GS.best_score_, GS.best_params_))
-    print("Best estimator: {} ".format(GS.best_estimator_))
-    print("CV results: {}".format(GS.cv_results_['mean_train_score']))
-    print("CV results: {}".format(GS.cv_results_['std_train_score']))
-    print("CV results: {}".format(GS.cv_results_['mean_test_score']))
-    print("CV results: {}".format(GS.cv_results_['std_test_score']))
-
-
-gs_result(grid_RF2, df_name)
-gs_results(grid_RF2, df_name)
-
-
-
-
-
-
-
-### to be added to process ### 
-
-
-
-
-=======
 
 #########################
 
 
 ##### to be added to process
->>>>>>> 724cdbf... test movels saved
 def ts_features(df_raw, df_dir, df_name, w_size, w_offset, t_time):
     '''
         Calculate more advanced features while filtering the most important ones 
@@ -256,10 +185,6 @@ def ts_features(df_raw, df_dir, df_name, w_size, w_offset, t_time):
 
 
 ### to be added to process ###
-<<<<<<< HEAD
-
-=======
->>>>>>> 724cdbf... test movels saved
 def balance (df, label):
     ''' 
         WORK IN PROGRESS
