@@ -17,13 +17,6 @@ def log(name, log_file = 'C:\\Users\\marinara.marcato\\Project\\Scripts\\dog_pos
     logger.addHandler(handler)
     return logger
     
-# ------------------------------------------------------------------------- #
-#                          Data Importing parameters                        #    
-# ------------------------------------------------------------------------- #
-base_dir = 'C:\\Users\\marinara.marcato\\Project\\Data\\Subjects'
-subjects = os.listdir(base_dir)[1:]
-#subjects = ['Dugg']
-dcs = ['DC1', 'DC2']
 
 # ------------------------------------------------------------------------- #
 #                            Feature Engineering                            #    

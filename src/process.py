@@ -31,7 +31,7 @@ def transitions(df):
 
 def features(df_raw, df_dir, df_name, w_size, w_offset, t_time):
     '''     
-    Extract 'mean','std', 'median', 'min', 'max' from df_raw 
+    Extracts 'min', 'max', 'mean','std', 'median', 'sum', 'skew', 'kurt' from a window interval in df_raw 
     based on timestamps for positions in df_raw
     Saves transformed df to a file in df_dir with df_name:
     df_raw: dataframe with all raw IMU measurements and info 'Dog', 'DC' & 'Position', 'Type'
@@ -121,61 +121,38 @@ def distribution (df, df_desc):
     return(df.groupby(['Position', 'Dog']).size().reset_index(name='count'))
 
 
-<<<<<<< HEAD
-def split (df):
+def split (df, p):
     '''
-        split the dataset into development and validation sets respecting the groups (dogs)
-        selects dogs for the validation set that have all 9 body positions 
-=======
-def split (df, prop):
-    '''
-        split the dataset into development and test sets respecting the groups (dogs)
-        selects dogs for the test set that have all 9 body positions 
->>>>>>> 724cdbf... test movels saved
+        split the dataset into two sets
+        selects different dogs for each set
+        dogs with most diverse position set are placed in the second set 
     '''
     # total number of unique dogs
     size_total = df['Dog'].unique().size
-    # 20% of total number of unique dogs
-<<<<<<< HEAD
-    size_test = round(size_total * 0.2)
-=======
-    size_test = round(size_total * prop)
->>>>>>> 724cdbf... test movels saved
-
+    # proportion of total number of unique dogs
+    size_chunk = round(size_total * p)
+    
     df_counts = df.groupby(['Dog','Position']).size().reset_index(name = 'Counts')
     df_summary = df_counts.groupby('Dog').sum()
     df_summary['Positions'] = df_counts.groupby('Dog').size()
     df_summary.sort_values(['Positions', 'Counts'], ascending = False, inplace = True)
+    df_summary['Cum_Percentage'] = df_summary['Counts'].cumsum()/df_summary['Counts'].sum()
+    idx = np.argmin(abs(df_summary['Cum_Percentage'] - prop))
+    dogs_chunk = df_summary[0:idx+1].index.to_list()
 
-    dogs_test = list(df_summary.index[0:size_test])
+    df1 = df[~df.Dog.isin(dogs_chunk)]
+    df2 = df[df.Dog.isin(dogs_chunk)]
 
-    df_test = df[df.Dog.isin(dogs_test)]
-    df_dev = df[~df.Dog.isin(dogs_test)]
+    return(df1, df2)
 
-    logger.info('\t Number in Test Set: {} \n\t Number in Dev Set: {}'.format(df_test.shape[0], df_dev.shape[0]) )
-    logger.info('\t Percentage in Test Set: {} \n\t Percentage in Dev Set: {}\n'.format(df_test.shape[0]/(df_test.shape[0]+df_dev.shape[0]), df_dev.shape[0]/(df_test.shape[0]+df_dev.shape[0])) )
-    return(df_dev, df_test)
+def stats(dfs):
+  sizes = list(map(len, dfs))
+  print(sizes)
+  print([size/sum(sizes) for size in sizes])
 
-def split_dev(df): 
-    '''
-<<<<<<< HEAD
-=======
-        split the dataset into development (train + validation) and test sets respecting the groups (dogs)
-        selects dogs for the test set that have all 9 body positions 
-    '''
-    # total number of unique dogs
 
-    
-    df_test = df[df.Dog.isin(dogs_test)]
-    df_val = df[df.Dog.isin(dogs_val)]
-    df_train = df[df.Dog.isin(dogs_train)]
-
-    logger.info('\t Number in Test Set: {} \n\t Number in Dev Set: {}'.format(df_test.shape[0], df_dev.shape[0]) )
-    logger.info('\t Percentage in Test Set: {} \n\t Percentage in Dev Set: {}\n'.format(df_test.shape[0]/(df_test.shape[0]+df_dev.shape[0]), df_dev.shape[0]/(df_test.shape[0]+df_dev.shape[0])) )
-    return(df_train, df_val, df_test)  
 def balance (df, label):
     '''
->>>>>>> 724cdbf... test movels saved
         Balances df based on label
         Naive Undersampling, does not take into account the dogs  
     '''

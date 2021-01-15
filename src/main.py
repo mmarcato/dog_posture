@@ -20,7 +20,6 @@ memory = joblib.Memory(location=location, verbose=10)
 # ------------------------------------------------------------------------- #
 #                            Importing ML modules                           #    
 # ------------------------------------------------------------------------- #
-
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import LeaveOneGroupOut
 from sklearn.model_selection import GridSearchCV
@@ -43,10 +42,10 @@ import evaluate
 
 logger = log(__name__)
 logger.info('Modules imported')
+
 # ------------------------------------------------------------------------- #
 #                        Creating/Importing raw df                          #    
 # ------------------------------------------------------------------------- #
-
 # creating info, positions, episode dataframes
 df_info, df_pos, df_ep = imports.timestamps(subjects, dcs, base_dir)
 # creating imu dataset considering the timestamps created
@@ -55,13 +54,14 @@ df_imu = imports.actigraph(df_info, base_dir)
 df_raw = imports.label(df_info, df_pos, df_imu, df_dir)
 # importing created raw dataset - shortcut for all the processes above
 df_raw = imports.posture(df_dir, 'df_raw')
+
 # ------------------------------------------------------------------------- #
 #                           Feature Engineering                             #    
 # ------------------------------------------------------------------------- # 
 # creating dataset with features with user defined settings 
 print(df_name, w_size, w_offset, t_time)
 df_feat = process.features(df_raw, df_dir, df_name, w_size, w_offset, t_time)
-'''
+
 # importing previously created datasets
 df_feat = imports.posture(df_dir, df_fname)  
 # visualising feature distribution  
@@ -71,7 +71,6 @@ df_dist = process.distribution(df_feat, 'Original Dataset')
 # ------------------------------------------------------------------------- #
 #                            Data Visualisations                             #    
 # ------------------------------------------------------------------------- # 
-
 # creating dev and test sets
 df_dev, df_test = process.split(df_feat, 0.2)
 df_train, df_val = process.split(df_dev, 0.25)
@@ -102,14 +101,7 @@ label = 'Position'
 y = df_dev.loc[:, label].values
 # setting a cv strategy that accounts for dogs
 cv0 = GroupKFold(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog'])
-cv1 = LeaveOneGroupOut(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog'])
-
-
-%reload_ext autoreload
-%autoreload 2
-import setup
-import learn
-import evaluate
+cv1 = LeaveOneGroupOut().split(X, y, groups = df_dev.loc[:,'Dog'])
 
 #################### RF
 gs_pipe = Pipeline([
@@ -154,7 +146,7 @@ gs_rf = GridSearchCV(gs_pipe, \
     return_train_score = True, n_jobs = -1)
     
 gs_rf.fit(X,y, groups = df_dev.loc[:,'Dog'])
-evaluate.print_cv(gs_rf)
+evaluate.gs_output(gs_rf)
 
 # Saving Grid Search Results to pickle file 
 run = 'GS-KNN-df_32'
@@ -163,20 +155,16 @@ memory.clear(warn=False)
 rmtree(location)
 
 
-# Loads Grid Search Results from Pickle file
+# Loading Grid Search Results from Pickle file
 run = 'GS-RF-PCA-df_11-X'
 
-# Comparing Explained Variance Ratios 
+# Comparing Explained Variance Ratios (PCA)
 gs = joblib.load('../models/{}.pkl'.format('GS-RF-PCA-df_11'))
-evaluate.print_cv(gs)
+evaluate.gs_output(gs)
 f = sns.scatterplot(data = gs.best_estimator_['reduce_dim'].explained_variance_)
 f.axhline(1, color = 'r')
 plt.show()
-evaluate.print_cv(gs)
-
-
-## developing main code for functions to work from separate files
-pp_dev = evaluate.gs_perf(df_dev, feat, cv, 'Position', pipes)
+evaluate.gs_output(gs)
 
 
 # ---------------       using naive balanced dataset      --------------------- #

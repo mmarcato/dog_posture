@@ -37,11 +37,10 @@ def gs_output(gs):
         Printing key metricts from the best estimator selected by GS algorithm
     '''
     best_idx_ = np.argmax(gs.cv_results_['mean_test_score'])
-    print("Best Estimator \nTest mean: %f\t std: %f\nTrain mean: %f \t std:  %f\nparameters: %s" % \
-        (np.max(gs.cv_results_['mean_test_score']), gs.cv_results_['std_test_score'][best_idx_],\
+    print("Best Estimator \nTest mean: {:.6f}\t std: {:.6f}\nTrain mean: {:.6f} \t std:  {:.6f}\nparameters: {}".format( \
+        np.max(gs.cv_results_['mean_test_score']), gs.cv_results_['std_test_score'][best_idx_],\
         gs.cv_results_['mean_train_score'][best_idx_],  gs.cv_results_['std_train_score'][best_idx_],\
         gs.best_params_))
-
 def gs_dump(gs, gs_name, gs_dir, memory, location):    
 # Saving Grid Search Results to pickle file 
     joblib.dump(gs, '{}/{}.pkl'.format(gs_dir, gs_name), compress = 1 )
@@ -115,7 +114,7 @@ def pipe_perf (df, feat, cv, label, pipes):
         print(perf)
 
 
-    return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), repots, scores)
+    return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), reports, scores)
     
 def plot_perf (pipes, perf):
     # Plotting the graph for visual performance comparison 
