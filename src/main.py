@@ -34,6 +34,8 @@ from sklearn.ensemble import GradientBoostingClassifier
 # ------------------------------------------------------------------------- #
 #                          Importing local modules                          #    
 # ------------------------------------------------------------------------- #
+%reload autoreload
+%autoreload 2
 from setup import *
 import imports
 import process
@@ -88,20 +90,21 @@ process.distribution(df_test, 'Test Dataset')
 # ------------------------------------------------------------------------- #
 #                Machine Learning - Label 'Positions'                       #    
 # ------------------------------------------------------------------------- # 
+df = df_train
 # select feature names
-feat = df_dev.columns[:-4]
+feat = df.columns[:-4]
 # Removing all Magnetometer features 
 features = [x for x in feat if "Mag" not in x]
 
 # select features
-X = df_dev.loc[:, feat]
+X = df.loc[:, feat]
 # setting label
 label = 'Position'
 # select label
-y = df_dev.loc[:, label].values
+y = df.loc[:, label].values
 # setting a cv strategy that accounts for dogs
-cv0 = GroupKFold(n_splits = 10).split(X, y, groups = df_dev.loc[:,'Dog'])
-cv1 = LeaveOneGroupOut().split(X, y, groups = df_dev.loc[:,'Dog'])
+cv0 = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog'])
+cv1 = LeaveOneGroupOut().split(X, y, groups = df.loc[:,'Dog'])
 
 #################### RF
 gs_pipe = Pipeline([
@@ -139,13 +142,16 @@ gs_params = {
     'estimator__n_neighbors' : [2,5,10,20,40],
     'estimator__weights': ['uniform', 'distance']
 }
+
+
+#                         GRID SEARCH                         #
 gs_rf = GridSearchCV(gs_pipe, \
     cv = cv0, \
     scoring = 'f1_weighted', \
     param_grid = gs_params, \
     return_train_score = True, n_jobs = -1)
     
-gs_rf.fit(X,y, groups = df_dev.loc[:,'Dog'])
+gs_rf.fit(X,y, groups = df.loc[:,'Dog'])
 evaluate.gs_output(gs_rf)
 
 # Saving Grid Search Results to pickle file 
@@ -156,11 +162,11 @@ rmtree(location)
 
 
 # Loading Grid Search Results from Pickle file
-run = 'GS-RF-PCA-df_11-X'
+run = 'GS-RF-df_32-3'
+gs = joblib.load('../models/{}.pkl'.format(run))
+evaluate.gs_output(gs)
 
 # Comparing Explained Variance Ratios (PCA)
-gs = joblib.load('../models/{}.pkl'.format('GS-RF-PCA-df_11'))
-evaluate.gs_output(gs)
 f = sns.scatterplot(data = gs.best_estimator_['reduce_dim'].explained_variance_)
 f.axhline(1, color = 'r')
 plt.show()

@@ -41,6 +41,7 @@ def gs_output(gs):
         np.max(gs.cv_results_['mean_test_score']), gs.cv_results_['std_test_score'][best_idx_],\
         gs.cv_results_['mean_train_score'][best_idx_],  gs.cv_results_['std_train_score'][best_idx_],\
         gs.best_params_))
+        
 def gs_dump(gs, gs_name, gs_dir, memory, location):    
 # Saving Grid Search Results to pickle file 
     joblib.dump(gs, '{}/{}.pkl'.format(gs_dir, gs_name), compress = 1 )

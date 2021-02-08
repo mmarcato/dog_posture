@@ -127,10 +127,7 @@ def split (df, p):
         selects different dogs for each set
         dogs with most diverse position set are placed in the second set 
     '''
-    # total number of unique dogs
-    size_total = df['Dog'].unique().size
-    # proportion of total number of unique dogs
-    size_chunk = round(size_total * p)
+    df = df_dev
     
     df_counts = df.groupby(['Dog','Position']).size().reset_index(name = 'Counts')
     df_summary = df_counts.groupby('Dog').sum()
