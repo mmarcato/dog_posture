@@ -1,5 +1,5 @@
 dfs/
 models/GS-KNN-df_32.pkl
-__oycache__/
+__pycache__/
 .vscode/
 .venv/
