@@ -21,11 +21,15 @@ memory = joblib.Memory(location=location, verbose=10)
 #                            Importing ML modules                           #    
 # ------------------------------------------------------------------------- #
 from sklearn.pipeline import Pipeline
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.feature_selection import SelectKBest, f_classif
+
 from sklearn.model_selection import LeaveOneGroupOut
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import GroupKFold
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
+
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
@@ -109,8 +113,8 @@ cv1 = LeaveOneGroupOut().split(X, y, groups = df.loc[:,'Dog'])
 #################### RF
 gs_pipe = Pipeline([
     ('selector', learn.DataFrameSelector(features,'float64')),
-    #('scaler', StandardScaler()),
-    #('reduce_dim', PCA()), 
+    ('scaler', StandardScaler()),
+    ('reduce_dim', PCA()), 
     ('estimator', RandomForestClassifier() )       
 ], memory = memory ) 
 
