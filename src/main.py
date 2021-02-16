@@ -38,8 +38,6 @@ from sklearn.ensemble import GradientBoostingClassifier
 # ------------------------------------------------------------------------- #
 #                          Importing local modules                          #    
 # ------------------------------------------------------------------------- #
-%reload autoreload
-%autoreload 2
 from setup import *
 import imports
 import process
@@ -68,18 +66,17 @@ df_raw = imports.posture(df_dir, 'df_raw')
 print(df_name, w_size, w_offset, t_time)
 df_feat = process.features(df_raw, df_dir, df_name, w_size, w_offset, t_time)
 
-# importing previously created datasets
+# importing previously created dataset
 df_feat = imports.posture(df_dir, df_fname)  
-# visualising feature distribution  
-df_dist = process.distribution(df_feat, 'Original Dataset')
-
+# creating dev and test sets
+df_dev, df_test = process.split(df_feat, 0.2)
+df_train, df_val = process.split(df_dev, 0.25)
 
 # ------------------------------------------------------------------------- #
 #                            Data Visualisations                             #    
 # ------------------------------------------------------------------------- # 
-# creating dev and test sets
-df_dev, df_test = process.split(df_feat, 0.2)
-df_train, df_val = process.split(df_dev, 0.25)
+# visualising feature distribution  
+df_dist = process.distribution(df_feat, 'Original Dataset')
 
 # visualising feature distribution for dev and test sets
 process.distribution(df_dev, 'Development Dataset')
@@ -94,14 +91,14 @@ process.distribution(df_test, 'Test Dataset')
 # ------------------------------------------------------------------------- #
 #                Machine Learning - Label 'Positions'                       #    
 # ------------------------------------------------------------------------- # 
-df = df_train
+df = df_dev
 # select feature names
-feat = df.columns[:-4]
+feat_all = df.columns[:-4]
 # Removing all Magnetometer features 
-features = [x for x in feat if "Mag" not in x]
+feat_mag = [x for x in feat_all if "Mag" not in x]
 
 # select features
-X = df.loc[:, feat]
+X = df.loc[:, feat_mag]
 # setting label
 label = 'Position'
 # select label
@@ -110,7 +107,7 @@ y = df.loc[:, label].values
 cv0 = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog'])
 cv1 = LeaveOneGroupOut().split(X, y, groups = df.loc[:,'Dog'])
 
-#################### RF
+#################### RANDOM FOREST
 gs_pipe = Pipeline([
     ('selector', learn.DataFrameSelector(features,'float64')),
     ('scaler', StandardScaler()),
@@ -124,17 +121,51 @@ gs_params = {
     'estimator__n_estimators' : [25, 35, 50], 
     #'reduce_dim__n_components' : [80, 100, 120], 
 }
-#################### GB
+
+
+#################### GRADIENT BOOSTED TREEES
 gs_pipe = Pipeline([
-    ('selector', learn.DataFrameSelector(features,'float64')),
+    ('selector', learn.DataFrameSelector(feat_mag,'float64')),
     ('estimator', GradientBoostingClassifier())
 ], memory = memory)
 
 gs_params = {
-    'estimator__max_depth' : [10],
-    'estimator__max_features' : [20],
-    'estimator__n_estimators': [3, 5, 10]
+    'estimator__max_depth' : [3, 10, 15, 20], 
+    'estimator__max_features' : [10, 20, 50, 70],
+    'estimator__n_estimators': [5, 10, 15]
 }
+
+
+#                         GRID SEARCH                         #
+gs = GridSearchCV(gs_pipe, \
+    cv = cv0, \
+    scoring = 'f1_weighted', \
+    param_grid = gs_params, \
+    return_train_score = True, n_jobs = -1)
+    
+gs.fit(X,y, groups = df.loc[:,'Dog'])
+evaluate.gs_output(gs)
+
+# Saving Grid Search Results to pickle file 
+run = 'GS-GB-df_32-2'
+joblib.dump(evaluate.gs_results(gs), '../models/{}.pkl'.format(run), compress = 1 )
+memory.clear(warn=False)
+rmtree(location)
+
+
+# Loading Grid Search Results from Pickle file
+run = 'GS-RF-df_32-3'
+gs = joblib.load('../models/{}.pkl'.format(run))
+evaluate.gs_output(gs)
+
+
+# Comparing Explained Variance Ratios (PCA)
+f = sns.scatterplot(data = gs.best_estimator_['reduce_dim'].explained_variance_)
+f.axhline(1, color = 'r')
+plt.show()
+evaluate.gs_output(gs)
+
+
 ################## KNN
 gs_pipe = Pipeline([
     ('selector', learn.DataFrameSelector(features,'float64')),
@@ -147,34 +178,6 @@ gs_params = {
     'estimator__weights': ['uniform', 'distance']
 }
 
-
-#                         GRID SEARCH                         #
-gs_rf = GridSearchCV(gs_pipe, \
-    cv = cv0, \
-    scoring = 'f1_weighted', \
-    param_grid = gs_params, \
-    return_train_score = True, n_jobs = -1)
-    
-gs_rf.fit(X,y, groups = df.loc[:,'Dog'])
-evaluate.gs_output(gs_rf)
-
-# Saving Grid Search Results to pickle file 
-run = 'GS-KNN-df_32'
-joblib.dump(evaluate.gs_results(gs_rf), '../models/{}.pkl'.format(run), compress = 1 )
-memory.clear(warn=False)
-rmtree(location)
-
-
-# Loading Grid Search Results from Pickle file
-run = 'GS-RF-df_32-3'
-gs = joblib.load('../models/{}.pkl'.format(run))
-evaluate.gs_output(gs)
-
-# Comparing Explained Variance Ratios (PCA)
-f = sns.scatterplot(data = gs.best_estimator_['reduce_dim'].explained_variance_)
-f.axhline(1, color = 'r')
-plt.show()
-evaluate.gs_output(gs)
 
 
 # ---------------       using naive balanced dataset      --------------------- #

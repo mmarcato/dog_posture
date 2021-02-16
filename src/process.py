@@ -120,27 +120,26 @@ def distribution (df, df_desc):
     chart.set_xticklabels(chart.get_xticklabels(), rotation=45, horizontalalignment='right')
     return(df.groupby(['Position', 'Dog']).size().reset_index(name='count'))
 
+def split (df, prop):
+  '''
+      split the dataset into two sets
+      selects different dogs for each set
+      dogs with most diverse position set are placed in the second set 
+  '''
+  df_counts = df.groupby(['Dog','Position']).size().reset_index(name = 'Counts')
+  df_summary = df_counts.groupby('Dog')\
+    .agg({'Position':'count', 'Counts': 'sum'})\
+    .reset_index()
+  df_summary.sort_values(['Position', 'Counts'], ascending = False, inplace = True, ignore_index = True)
+  df_summary['Cum_Percentage'] = df_summary['Counts'].cumsum()/df_summary['Counts'].sum()
+  idx = np.argmin(abs(df_summary['Cum_Percentage'] - prop))
+  dogs_chunk = df_summary.Dog[0:idx+1].to_list()
+  print(dogs_chunk)
 
-def split (df, p):
-    '''
-        split the dataset into two sets
-        selects different dogs for each set
-        dogs with most diverse position set are placed in the second set 
-    '''
-    df = df_dev
-    
-    df_counts = df.groupby(['Dog','Position']).size().reset_index(name = 'Counts')
-    df_summary = df_counts.groupby('Dog').sum()
-    df_summary['Positions'] = df_counts.groupby('Dog').size()
-    df_summary.sort_values(['Positions', 'Counts'], ascending = False, inplace = True)
-    df_summary['Cum_Percentage'] = df_summary['Counts'].cumsum()/df_summary['Counts'].sum()
-    idx = np.argmin(abs(df_summary['Cum_Percentage'] - prop))
-    dogs_chunk = df_summary[0:idx+1].index.to_list()
+  df1 = df[~df.Dog.isin(dogs_chunk)]
+  df2 = df[df.Dog.isin(dogs_chunk)]
 
-    df1 = df[~df.Dog.isin(dogs_chunk)]
-    df2 = df[df.Dog.isin(dogs_chunk)]
-
-    return(df1, df2)
+  return(df1, df2)
 
 def stats(dfs):
   sizes = list(map(len, dfs))
