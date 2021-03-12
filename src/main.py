@@ -113,27 +113,27 @@ gs_pipe = Pipeline([
     ('scaler', StandardScaler()),
     ('reduce_dim', PCA()), 
     ('estimator', RandomForestClassifier() )       
-], memory = memory ) 
+    ], memory = memory ) 
 
 gs_params = {
     'estimator__max_depth' : [3, 5, 10], 
     'estimator__max_features' : [80, 100, 120], 
     'estimator__n_estimators' : [25, 35, 50], 
     #'reduce_dim__n_components' : [80, 100, 120], 
-}
+    }
 
 
 #################### GRADIENT BOOSTED TREEES
 gs_pipe = Pipeline([
     ('selector', learn.DataFrameSelector(feat_mag,'float64')),
     ('estimator', GradientBoostingClassifier())
-], memory = memory)
+    ], memory = memory)
 
 gs_params = {
     'estimator__max_depth' : [3, 10, 15, 20], 
     'estimator__max_features' : [10, 20, 50, 70],
     'estimator__n_estimators': [5, 10, 15]
-}
+    }
 
 
 #                         GRID SEARCH                         #
@@ -156,13 +156,6 @@ rmtree(location)
 # Loading Grid Search Results from Pickle file
 run = 'GS-RF-df_32-F'
 gs = joblib.load('../models/{}.pkl'.format(run))
-evaluate.gs_output(gs)
-
-
-# Comparing Explained Variance Ratios (PCA)
-f = sns.scatterplot(data = gs.best_estimator_['reduce_dim'].explained_variance_)
-f.axhline(1, color = 'r')
-plt.show()
 evaluate.gs_output(gs)
 
 
