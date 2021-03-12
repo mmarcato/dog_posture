@@ -1,3 +1,20 @@
+
+# Loading Grid Search Results from Pickle file
+run = 'GS-GB-df_32'
+gs = joblib.load('../models/{}.pkl'.format(run))
+evaluate.gs_output(gs)
+
+ft_import = gs.best_estimator_['estimator'].feature_importances_
+df_imp = pd.DataFrame(data = {'feat' : feat_all, 'importance' : ft_import })
+df_imp = df_imp.sort_values(by = 'importance', ascending = False, ignore_index = True)
+df_imp.shape
+df_imp['Acc'] = list(map(df_imp['feat'].str.contains, ['Acc']))
+df_imp.insert(2, 'Acc', list(map(df_imp['feat'].str.contains, ['Acc'])))
+len(list(map(df_imp['feat'].str.contains, ['Acc'])))
+import matplotlib.pyplot as plt 
+plt.bar(x = df_imp.index, height = df_imp.importance.values)
+df_imp.feat.values
+
 ''' Implementing grid search function'''
 
 from sklearn.preprocessing import StandardScaler

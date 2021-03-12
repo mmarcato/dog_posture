@@ -154,7 +154,7 @@ rmtree(location)
 
 
 # Loading Grid Search Results from Pickle file
-run = 'GS-RF-df_32-3'
+run = 'GS-RF-df_32-F'
 gs = joblib.load('../models/{}.pkl'.format(run))
 evaluate.gs_output(gs)
 
