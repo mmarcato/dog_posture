@@ -67,7 +67,7 @@ print(df_name, w_size, w_offset, t_time)
 df_feat = process.features(df_raw, df_dir, df_name, w_size, w_offset, t_time)
 
 # importing previously created dataset
-df_feat = imports.posture(df_dir, df_fname)  
+df_feat = imports.posture(df_dir, 'df_12')  
 # creating dev and test sets
 df_dev, df_test = process.split(df_feat, 0.2)
 df_train, df_val = process.split(df_dev, 0.25)
@@ -96,44 +96,46 @@ df = df_dev
 feat_all = df.columns[:-4]
 # Removing all Magnetometer features 
 feat_mag = [x for x in feat_all if "Mag" not in x]
+feat = feat_all
 
 # select features
-X = df.loc[:, feat_mag]
-# setting label
-label = 'Position'
+X = df.loc[:, feat]
 # select label
-y = df.loc[:, label].values
+y = df.loc[:, 'Position'].values
 # setting a cv strategy that accounts for dogs
 cv0 = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog'])
 cv1 = LeaveOneGroupOut().split(X, y, groups = df.loc[:,'Dog'])
 
 #################### RANDOM FOREST
 gs_pipe = Pipeline([
-    ('selector', learn.DataFrameSelector(features,'float64')),
-    ('scaler', StandardScaler()),
-    ('reduce_dim', PCA()), 
+    ('selector', learn.DataFrameSelector(feat,'float64')),
+    #('scaler', StandardScaler()),
+    #('reduce_dim', PCA()), 
     ('estimator', RandomForestClassifier() )       
 ], memory = memory ) 
 
 gs_params = {
-    'estimator__max_depth' : [3, 5, 10], 
-    'estimator__max_features' : [80, 100, 120], 
-    'estimator__n_estimators' : [25, 35, 50], 
+    'estimator__max_depth' : [3, 5, 10],
+    'estimator__max_features' : [80, 100, 120],
+    'estimator__n_estimators' : [25, 35, 50],
     #'reduce_dim__n_components' : [80, 100, 120], 
 }
 
 
 #################### GRADIENT BOOSTED TREEES
 gs_pipe = Pipeline([
-    ('selector', learn.DataFrameSelector(feat_mag,'float64')),
+    ('selector', learn.DataFrameSelector(feat,'float64')),
+    #('scaler', StandardScaler()),
+    #('reduce_dim', PCA()), 
     ('estimator', GradientBoostingClassifier())
 ], memory = memory)
 
 gs_params = {
     'estimator__max_depth' : [3, 10, 15, 20], 
-    'estimator__max_features' : [10, 20, 50, 70],
-    'estimator__n_estimators': [5, 10, 15]
-}
+    'estimator__max_features' : [5, 10, 20, 50],
+    'estimator__n_estimators': [10, 15, 20],
+    #'reduce_dim__n_components' : [0.85, 0.90, 0.95],    
+}   
 
 
 #                         GRID SEARCH                         #
@@ -147,7 +149,7 @@ gs.fit(X,y, groups = df.loc[:,'Dog'])
 evaluate.gs_output(gs)
 
 # Saving Grid Search Results to pickle file 
-run = 'GS-GB-df_32-2'
+run = 'GS-RF-df_12'
 joblib.dump(evaluate.gs_results(gs), '../models/{}.pkl'.format(run), compress = 1 )
 memory.clear(warn=False)
 rmtree(location)
@@ -157,6 +159,12 @@ rmtree(location)
 run = 'GS-RF-df_32-3'
 gs = joblib.load('../models/{}.pkl'.format(run))
 evaluate.gs_output(gs)
+
+
+
+
+
+
 
 
 # Comparing Explained Variance Ratios (PCA)

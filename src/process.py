@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 from setup import log
 import datetime
-from tsfresh import extract_features
-from tsfresh.utilities.dataframe_functions import roll_time_series
+#from tsfresh import extract_features
+#from tsfresh.utilities.dataframe_functions import roll_time_series
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -14,7 +14,7 @@ def transitions(df):
     '''
         Process df_raw to create:
             1. Transition in Position for consective positions performed by same dog
-            2. Transition in Time in case moving in between two positions or different dog
+            2. Transition sin Time in case moving in between two positions or different dog
             3. Transition column combining both step 1. and 2.
     '''
     # Finding transitions in posture

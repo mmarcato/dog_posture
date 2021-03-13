@@ -29,14 +29,14 @@ w_size:     window size - for feature calculation, considering that raw data are
 w_offset:   window offset - for resampling, taken from start_time + t_time + w_size/2 * as feature are calculated from centre of window
 '''
 df_dir = 'C:\\Users\\marinara.marcato\\Project\\Scripts\\dog_posture\\dfs'
-df_name = 'df_32'
-w_size = 25
-w_offset = timedelta(seconds = .10)
+df_name = 'df_11'
+w_size = 100
+w_offset = timedelta(seconds = .25)
 t_time = timedelta(seconds = .25)
 
 # ------------------------------------------------------------------------- #
 #                             Machine Learning                              #    
 # ------------------------------------------------------------------------- #
 
-df_fname = 'df_32'
+df_fname = 'df_11'
 run = 'GS-GB-df_32'
