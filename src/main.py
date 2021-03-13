@@ -131,9 +131,9 @@ gs_pipe = Pipeline([
 ], memory = memory)
 
 gs_params = {
-    'estimator__max_depth' : [3, 10, 15, 20], 
-    'estimator__max_features' : [5, 10, 20, 50],
-    'estimator__n_estimators': [10, 15, 20],
+    'estimator__max_depth' : [3, 10], 
+    'estimator__max_features' : [20, 50, 70],
+    'estimator__n_estimators': [10, 30, 50, 100]
     #'reduce_dim__n_components' : [0.85, 0.90, 0.95],    
 }   
 
@@ -160,14 +160,14 @@ gs.fit(X,y, groups = df.loc[:,'Dog'])
 evaluate.gs_output(gs)
 
 # Saving Grid Search Results to pickle file 
-run = 'GS-KNN-df_12'
+run = 'GS-GS-df_12'
 joblib.dump(evaluate.gs_results(gs), '../models/{}.pkl'.format(run), compress = 1 )
 memory.clear(warn=False)
 rmtree(location)
 
 
 # Loading Grid Search Results from Pickle file
-run = 'GS-RF-df_32-3'
+run = 'GS-KNN-df_11'
 gs = joblib.load('../models/{}.pkl'.format(run))
 evaluate.gs_output(gs)
 

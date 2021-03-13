@@ -2,16 +2,17 @@
 import joblib
 import pandas as pd
 import seaborn as sns
+import evaluate
+evaluate.gs_output(gs)
 
 # pickle file and dataframe names
-gs = joblib.load('../models/{}.pkl'.format('GS-GB-df_32-2'))
+gs = joblib.load('../models/{}.pkl'.format('GS-GB-df_12'))
 
 ########################    Start: CV Results  ########################
 cv = pd.DataFrame(gs.cv_results_)
 cv = cv.melt(id_vars = ['param_estimator__max_depth', 'param_estimator__max_features', 'param_estimator__n_estimators'],\
-    value_vars = ('mean_train_score','mean_test_score'))
+    value_vars = ['mean_train_score','mean_test_score'])
     #,'std_train_score', 'std_test_score') )
-cv['mean_test_score'].max()
 sns.catplot(x = 'param_estimator__max_depth',\
     y = 'value', \
     hue = 	'variable', \
