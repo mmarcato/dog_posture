@@ -1,3 +1,80 @@
+# Loading Grid Search Results from Pickle file
+import joblib
+import pandas as pd
+import seaborn as sns
+
+# pickle file and dataframe names
+gs = joblib.load('../models/{}.pkl'.format('GS-GB-df_32-2'))
+
+########################    Start: CV Results  ########################
+cv = pd.DataFrame(gs.cv_results_)
+cv = cv.melt(id_vars = ['param_estimator__max_depth', 'param_estimator__max_features', 'param_estimator__n_estimators'],\
+    value_vars = ('mean_train_score','mean_test_score'))
+    #,'std_train_score', 'std_test_score') )
+cv['mean_test_score'].max()
+sns.catplot(x = 'param_estimator__max_depth',\
+    y = 'value', \
+    hue = 	'variable', \
+    col  = 'param_estimator__max_features', \
+    row = 'param_estimator__n_estimators',\
+    data = cv, kind = 'bar', height = 4, aspect =0.7\
+    )
+cv = cv[['param_estimator__max_depth','param_estimator__max_features', 'param_estimator__n_estimators','mean_train_score','mean_test_score','std_train_score', 'std_test_score']]
+cv.sort_values('mean_test_score', ascending = False)
+########################    End: CV Results  ########################
+
+########################    Start: Feature importance   ########################
+
+# Chest and Back variables seem to be equally important while neck not so much
+# Another thing that I could analyse is feature correlation
+
+ft_imp = gs.best_estimator_['estimator'].feature_importances_
+ft_name = gs.best_estimator_['selector'].attribute_names 
+df_imp = pd.DataFrame(data = {'importance' : ft_imp , 'feat' : ft_name })
+df_imp = df_imp.sort_values(by = 'importance', ascending = False, ignore_index = True)
+df_imp[['stat', 'location', 'sensor', 'axis' ]] = pd.DataFrame(df_imp['feat'].str.split('.').to_list())
+
+sns.set_style("whitegrid")
+sns.set(rc={'figure.figsize':(14,5)})
+sns.catplot(x = 'sensor', y = 'importance', hue = 'stat', col  = 'location', 
+                    data = df_imp, kind = 'bar', height = 4, aspect =0.7, )
+sns.catplot(x = 'sensor', y = 'importance', hue = 'axis', col  = 'location', 
+                    data = df_imp, kind = 'bar', height = 4, aspect =0.7)
+sns.catplot(x = 'location', y = 'importance', data = df_imp, kind = 'bar')
+
+# creating a list to add the feature importance 
+dfs = []
+for col in df_imp.columns[2:]: 
+    # append dataframes with sum, mean and std of each of variable category as a list
+    # sort values, drop importance level in multindex column, 
+    # creates a column named category for the stat, location, sensor, axis  
+    dfs.append(df_imp.groupby(col)\
+        .agg({'importance': ['sum', 'mean','std']})\
+        .sort_values(by = [('importance', 'sum')], ascending = False)\
+        .droplevel(0, axis = 1)\
+        .assign(category = col))
+dfs = pd.concat(dfs)
+
+## Stats: std > max > mean > sum ~ median > kurt ~ skew
+# Location: Chest > Back >>>>> Neck
+# Sensor: Acc >>> Gyr> Mag 
+# Axis: z>y>x
+sns.barplot(x = dfs.index, y = 'sum', hue = 'category', data = dfs, ci = 'std', \
+            linewidth=0.1, errcolor =  'black', errwidth =2, capsize = .1, dodge = False)  
+
+sns.barplot(x = dfs.index, y = 'mean', hue = 'category', data = dfs, ci = 'std', \
+            linewidth=0.1, errcolor =  'black', errwidth =2, capsize = .1, dodge = False)  
+
+
+########################    End: Feature importance   ########################
+
+# Comparing Explained Variance Ratios (PCA)
+f = sns.scatterplot(data = gs.best_estimator_['reduce_dim'].explained_variance_)
+f.axhline(1, color = 'r')
+plt.show()
+evaluate.gs_output(gs)
+
+
 ''' Implementing grid search function'''
 
 from sklearn.preprocessing import StandardScaler

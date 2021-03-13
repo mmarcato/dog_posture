@@ -96,15 +96,15 @@ df = df_dev
 feat_all = df.columns[:-4]
 # Removing all Magnetometer features 
 feat_mag = [x for x in feat_all if "Mag" not in x]
-feat = feat_all
+feat = feat_mag
 
-# select features
+# select features, label, dogs
 X = df.loc[:, feat]
-# select label
 y = df.loc[:, 'Position'].values
+dogs = df.loc[:,'Dog']
 # setting a cv strategy that accounts for dogs
-cv0 = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog'])
-cv1 = LeaveOneGroupOut().split(X, y, groups = df.loc[:,'Dog'])
+cv0 = GroupKFold(n_splits = 10).split(X, y, groups = dogs)
+cv1 = LeaveOneGroupOut().split(X, y, groups = dogs)
 
 #################### RANDOM FOREST
 gs_pipe = Pipeline([
@@ -137,6 +137,17 @@ gs_params = {
     #'reduce_dim__n_components' : [0.85, 0.90, 0.95],    
 }   
 
+################## KNN
+gs_pipe = Pipeline([
+    ('selector', learn.DataFrameSelector(feat,'float64')),
+    ('scaler', StandardScaler()),
+    ('estimator', KNeighborsClassifier(n_jobs=-1))
+], memory = memory)
+
+gs_params = {
+    'estimator__n_neighbors' : [5,10,20,40]
+}
+
 
 #                         GRID SEARCH                         #
 gs = GridSearchCV(gs_pipe, \
@@ -149,7 +160,7 @@ gs.fit(X,y, groups = df.loc[:,'Dog'])
 evaluate.gs_output(gs)
 
 # Saving Grid Search Results to pickle file 
-run = 'GS-RF-df_12'
+run = 'GS-KNN-df_12'
 joblib.dump(evaluate.gs_results(gs), '../models/{}.pkl'.format(run), compress = 1 )
 memory.clear(warn=False)
 rmtree(location)
@@ -173,18 +184,6 @@ f.axhline(1, color = 'r')
 plt.show()
 evaluate.gs_output(gs)
 
-
-################## KNN
-gs_pipe = Pipeline([
-    ('selector', learn.DataFrameSelector(features,'float64')),
-    ('scaler', StandardScaler()),
-    ('estimator', KNeighborsClassifier(n_jobs=-1))
-], memory = memory)
-
-gs_params = {
-    'estimator__n_neighbors' : [2,5,10,20,40],
-    'estimator__weights': ['uniform', 'distance']
-}
 
 
 
