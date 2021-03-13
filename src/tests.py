@@ -4,7 +4,24 @@ import pandas as pd
 import seaborn as sns
 
 # pickle file and dataframe names
-gs = joblib.load('../models/{}.pkl'.format('GS-GB-df_32'))
+gs = joblib.load('../models/{}.pkl'.format('GS-GB-df_32-2'))
+
+########################    Start: CV Results  ########################
+cv = pd.DataFrame(gs.cv_results_)
+cv = cv.melt(id_vars = ['param_estimator__max_depth', 'param_estimator__max_features', 'param_estimator__n_estimators'],\
+    value_vars = ('mean_train_score','mean_test_score'))
+    #,'std_train_score', 'std_test_score') )
+cv['mean_test_score'].max()
+sns.catplot(x = 'param_estimator__max_depth',\
+    y = 'value', \
+    hue = 	'variable', \
+    col  = 'param_estimator__max_features', \
+    row = 'param_estimator__n_estimators',\
+    data = cv, kind = 'bar', height = 4, aspect =0.7\
+    )
+cv = cv[['param_estimator__max_depth','param_estimator__max_features', 'param_estimator__n_estimators','mean_train_score','mean_test_score','std_train_score', 'std_test_score']]
+cv.sort_values('mean_test_score', ascending = False)
+########################    End: CV Results  ########################
 
 ########################    Start: Feature importance   ########################
 
@@ -18,7 +35,7 @@ df_imp = df_imp.sort_values(by = 'importance', ascending = False, ignore_index =
 df_imp[['stat', 'location', 'sensor', 'axis' ]] = pd.DataFrame(df_imp['feat'].str.split('.').to_list())
 
 sns.set_style("whitegrid")
-sns.set(rc={'figure.figsize':(12,5)})
+sns.set(rc={'figure.figsize':(14,5)})
 sns.catplot(x = 'sensor', y = 'importance', hue = 'stat', col  = 'location', 
                     data = df_imp, kind = 'bar', height = 4, aspect =0.7, )
 sns.catplot(x = 'sensor', y = 'importance', hue = 'axis', col  = 'location', 
