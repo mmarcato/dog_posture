@@ -73,22 +73,6 @@ df_dev, df_test = process.split(df_feat, 0.2)
 df_train, df_val = process.split(df_dev, 0.25)
 
 # ------------------------------------------------------------------------- #
-#                            Data Visualisations                             #    
-# ------------------------------------------------------------------------- # 
-# visualising feature distribution  
-df_dist = process.distribution(df_feat, 'Original Dataset')
-
-# visualising feature distribution for dev and test sets
-process.distribution(df_dev, 'Development Dataset')
-process.distribution(df_test, 'Test Dataset')
-
-# visualising feature distribution for dev and test sets
-process.distribution(df_train, 'Train Dataset')
-process.distribution(df_val, 'Validation Dataset')
-process.distribution(df_test, 'Test Dataset')
-
-
-# ------------------------------------------------------------------------- #
 #                Machine Learning - Label 'Positions'                       #    
 # ------------------------------------------------------------------------- # 
 df = df_dev
@@ -109,9 +93,10 @@ cv1 = LeaveOneGroupOut().split(X, y, groups = dogs)
 #################### RANDOM FOREST
 gs_pipe = Pipeline([
     ('selector', learn.DataFrameSelector(feat,'float64')),
-    #('scaler', StandardScaler()),
-    #('reduce_dim', PCA()), 
-    ('estimator', RandomForestClassifier() )       
+    ('scaler', StandardScaler()),
+    ('reduce_dim', [PCA(), 'passthrough']), 
+    ('estimator', [ RandomForestClassifier(),
+                     )       
 ], memory = memory ) 
 
 gs_params = {
@@ -147,6 +132,52 @@ gs_pipe = Pipeline([
 gs_params = {
     'estimator__n_neighbors' : [5,10,20,40]
 }
+
+def RF(feat):
+    RF = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('estimator', RandomForestClassifier() )       
+    ]) 
+    return({'RF': RF})
+
+def RF_PCA(feat, memory):
+    '''
+        WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FILES
+    '''
+    p = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('scaler', StandardScaler()),
+        ('reduce_dim', PCA()),
+        ('estimator', RandomForestClassifier() )       
+    ], memory = memory ) 
+    return(p)
+
+def GB(feat):
+    GB = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('estimator', GradientBoostingClassifier() )       
+    ])
+    return({'GB': GB})
+
+def pipes(feat):
+    '''
+        Simple Pipelines including feature selection, scaling and estimator (LR, RF or SV)    
+    params:
+        feat: list with name of columns to be used as features
+    '''
+    RF = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('scaler', 'passthrough'),
+        ('reduce_dim', 'passthrough'),
+        ('estimator', RandomForestClassifier() )       
+    ]) 
+    GB = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('scaler', 'passthrough'),
+        ('reduce_dim', 'passthrough'),
+        ('estimator', GradientBoostingClassifier())
+    ])
+    return ({'RF': RF, 'GB' : GB})
 
 
 #                         GRID SEARCH                         #

@@ -1,14 +1,12 @@
 import pandas as pd
 import numpy as np
-from setup import log
+from src.__modules__.setup import log
 import datetime
 #from tsfresh import extract_features
 #from tsfresh.utilities.dataframe_functions import roll_time_series
 
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-logger = log(__name__)
 
 def transitions(df): 
     '''
@@ -28,7 +26,6 @@ def transitions(df):
     
     return(df)
 
-
 def features(df_raw, df_dir, df_name, w_size, w_offset, t_time):
     '''     
     Extracts 'min', 'max', 'mean','std', 'median', 'sum', 'skew', 'kurt' from a window interval in df_raw 
@@ -37,14 +34,16 @@ def features(df_raw, df_dir, df_name, w_size, w_offset, t_time):
     df_raw: dataframe with all raw IMU measurements and info 'Dog', 'DC' & 'Position', 'Type'
     df_imu: dataframe containing Actigraph data (back, chest, neck)*(3-axis)*(acc, gyr, mag)
     params: pr_feat contains columns for
-    df_name = dataset name
-    w_size = size of the window df_feat.ix[df_feat.index.get_loc(s_time)+1, 'Trans-Time']
-    w_offset = offset from start time for the value to be taken
-    t_time = transition time between positions
+        df_name = dataset name
+        w_size = size of the window df_feat.ix[df_feat.index.get_loc(s_time)+1, 'Trans-Time']
+        w_offset = offset from start time for the value to be taken
+        t_time = transition time between positions
     return:
-    df containing features calculated and label 'Position' and 'Type'
-
+        df containing features calculated and label 'Position' and 'Type'
     '''
+    
+    logger = log(__name__)
+
     print('Processing simple features \n df_name {}, w_size {}, w_offset {}, t_time{}'.format(df_name, w_size, w_offset, t_time))
 
     # Finding transitions in posture
@@ -134,7 +133,7 @@ def split (df, prop):
   df_summary['Cum_Percentage'] = df_summary['Counts'].cumsum()/df_summary['Counts'].sum()
   idx = np.argmin(abs(df_summary['Cum_Percentage'] - prop))
   dogs_chunk = df_summary.Dog[0:idx+1].to_list()
-  print(dogs_chunk)
+  #print(dogs_chunk)
 
   df1 = df[~df.Dog.isin(dogs_chunk)]
   df2 = df[df.Dog.isin(dogs_chunk)]

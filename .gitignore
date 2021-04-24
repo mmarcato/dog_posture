@@ -1,4 +1,4 @@
-dfs/
+data/
 models/GS-KNN-df_32.pkl
 src/__pycache__/
 src/cachedir/

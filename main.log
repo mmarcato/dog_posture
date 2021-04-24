@@ -42,3 +42,19 @@ Modules imported
 2021-02-17 18:28:02,886 INFO: __main__ 
 >>>>>>> 51fb479a1130d21f1bfb82d310ddf08d51a81249
 Modules imported
+2021-03-23 20:38:20,822 INFO: modules.imports 
+	 Imported Timestamps for 
+     Subject DC        Date Start time
+0       Diva  1  20/05/2019   14:46:21
+1       Diva  1  20/05/2019   14:46:21
+2       Diva  1  20/05/2019   14:46:21
+3       Diva  1  20/05/2019   14:46:21
+4       Diva  1  20/05/2019   14:46:21
+...      ... ..         ...        ...
+1323  Zodiac  1  20/05/2019   14:13:22
+1324  Zodiac  1  20/05/2019   14:13:22
+1325  Zodiac  1  20/05/2019   14:13:22
+1326  Zodiac  1  20/05/2019   14:13:22
+1327  Zodiac  1  20/05/2019   14:13:22
+
+[1328 rows x 4 columns]

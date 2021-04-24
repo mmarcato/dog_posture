@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Aug 22 13:21:08 2019
 
-@author: marinara.marcato
 """
 
 import matplotlib.pyplot as plt
@@ -11,13 +8,10 @@ import pandas as pd
 
 from sklearn.decomposition import PCA
 
-from sklearn.model_selection import cross_validate
-from sklearn.model_selection import cross_val_predict
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import classification_report
+from sklearn.model_selection import ShuffleSplit, GroupKFold
+from sklearn.model_selection import cross_val_score, cross_validate, cross_val_predict
+from sklearn.metrics import confusion_matrix, classification_report
 
-from sklearn.model_selection import StratifiedKFold
-from sklearn.model_selection import GroupKFold
 from sklearn.model_selection import GridSearchCV
 
 # Caching Modules
@@ -43,7 +37,9 @@ def gs_output(gs):
         gs.best_params_))
         
 def gs_dump(gs, gs_name, gs_dir, memory, location):    
-# Saving Grid Search Results to pickle file 
+    ''' 
+    Saving Grid Search Results to pickle file 
+    '''
     joblib.dump(gs, '{}/{}.pkl'.format(gs_dir, gs_name), compress = 1 )
     memory.clear()
     rmtree(location)
@@ -53,15 +49,15 @@ def gs_load(gs_name, gs_dir ):
     gs_output(gs)
     return(gs)
 
-def gs_perf (gs_pipe, gs_params, df):
+def gs_perf (gs_pipe, gs_params, X, y, groups, cv):
     '''
         WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FILES
     '''
-    gs_rf = GridSearchCV(gs_pipe, n_jobs = -1 , \
-        cv = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog']), \
-            scoring = 'f1_weighted', param_grid = gs_params, return_train_score = True)
-    gs_rf.fit(X,y, groups = df_dev.loc[:,'Dog'])
-    return(gs_output(gs_rf))
+    gs = GridSearchCV(gs_pipe, param_grid = gs_params, scoring = 'f1_weighted', \
+        n_jobs = -1, cv = cv, return_train_score = True)
+    gs.fit(X,y, groups = groups)
+
+    return(gs_output(gs))
 
 def pipe_perf (df, feat, cv, label, pipes):     
     '''
@@ -71,8 +67,7 @@ def pipe_perf (df, feat, cv, label, pipes):
             label: list of column name to be used as target
             pipes: dictionary of keys(pipeline name) and value(actual pipeline)
             cv: cross validation splitting strategy to be used
-    '''        
-    df = df_dev
+    '''
     X = df.loc[:, feat]
     y = df.loc[:, label].values
 
@@ -101,7 +96,9 @@ def pipe_perf (df, feat, cv, label, pipes):
 
         print(report)
 
-        score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, return_train_score=True )
+        score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), \
+            scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, \
+                return_train_score=True )
 
         print(score)
                                                 
@@ -114,10 +111,9 @@ def pipe_perf (df, feat, cv, label, pipes):
 
         print(perf)
 
-
     return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), reports, scores)
     
-def plot_perf (pipes, perf):
+def plot_perf (pipes, perf, parameters, title):
     # Plotting the graph for visual performance comparison 
     width = .9/len(pipes)
     index = np.arange(9)

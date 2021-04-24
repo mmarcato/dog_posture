@@ -1,5 +1,14 @@
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+from sklearn.dummy import DummyClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.model_selection import GroupKFold
 
 class DataFrameSelector(BaseEstimator, TransformerMixin):
     def __init__(self, attribute_names, dtype=None):
@@ -13,29 +22,35 @@ class DataFrameSelector(BaseEstimator, TransformerMixin):
             return X_selected.astype(self.dtype).values
         return X_selected.values
 
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-from sklearn.model_selection import ShuffleSplit
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import cross_validate
-
-from sklearn.dummy import DummyClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-
 # Caching Libraries
 import joblib
 from shutil import rmtree
 location = 'cachedir'
 memory = joblib.Memory(location=location, verbose=10)
 
+def df_prep(df, feat, label):
+    ''' Extracts X by selecting feat columns in df and y from label columns in df
+        Inputs:
+            df: dataframe
+            feat: list of strings that represent the column names in df to be selected
+            label: string column name in df to be used as the target label    
+        
+        Output: 
+            returns X (dataframe), y(array), groups(list) and cv() 
+    '''
+    X = df.loc[:, feat]
+    y = df.loc[:, label].values
+    groups = df.loc[:,'Dog']
+    cv = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog'])
+
+    return(X, y, groups, cv)
+
 def RF(feat):
     RF = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('estimator', RandomForestClassifier() )       
     ]) 
-    return({'RF': RF})
+    return(RF)
 
 def RF_PCA(feat, memory):
     '''
