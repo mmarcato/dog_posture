@@ -9,6 +9,8 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.model_selection import GroupKFold
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import SelectFromModel
 
 class DataFrameSelector(BaseEstimator, TransformerMixin):
     def __init__(self, attribute_names, dtype=None):

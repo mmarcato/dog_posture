@@ -31,10 +31,13 @@ def gs_output(gs):
         Printing key metricts from the best estimator selected by GS algorithm
     '''
     best_idx_ = np.argmax(gs.cv_results_['mean_test_score'])
-    print("Best Estimator \nTest mean: {:.6f}\t std: {:.6f}\nTrain mean: {:.6f} \t std:  {:.6f}\nparameters: {}".format( \
-        np.max(gs.cv_results_['mean_test_score']), gs.cv_results_['std_test_score'][best_idx_],\
-        gs.cv_results_['mean_train_score'][best_idx_],  gs.cv_results_['std_train_score'][best_idx_],\
-        gs.best_params_))
+    print("Best Estimator \nTest mean: {:.6f}\t std: {:.6f}\nTrain mean: {:.6f} \t std:  {:.6f}\nparameters: {}".format(
+        np.max(gs.cv_results_['mean_test_score']), 
+        gs.cv_results_['std_test_score'][best_idx_],
+        gs.cv_results_['mean_train_score'][best_idx_],  
+        gs.cv_results_['std_train_score'][best_idx_],
+        gs.best_params_)) #
+    
         
 def gs_dump(gs, gs_name, gs_dir, memory, location):    
     ''' 
@@ -51,28 +54,32 @@ def gs_load(gs_name, gs_dir ):
 
 def gs_perf (gs_pipe, gs_params, X, y, groups, cv):
     '''
-        WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FILES
+        WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FUNCTIONS
     '''
     gs = GridSearchCV(gs_pipe, param_grid = gs_params, scoring = 'f1_weighted', \
         n_jobs = -1, cv = cv, return_train_score = True)
     gs.fit(X,y, groups = groups)
 
-    return(gs_output(gs))
+    return(gs_results(gs))
 
-def pipe_perf (df, feat, cv, label, pipes):     
+def pipe_perf (df, feat, label, pipes):     
     '''
         Evaluate pipes and plot 
         params:
             df: dataframe containing features and label
             label: list of column name to be used as target
             pipes: dictionary of keys(pipeline name) and value(actual pipeline)
-            cv: cross validation splitting strategy to be used
+
+        return: list with three elements
+            dataframe: with performance of the pipeline
+            reports: precision, recall, f1-score, support for each of the classes
+
     '''
     X = df.loc[:, feat]
     y = df.loc[:, label].values
 
     print('Classifying', label , '\nbased on features', feat,\
-         '\nusing pipelines', list(pipes.keys()), '\nCross Val Strategy', cv)
+         '\nusing pipelines', list(pipes.keys()))
     
     perf = []       
     reports = {}
@@ -90,27 +97,50 @@ def pipe_perf (df, feat, cv, label, pipes):
         Parameters above can be calculated with function, however, it is not that easy to access the data 
         from it and it takes longer to calculate than the above
          '''
-        report = classification_report(y, cross_val_predict(pipe, X, y, cv=GroupKFold(n_splits = 10), groups = df_dev.loc[:,'Dog'], n_jobs = -1), output_dict = True)
-
+        # CV (fit + predict) to set get classification report
+        report = classification_report(
+                        y, 
+                        cross_val_predict(pipe, X, y, cv=GroupKFold(n_splits = 10), 
+                        groups = df.loc[:,'Dog']),                     
+                        output_dict = True
+                )
+                    
+        # add new dictionary entry where key = name and value = report
         reports[name] = report
-
         print(report)
 
-        score = cross_validate(pipe, X, y, cv= GroupKFold(n_splits = 10), \
-            scoring = 'f1_score', groups = df_dev.loc[:,'Dog'], n_jobs = -1, \
-                return_train_score=True )
+        # fit and predict to calculate calculate f1_weighted score with CV 10 GroupKFold
+        score = cross_validate(
+                    pipe, X, y, 
+                    scoring = 'f1_weighted', 
+                    cv= GroupKFold(n_splits = 10), 
+                    groups = df.loc[:,'Dog'],
+                    return_train_score=True,
+                    return_estimator = True
+                )
 
-        print(score)
-                                                
-        perf.append([label, name, df.shape, str(cv)] + \
-                        list(np.mean(list(score.values()), axis = 1)) + \
-                            list(report['weighted avg'].values()))                       
-        cols = ( ['Classifier', 'Pipeline', 'Examples', 'CV'] + list(score.keys()) + list(report['weighted avg'].keys()) )
- 
+        # add new dictionary entry where key = name and value = score
         scores[name] = score
+        print(score)
+
+        # appending all data to a list                                        
+        perf.append(
+                        [label, name, df.shape] + 
+                        # fit_time, score_time, test_score, train_score
+                        list(np.mean(list(score.values()), axis = 1)) +   
+                        # precision, recall, f1-score, support average among classes
+                        list(report['weighted avg'].values())
+                    ) 
+        # creating a list with columns names     
+        cols = ( 
+                    ['Classifier', 'Pipeline', 'Examples'] + 
+                    list(score.keys()) +
+                    list(report['weighted avg'].keys()) 
+                )
 
         print(perf)
-
+    
+    # returns a list with three elements
     return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), reports, scores)
     
 def plot_perf (pipes, perf, parameters, title):

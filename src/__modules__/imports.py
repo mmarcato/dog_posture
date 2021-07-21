@@ -2,11 +2,11 @@ import os
 import pandas as pd
 import glob
 
-def timestamps(subjects, dcs, base_dir): 
+def timestamps(df_data, base_dir): 
     '''
         This can possibly be more optimised in the future 
         by having one unified dataframe with columns for Subject and DC
-        imports data from timestamps files, organise them in dictionaries and return
+        >imports data from timestamps files, organise them in dictionaries and return
 
     Input
         subjects, dcs: unique combinations of dog name & dc number
@@ -19,23 +19,18 @@ def timestamps(subjects, dcs, base_dir):
     '''
 
     print('\nImporting Timestamp files - Episode and Position Data') 
-    
     stats = []
     df_ep, df_pos = {},{}
-    '''
-    for subj in subjects:
+
+    for subj in df_data['Dog'].unique():
         df_ep[subj], df_pos[subj] = {},{}
-        for dc in dcs:'''
-    
-    for subj in subjects:
-        df_ep[subj], df_pos[subj] = {},{}
-        for dc in [0,1]:       
+        for dc in df_data.loc[df_data['Dog'] == subj, 'DC']:
             df_ep[subj][dc], df_pos[subj][dc] = None, None
             f_name = '%s\\%s\\%s_Timestamps.csv' % (base_dir, subj, dc) 
             # if the timestamp file is found 
-            if os.path.exists(f_name):
+            if os.path.exists(f_name):            
                 # Read the information about the behaviour test 
-                df_info = pd.read_csv(f_name, index_col = 0, nrows = 4, usecols = [0,1])
+                df_info = pd.read_csv(f_name, index_col = 0, nrows = 4, usecols = [0,1], dayfirst = False)
                 date = df_info[subj]['Date']
                 time = df_info[subj]['Start time']     
                 stats.append([subj, dc, date, time])
@@ -66,7 +61,8 @@ def timestamps(subjects, dcs, base_dir):
                             'moving': 'dynamic'}
 
                 df_pos[subj][dc]['Type'] = df_pos[subj][dc]['Position'].map(pos_type)
-
+            else:
+                print('Error loading', subj, dc)
     df_info = pd.DataFrame(stats, columns = ['Subject', 'DC', 'Date', 'Start time'])
     #logger.info('\t Imported Timestamps for \n{}'.format(df_info))
 
@@ -89,9 +85,12 @@ def actigraph(df_info, base_dir):
                 for bp in bps:   
                         # Find file path for each bp
                         f_name =  glob.glob('%s\\%s\\%s_Actigraph\\*_%s.csv' % (base_dir, subj, dc, bp))
-                        df_list.append(pd.read_csv(f_name[0], index_col = ['Timestamp'], parse_dates = [0], \
-                                date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f'))\
-                                .drop(['Temperature'], axis = 1))
+                        df_list.append(pd.read_csv(f_name[0], 
+                                                    index_col = ['Timestamp'], 
+                                                    parse_dates = [0],
+                                                    date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f'))\
+                                        .drop(['Temperature'], 
+                                        axis = 1))
                 # Concatenating dataframes for different body parts in one single dataframe
                 # Results in one dataframe per dog per data collection
                 print('\t', subj, dc)
@@ -114,32 +113,38 @@ def label(df_info, df_pos, df_imu):
         df_imu: df containing Actigraph data (back, chest, neck)*(3-axis)*(acc, gyr, mag)
     '''
     print('Started creating labeled raw data')
-    df_list = []  
-    for subj in df_info['Subject'].unique():        
-        # Iterating through data collections
-        for dc in df_info[df_info.Subject == subj]['DC']:     
-            print('\t',subj, dc)
-            for (s_time, f_time) in zip(df_pos[subj][dc].index.to_series(), \
-                                df_pos[subj][dc].index.to_series().shift(-1)):
-                #print(s_time, f_time)    
-                df_imu[subj][dc]['Dog'] = subj
-                df_imu[subj][dc]['DC'] = dc
-                df_imu[subj][dc].loc[s_time:f_time,'Type'] = df_pos[subj][dc].loc[s_time, 'Type']
-                df_imu[subj][dc].loc[s_time:f_time,'Position'] = df_pos[subj][dc].loc[s_time, 'Position']
+    df = pd.DataFrame()
+    for (subj, dc) in zip(df_info['Subject'], df_info['DC']):    
+        
+        print('\t',subj, dc)
 
-               
-            df_list.append(df_imu[subj][dc])
-    df = pd.concat(df_list)
+        # iterating over all postures annotated 
+        for (s_time, f_time) in zip(df_pos[subj][dc].index.to_series(), \
+                            df_pos[subj][dc].index.to_series().shift(-1)):
+            print(s_time, f_time)    
+            df_imu[subj][dc].loc[s_time:f_time,'Dog'] = subj
+            df_imu[subj][dc].loc[s_time:f_time,'DC'] = dc
+            df_imu[subj][dc].loc[s_time:f_time,'Type'] = df_pos[subj][dc].loc[s_time, 'Type']
+            df_imu[subj][dc].loc[s_time:f_time,'Position'] = df_pos[subj][dc].loc[s_time, 'Position']
+         
+        print(df_imu[subj][dc].shape)
+        df = df.append(df_imu[subj][dc])
+        print(df.shape)
     # Deleting rows with nan 
     df.dropna(axis = 0, inplace = True)
     # Deleting rows with 'Moving'
     df = df[df['Position'] != 'moving']
     print('Finished creating labeled raw data')
+    
     return(df)
-
+ 
 def posture(df_dir, df_name = 'df_raw'):
-    return(pd.read_csv( '%s//%s.csv' % (df_dir, df_name), index_col = ['Timestamp'], parse_dates = [0], \
-                            date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f')))
+    return(pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), 
+                index_col = ['Timestamp'], 
+                parse_dates = ['Timestamp'],
+                dayfirst = True,
+                date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f'))
+                )
 
 def dogs(df_dir, df_name):
     df_dogs = pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), \
