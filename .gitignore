@@ -1,7 +1,6 @@
-data/
-models/GS-KNN-df_32.pkl
-src/__modules__/__pycache__/
-src/__pycache__/
-src/cachedir/
 .vscode/
+data/
 venv/
+models/GS-KNN-df_32.pkl
+**/__pycache__/
+**/cachedir/

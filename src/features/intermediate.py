@@ -69,11 +69,11 @@ for (s_time, f_time) in zip( df.loc[df['Transition'] == True].index[:-1] + t_tim
                 # rolling window with size w_size
                 .rolling(w_size, center = True)
                 # calculating features
-                .agg(['min', 'max', 'mean', 'std', 
-                        np.quantile(0.25), 'median', np.quantile(0.75), 'var',
+                .agg(['min', 'max', 'mean', 'std', 'var',
+                        q1, 'median', q3, iqr, mad,
                         'sum', 'skew', 'kurt', 
-                        # signal magnitude
-                        # activity
+                        # signal magnitude area
+                        # activity (accellerometers)
                         #  
                         ])
                 # dropping the first and last values that are NAs
@@ -88,11 +88,57 @@ for (s_time, f_time) in zip( df.loc[df['Transition'] == True].index[:-1] + t_tim
 
 # flatten the multiindex column to a simple columns +   add the last 4 columns
 df_new.columns =  [".".join(v) for v in df_new.columns[:-4]] + ['Dog', 'DC', 'Type', 'Position']
-
-
+# saving new features dataframe
 print('Save df to csv')
 df_new.to_csv('%s\\%s.csv' % (df_dir, df_name))
 
+
+
+####################### NEW FUNCTIONS
+
+z = np.random.uniform(low=-1, high=1, size=(10,))
+
+
+
+def n_zero_crossing(x):
+        # count number of zero crossings
+        return sum(x * np.append(x[1:], [np.nan]) < 0 )
+
+def q1(x):
+        # calculate the 1st quartile 
+        return x.quantile(0.25)
+
+def q3(x):
+        # calculate the 3st quartile
+        return x.quantile(0.75)
+
+def iqr(x):
+        #calculate interquartile rage (Q3 - Q1)
+        return np.subtract(*np.percentile(x, [75, 25]))
+
+def mad(x):
+        # median absolute deviation
+        np.median(np.abs(x - np.median(x)))
+
+def md(x):
+        # mean absolute deviation
+        np.mean(np.abs(x - np.median(x)))
+
+        energy(): Energy measure. Sum of the squares divided by the number of values.
+
+def rms(x):
+        # calculate root mean square 
+        return np.sqrt(np.mean(x**2))
+
+
+def sma(x, y, z):
+        # calculates signal magnitude area
+        # t is the time window
+        return np.sum(np.abs(x) + np.abs(y) + np.abs(z))/len(x)
+
+def svm(x, y, z):
+        # calculates signal vector magnitude
+        return np.sum(np.sqrt(x**2 + y**2 + z**2))/len(x)
 
 #    df_logger = log(df_name, log_file = '%s\\%s.log' % (df_dir, df_name))
 #    df_logger.info('\n\t Dataset created with simple_feature parameters: \n\ndf_name: {}, w_size: {}, w_offset: {}us, t_time: {}us'.format(df_name, w_size, w_offset, t_time))
