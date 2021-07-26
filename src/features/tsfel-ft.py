@@ -1,3 +1,21 @@
+
+### GITHUB - START
+import tsfel
+import pandas as pd
+
+cfg = tsfel.get_features_by_domain()
+
+df = pd.read_csv("sample.csv")
+df = df.drop(columns=["Timestamp"])    # You should not pass the timestamp column. Time will be taken into consideration taking into account the length of your input and the sampling frequency.
+
+features = tsfel.time_series_features_extractor(cfg, df, fs=100, window_size=100, verbose = 0)
+
+
+
+
+### GITHUB - END
+
+
 import os, sys
 from datetime import timedelta
 import numpy as np
@@ -34,16 +52,40 @@ df = process.transitions(df_raw)
 
 df = df[df['Dog'] == 'Diva']
 cols = df.columns[:-7]
-cols = cols[cols.str.contains('Neck')]
+#cols = cols[cols.str.contains('Neck')]
 cols = cols[~cols.str.contains('Mag')]
 timestamp = df.index
-df_feat = pd.DataFrame([])
+df_feat = pd.DataFrame()
 
 
 # Retrieves a pre-defined feature configuration file to extract all available features
-cfg = tsfel.get_features_by_domain('statistical')
-# Extract features
-# X = tsfel.time_series_features_extractor(cfg, df)
+cfg = tsfel.get_features_by_domain(domain = 'statistical',
+                                         json_path = 'features.json')
+
+### SIMPLE VERSION
+s_times = df.loc[df['Transition'] == True].index[:-1] + t_time
+f_times = df.loc[df['Transition'].shift(-1) == True].index - t_time
+data = df.loc[s_times[0]:f_times[0], 'Neck.Acc.X'][:101]
+df.loc[s_times[0]:f_times[0], cols].to_csv('sample.csv')
+
+
+df_tsfel = tsfel.time_series_features_extractor(
+        # configuration file with features to be extracted 
+        cfg,                            
+        # dataframe window to calculate features window on 
+        data,   
+        # sampling frequency of original signal
+        fs = 100,
+        # sliding window size
+        window_size = 100,
+        verbose = 0
+        # overlap between subsequent sliding windows
+        #overlap = .5
+        # using all processors
+        #n_jobs = -1 
+        )
+### SIMPLE VERSION
+
 
 
 # Iterating over the postures, taking the steady periods between transitions
@@ -58,7 +100,7 @@ for (s_time, f_time) in zip(df.loc[df['Transition'] == True].index[:-1] + t_time
     
         print('Calculating Features for {}\n'
                 .format(df.loc[s_time, ['Dog','DC','Position']].values))
-        print(df.loc[s_time:f_time, 'Neck.Acc.X']) 
+        
         
         # calculating all features and appending to the dataframe
         ############# DROP MAGNETOMETER FEATURES?
@@ -71,15 +113,15 @@ for (s_time, f_time) in zip(df.loc[df['Transition'] == True].index[:-1] + t_time
                         # configuration file with features to be extracted 
                         dict_features = cfg,                            
                         # dataframe window to calculate features window on 
-                        signal_windows = df.loc[s_time:f_time, 'Neck.Acc.X'],   
+                        signal_windows = df.loc[s_time:f_time, 'Neck.Acc.X'].to_list(),   
                         # sampling frequency of original signal
-                        fs = 100,
+                        #fs = 100,
                         # sliding window size
                         window_size = w_size, 
                         # overlap between subsequent sliding windows
                         overlap = .5,
                         # using all processors
-                        n_jobs = -1 
+                        #n_jobs = -1 
                         )
                         .assign(Dog = df.loc[s_time,'Dog'], 
                         DC = df.loc[s_time,'DC'], 
