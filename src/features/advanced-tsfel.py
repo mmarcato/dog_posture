@@ -1,5 +1,7 @@
 
 ### GITHUB - START
+%load_ext autoreload
+%autoreload 2
 import tsfel
 import pandas as pd
 
@@ -7,13 +9,9 @@ cfg = tsfel.get_features_by_domain()
 
 df = pd.read_csv("sample.csv")
 df = df.drop(columns=["Timestamp"])    # You should not pass the timestamp column. Time will be taken into consideration taking into account the length of your input and the sampling frequency.
+#print(df['Back.Acc.X'].to_list())
+features = tsfel.time_series_features_extractor(cfg, df, fs=100, window_size=100) #, n_jobs = -1)
 
-features = tsfel.time_series_features_extractor(cfg, df, fs=100, window_size=100, verbose = 0)
-
-
-
-
-### GITHUB - END
 
 
 import os, sys
@@ -52,7 +50,6 @@ df = process.transitions(df_raw)
 
 df = df[df['Dog'] == 'Diva']
 cols = df.columns[:-7]
-#cols = cols[cols.str.contains('Neck')]
 cols = cols[~cols.str.contains('Mag')]
 timestamp = df.index
 df_feat = pd.DataFrame()
