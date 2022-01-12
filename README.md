@@ -1,7 +1,7 @@
 # Posture Algorithm
 The main goal of this machine learning project is to predict canine body posture based on Inertial data.
 
-In order to achive that, the following data are colleted during a video recorded behaviour test are used.
+In order to achieve that, the following data are colleted during a video recorded behaviour test are used.
 * Inertial data acquired by three Actigraph IMUs (Inertial Measurement Units)  
 * Posture labels timestamped considering 9 classes of postures performed by canines
 * Type labels timestamped consider the 2 types of postures (Static, Dynamic)

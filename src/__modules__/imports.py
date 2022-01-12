@@ -3,20 +3,25 @@ import pandas as pd
 import glob
 
 def timestamps(df_data, base_dir): 
-    '''
-        This can possibly be more optimised in the future 
-        by having one unified dataframe with columns for Subject and DC
-        >imports data from timestamps files, organise them in dictionaries and return
+    """
+    Imports data from timestamps files, organise them in dictionaries and return
 
-    Input
-        subjects, dcs: unique combinations of dog name & dc number
-        base_dir: directory where timestamps are located
+    Parameters
+        -------
+        df_data : DataFrame
+            columns are subjects, dcs: unique combinations of dog name & dc number
+        base_dir : str
+            directory where timestamps are located
 
-    Output: 
-        df_ep: df indexed by'Timestamps' containing 'Episode', 'Ep-VT' and 'Duration'
-        df_pos: df indexed by 'Timestamps' containing 'Position', 'Pos-VT', 'Duration', 'Type'
-        df_stats: df containing 'Subject', 'DC', 'Date', 'Start time' 
-    '''
+    Returns
+        -------
+        df_ep: DataFrame
+            indexed by'Timestamps' containing 'Episode', 'Ep-VT' and 'Duration'
+        df_pos: DataFrame
+            indexed by 'Timestamps' containing 'Position', 'Pos-VT', 'Duration', 'Type'
+        df_stats: DataFrame
+            containing 'Subject', 'DC', 'Date', 'Start time' 
+    """
 
     print('\nImporting Timestamp files - Episode and Position Data') 
     stats = []
@@ -51,6 +56,13 @@ def timestamps(df_data, base_dir):
                 df_pos[subj][dc].index = dt + pd.to_timedelta(df_pos[subj][dc]['Pos-VT'])         
                 # Create new column for the position Duration
                 df_pos[subj][dc]['Duration'] = df_pos[subj][dc].index.to_series().diff().shift(-1) 
+
+                if any(df_pos[subj][dc]['Duration'] <= pd.Timedelta(0,'seconds')):
+                # Flagging positions that are shorter than 0s
+                    print('Warning: Position duration is shorter than 0s for', subj, dc, '\n', 
+                        df_pos[subj][dc].loc[df_pos[subj][dc]['Duration'] <= pd.Timedelta(0,'seconds'),'Position'],
+                    '\n\n')
+
                 df_pos[subj][dc]['Position'] = df_pos[subj][dc]['Position'].str.lower()
                 
                 pos_type = {'walking': 'dynamic', 'w-sniffing floor': 'dynamic',
@@ -105,8 +117,8 @@ def actigraph(df_info, base_dir):
 def label(df_info, df_pos, df_imu):
     '''
         Combines data from df_imu and df_info to create a 
-            df containing raw df_imu data plus Dog, DC, Type, Position 
-                based on the markings df_pos
+        df containing raw df_imu data plus Dog, DC, Type, Position 
+        based on the markings df_pos
 
         df_info: df containing 'Subject', 'DC', 'Data' and 'Start Time'
         df_pos: df containing timestamps data 'Position', 'Pos-VT' and 'Duration'
@@ -148,6 +160,19 @@ def posture(df_dir, df_name = 'df_raw'):
 
 def dogs(df_dir, df_name):
     df_dogs = pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), \
-        usecols = ['Intake', 'Code', 'Name', 'DOB', 'DOA', 'PR Sup', 'Sex', 'Source'],\
+        usecols = ['Intake', 'Code', 'Name', 'DOB', 'DOA', 'PR Sup', 'Sex', 'Source', 'Breed'],\
         parse_dates = ['DOB', 'DOA'])
     return(df_dogs)
+
+def features_tsfel(dir_new):
+    
+    # view all dataframes in directory
+    print(os.listdir(dir_new))
+
+    # read all dataframes into only one dataframe df_new
+    df = pd.DataFrame()
+    for df_name in os.listdir(dir_new):
+        df = df.append(
+                    posture(dir_new, os.path.splitext(df_name)[0]))
+        print(df_name, df.shape)
+    return df

@@ -1,6 +1,8 @@
 import os, sys
 import numpy as np
 import pandas as pd
+import time
+
 pd.set_option('display.max_rows', 500)
 
 currentdir = os.path.dirname(os.path.realpath(__file__))
@@ -48,7 +50,7 @@ df = df[df['Dog'] == 'Diva']
 cols = df.columns[:-7]
 timestamp = df.index
 df_new = pd.DataFrame([])
-
+tic = time.time()
 # Iterating over the postures, taking the steady periods between transitions
 for (s_time, f_time) in zip( df.loc[df['Transition'] == True].index[:-1] + t_time , \
                             df.loc[df['Transition'].shift(-1) == True].index - t_time):
@@ -85,6 +87,8 @@ for (s_time, f_time) in zip( df.loc[df['Transition'] == True].index[:-1] + t_tim
                         DC = df.loc[s_time,'DC'], 
                         Type = df.loc[s_time,'Type'], 
                         Position = df.loc[s_time, 'Position']))
+toc = time.time()
+print(toc - tic)
 
 # flatten the multiindex column to a simple columns +   add the last 4 columns
 df_new.columns =  [".".join(v) for v in df_new.columns[:-4]] + ['Dog', 'DC', 'Type', 'Position']

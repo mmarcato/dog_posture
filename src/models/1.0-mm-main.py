@@ -82,7 +82,7 @@ X, y, groups, cv = learn.df_prep(df, feat, label = 'Position')
 # evaluate grid seach performance
 gs_results = evaluate.gs_perf(pipe, params, X, y, groups, cv)
 
-# Saving Grid Search Results to pic le file 
+# Saving Grid Search Results to pickle file 
 run = 'RF-Test'
 joblib.dump(gs_results, 
             '../models/{}.pkl'.format(run)
@@ -95,4 +95,5 @@ rmtree(location)
 run = 'RF-Test'
 gs = joblib.load('../models/{}.pkl'.format(run))
 evaluate.gs_output(gs)
+
 
