@@ -160,8 +160,8 @@ def posture(df_dir, df_name = 'df_raw'):
 
 def dogs(df_dir, df_name):
     df_dogs = pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), \
-        usecols = ['Intake', 'Code', 'Name', 'DOB', 'DOA', 'PR Sup', 'Sex', 'Source', 'Breed'],\
-        parse_dates = ['DOB', 'DOA'])
+        usecols = ['Intake', 'Code', 'Name', 'DOB', 'DOA', 'PR Sup', 'Sex', 'Source', 'Breed', 'DC1', 'DC2'],\
+        parse_dates = ['DOB', 'DOA', 'DC1', 'DC2'])
     return(df_dogs)
 
 def features_tsfel(dir_new):

@@ -9,6 +9,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.model_selection import GroupKFold
+from sklearn.model_selection import GridSearchCV
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import SelectFromModel
 
@@ -100,7 +101,7 @@ def df_prep(df, feat, label):
     X = df.loc[:, feat]
     y = df.loc[:, label].values
     groups = df.loc[:,'Dog']
-    cv = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog'])
+    cv = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,['Dog', 'Breed'])
 
     return(X, y, groups, cv)
 
@@ -129,6 +130,32 @@ def GB(feat):
         ('estimator', GradientBoostingClassifier(random_state = 42) )       
     ])
     return({'GB': GB})
+
+
+def DTW(a, b):
+    '''
+    Dynamic Time Warping 
+    Implementation code from
+    https://stackoverflow.com/questions/57015499/how-to-use-dynamic-time-warping-with-knn-in-python
+    TO DO 
+    '''   
+    an = a.size
+    bn = b.size
+    pointwise_distance = distance.cdist(a.reshape(-1,1),b.reshape(-1,1))
+    cumdist = np.matrix(np.ones((an+1,bn+1)) * np.inf)
+    cumdist[0,0] = 0
+
+    for ai in range(an):
+        for bi in range(bn):
+            minimum_cost = np.min([cumdist[ai, bi+1],
+                                   cumdist[ai+1, bi],
+                                   cumdist[ai, bi]])
+            cumdist[ai+1, bi+1] = pointwise_distance[ai,bi] + minimum_cost
+
+    return cumdist[an, bn]
+
+clf = GridSearchCV(KNeighborsClassifier(metric=DTW), parameters, cv=3, verbose=1)
+
 
 def pipes(feat):
     '''

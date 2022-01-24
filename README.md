@@ -20,15 +20,17 @@ The data workflow overview:
 
 The data workflow detailed description is as follows:
 
-Actigraph: data/imu_select.py
-* Step 1: The raw data measured in one data collection day are recorded by three Actigraph IMUs placed on different body parts (back, chest, neck). Path format: Actigraph/YYYY-MM-DD/(Back, Chest, Neck) files. ActiLife software is used to download the data from each of those, resulting in three raw ActiLife files (back, chest, neck).
-* Step 2: ActiLife is used to export those three raw ActiLife files into IMU .csv files. Each of resulting files (back, chest, neck) contain 3-axial Accelerometer, Gyroscope, Magnetometer data for all the dogs tested in a given day. Path format: Actigraph/YYYY-MM-DD/(Back, Chest, Neck).csv files
-* Step 3: Python script in path scr/data/imu_split.py. (1) Imports Data Collection - Summary.csv and takes each dog's behaviour test start and finish datatime data. (2) Imports & selects data from the three raw IMU located at  Actigraph/YYYY-MM-DD/(Back, Chest, Neck).csv files based on the each. (3) Saves selected data in a folder per dog. Path format: Subjects/DogName/X_Actigraph where X is Data Collection Number.
-* Step 4: Python script in path scr/data/raw_create.py. (1) Imports
+* Step 1: The raw data acquired in one data collection day are recorded by three Actigraph IMUs placed on different body parts (back, chest, neck). ActiLife software is used to download the data from each of those, resulting in three raw ActiLife files (back, chest, neck). Path format: *Actigraph/YYYY-MM-DD/(Back, Chest, Neck).gt3x and agd* file formats.
 
-Labels were created for the body postures performed by the subjects and added to a Timestamp file:
+* Step 2: ActiLife Software is used to export those three raw ActiLife files into IMU .csv files. Each of resulting files (back, chest, neck) contain 3-axial Accelerometer, Gyroscope, Magnetometer data for all the dogs tested in a given day. Path format: *Actigraph/YYYY-MM-DD/(Back, Chest, Neck).csv* files.
 
-[WORK IN PROGRESS - Include description of raw_create.py file]
+* Step 3: Python script in path *scr/data/imu_select.py*. (1) Imports Data Collection - Summary.csv and takes each dog's behaviour test start and finish datetime data. (2) Imports & selects data considering the  dog's data collection time from the three raw IMU located at *Actigraph/YYYY-MM-DD/(Back, Chest, Neck).csv* files. (3) Saves selected data in the dog's folder. Path format: *Subjects/DogName/X_Actigraph* where X is Data Collection Number.
+
+* Step 4: Labels were created for the body postures performed by the subjects and added to a Timestamp excel file. There is a macro to save each of the tabs as a csv file in the dog's folder.
+
+* Step 5: Python script in path *scr/data/raw_create.py*. (1) Imports Raw ActiLife data in *Subjects/DogName/X_Actigraph/(Back, Chest, Neck).csv* and Timestamps is *Subjects/DogName/X_Timestamps.csv*. (2) Combines them to create df_raws. (3) Imports Data Collection - Dogs data to for dataset statistics and data exploration.
+
+
 
 # WS: Dog Posture
 This file explains the structure of this folder and outlines the content and source of each file as appropriate.

@@ -31,13 +31,12 @@ def gs_output(gs):
         Printing key metricts from the best estimator selected by GS algorithm
     '''
     best_idx_ = np.argmax(gs.cv_results_['mean_test_score'])
-    print("Best Estimator \nTest mean: {:.6f}\t std: {:.6f}\nTrain mean: {:.6f} \t std:  {:.6f}\nparameters: {}".format(
+    print("Best Estimator \nTest mean: {:.4f}\t std: {:.4f}\nTrain mean: {:.4f} \t std:  {:.4f}\nparameters: {}".format(
         np.max(gs.cv_results_['mean_test_score']), 
         gs.cv_results_['std_test_score'][best_idx_],
         gs.cv_results_['mean_train_score'][best_idx_],  
         gs.cv_results_['std_train_score'][best_idx_],
         gs.best_params_)) #
-    
         
 def gs_dump(gs, gs_name, gs_dir, memory, location):    
     ''' 
@@ -56,15 +55,16 @@ def gs_perf (gs_pipe, gs_params, X, y, groups, cv):
     '''
         WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FUNCTIONS
     '''
-    gs = GridSearchCV(gs_pipe, param_grid = gs_params, scoring = 'f1_weighted', \
-        n_jobs = -1, cv = cv, return_train_score = True)
+    gs = GridSearchCV(gs_pipe, param_grid = gs_params, 
+            scoring = 'f1_weighted', \
+            n_jobs = -1, cv = cv, return_train_score = True)
     gs.fit(X,y, groups = groups)
 
     return(gs_results(gs))
 
 def pipe_perf (df, feat, label, pipes):     
     '''
-        Evaluate pipes and plot 
+        Evaluate pipes and plots
         params:
             df: dataframe containing features and label
             label: list of column name to be used as target
@@ -142,10 +142,35 @@ def pipe_perf (df, feat, label, pipes):
     
     # returns a list with three elements
     return(pd.DataFrame(perf, columns = cols).set_index('Pipeline'), reports, scores)
-    
-def plot_perf (pipes, perf, parameters, title):
+       
+def plot_cv_results (pipes, perf, parameters, title):
     # Plotting the graph for visual performance comparison 
-    width = .9/len(pipes)
+    width = .9
+    index = np.arange(9)
+    colour = ['b', 'r', 'g', 'y', 'm', 'c', 'k']
+    
+    fig, ax = plt.subplots()
+    ax2 = ax.twinx()
+    for i in range (len(parameters)):
+        ax.bar(index[0:6] + width, perf[i][0:6], width, color = colour[i], label = label[i])  
+        ax2.bar(index[6:8] + width, perf[i][6:8], width, color = colour[i], label = label[i])  
+
+    ax.set_xticks(index + width*(len(perf)-1) / 2)
+    ax.set_xticklabels(parameters, rotation=45)
+    ax.legend()
+    ax.set_ylabel('Percentage (%)')
+    ax.set_ylim([0,110])
+    ax2.set_ylabel('Time (s)')
+    plt.title(title)
+    plt.figure(figsize=(10,20))
+    plt.show()
+
+    return (perf)  
+
+
+def plot_perf_old (pipes, perf, parameters, title):
+    # Plotting the graph for visual performance comparison 
+    width = .9 /(len(pipes) - 1) 
     index = np.arange(9)
     colour = ['b', 'r', 'g', 'y', 'm', 'c', 'k']
     

@@ -12,7 +12,8 @@ import tsfel
 
 currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
-sys.path.append(parentdir)
+modulesdir = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', '__modules__'))
+sys.path.append(modulesdir)
 
 %load_ext autoreload
 %autoreload 2
