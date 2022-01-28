@@ -1,11 +1,19 @@
+# ------------------------------------------------------------------------- #
+#                                   Imports                                 #    
+# ------------------------------------------------------------------------- # 
+
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
+
+from sklearn.feature_selection import f_classif
 
 from sklearn.dummy import DummyClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import LinearSVC
 
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.model_selection import GroupKFold
@@ -14,6 +22,11 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import SelectFromModel
 
 import numpy as np
+
+
+# ------------------------------------------------------------------------- #
+#                                   Classes                                 #    
+# ------------------------------------------------------------------------- # 
 
 class DataFrameSelector(BaseEstimator, TransformerMixin):
     def __init__(self, attribute_names, dtype=None):
@@ -85,6 +98,12 @@ from shutil import rmtree
 location = 'cachedir'
 memory = joblib.Memory(location=location, verbose=10)
 
+
+# ------------------------------------------------------------------------- #
+#                                  Functions                                #    
+# ------------------------------------------------------------------------- # 
+
+
 def df_prep(df, feat, label):
     ''' Extracts X by selecting feat columns in df and y from label columns in df
         
@@ -101,28 +120,72 @@ def df_prep(df, feat, label):
     X = df.loc[:, feat]
     y = df.loc[:, label].values
     groups = df.loc[:,'Dog']
-    cv = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,['Dog', 'Breed'])
+    cv = GroupKFold(n_splits = 10).split(X, y, groups = df.loc[:,'Dog'])
 
     return(X, y, groups, cv)
 
-def RF(feat):
-    RF = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('estimator', RandomForestClassifier() )       
-    ]) 
-    return(RF)
 
-def RF_PCA(feat, memory):
-    '''
-        WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FILES
-    '''
-    p = Pipeline([
+
+# ------------------------------------------------------------------------- #
+#                                  Pipelines                                #    
+# ------------------------------------------------------------------------- # 
+
+'''
+    WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FILES
+'''
+
+def RF(feat):
+    pipe = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('estimator', RandomForestClassifier(random_state = 42) )       
+    ]) 
+    return(pipe)
+
+def SKB_RF(feat):
+    pipe = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('selection', SelectKBest(score_func= f_classif())),
+        ('estimator', RandomForestClassifier(random_state = 42) )       
+    ]) 
+    return(pipe)
+
+def SFM_SVC_RF(feat):
+    pipe = Pipeline([
         ('selector', DataFrameSelector(feat,'float64')),
         ('scaler', StandardScaler()),
-        ('reduce_dim', PCA()),
-        ('estimator', RandomForestClassifier(random_state = 42))       
+        ('selection', SelectFromModel(LinearSVC())),
+        ('estimator', RandomForestClassifier(random_state = 42) )       
+    ]) 
+    return(pipe)
+
+def SFM_ET_RF(feat):
+    pipe = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('scaler', StandardScaler()),
+        ('selection', SelectFromModel(())),
+        ('estimator', RandomForestClassifier(random_state = 42) )       
+    ]) 
+    return(pipe)
+
+def KNN(feat):
+    pipe = Pipeline([
+        ('selector', DataFrameSelector(feat,'float64')),
+        ('scaler', StandardScaler()),
+        ('estimator', KNeighborsClassifier(n_jobs=-1))
+    ])
+    return(pipe)
+
+def KNN_Selection(feat, memory):
+    pipe = Pipeline([
+        ('features', DataFrameSelector(feat,'float64')),
+        ('selection', [SelectFromModel(RandomForestClassifier(random_state = 42)),
+                        SelectKBest(score_func=f_classif),
+        ]),
+        ('scaler', StandardScaler()),
+        ('estimator', KNeighborsClassifier(n_jobs=-1))       
     ], memory = memory ) 
-    return(p)
+    return(pipe)
+
 
 def GB(feat):
     GB = Pipeline([
@@ -154,7 +217,7 @@ def DTW(a, b):
 
     return cumdist[an, bn]
 
-clf = GridSearchCV(KNeighborsClassifier(metric=DTW), parameters, cv=3, verbose=1)
+#clf = GridSearchCV(KNeighborsClassifier(metric=DTW), parameters, cv=3, verbose=1)
 
 
 def pipes(feat):

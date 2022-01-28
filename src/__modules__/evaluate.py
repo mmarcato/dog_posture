@@ -1,10 +1,14 @@
 """
 
 """
+# ------------------------------------------------------------------------- #
+#                                  Imports                                  #    
+# ------------------------------------------------------------------------- # 
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import time
 
 from sklearn.decomposition import PCA
 
@@ -18,6 +22,10 @@ from sklearn.model_selection import GridSearchCV
 import joblib
 from shutil import rmtree
 
+# ------------------------------------------------------------------------- #
+#                                   Classes                                 #    
+# ------------------------------------------------------------------------- # 
+
 class gs_results:
     # Storing Grid Search results
     def __init__(self, gs):
@@ -26,6 +34,10 @@ class gs_results:
         self.best_params_ = gs.best_params_
         self.best_score_ = gs.best_score_
 
+
+# ------------------------------------------------------------------------- #
+#                                  Functions                                #    
+# ------------------------------------------------------------------------- # 
 def gs_output(gs):
     '''
         Printing key metricts from the best estimator selected by GS algorithm
@@ -51,14 +63,50 @@ def gs_load(gs_name, gs_dir ):
     gs_output(gs)
     return(gs)
 
-def gs_perf (gs_pipe, gs_params, X, y, groups, cv):
+def gs_perf (gs_pipe, gs_params, X, y, groups, cv):# dir_model, run):
     '''
         WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FUNCTIONS
     '''
+    # location = 'cachedir'
+    # memory = joblib.Memory(location=location , verbose=10)
+
+
+    start_time = time.time()
     gs = GridSearchCV(gs_pipe, param_grid = gs_params, 
             scoring = 'f1_weighted', \
             n_jobs = -1, cv = cv, return_train_score = True)
     gs.fit(X,y, groups = groups)
+    end_time = time.time()
+    duration = end_time - start_time
+    print("--- %s seconds ---" % (duration))
+        
+    # joblib.dump(gs, '{}/{}.pkl'.format(dir_model, run), compress = 1 )
+    # memory.clear(warn=False)
+    # rmtree(location)
+
+    return(gs_results(gs))
+
+def gs_perf_nosave (gs_pipe, gs_params, X, y, groups, cv):
+    '''
+        WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FUNCTIONS
+    '''
+
+
+    start_time = time.time()
+    gs = GridSearchCV(gs_pipe, param_grid = gs_params, 
+            scoring = 'f1_weighted', \
+            n_jobs = -1, cv = cv, return_train_score = True)
+    gs.fit(X,y, groups = groups)
+    end_time = time.time()
+    duration = end_time - start_time
+    print("--- %s seconds ---" % (duration))
+        
+    # location = 'cachedir'
+    # memory = joblib.Memory(location=location , verbose=10)
+    
+    # joblib.dump(gs, '{}/{}.pkl'.format(dir_model, run), compress = 1 )
+    # memory.clear(warn=False)
+    # rmtree(location)
 
     return(gs_results(gs))
 
@@ -166,7 +214,6 @@ def plot_cv_results (pipes, perf, parameters, title):
     plt.show()
 
     return (perf)  
-
 
 def plot_perf_old (pipes, perf, parameters, title):
     # Plotting the graph for visual performance comparison 

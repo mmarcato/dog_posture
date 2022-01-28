@@ -1,3 +1,7 @@
+# ------------------------------------------------------------------------- #
+#                                   Imports                                 #    
+# ------------------------------------------------------------------------- # 
+
 import pandas as pd
 import numpy as np
 from datetime import timedelta
@@ -7,6 +11,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from setup import log
+
+
+# ------------------------------------------------------------------------- #
+#                                  Functions                                #    
+# ------------------------------------------------------------------------- # 
 
 def transitions(df): 
     """
@@ -85,19 +94,24 @@ def features_simple(df_raw, df_dir, df_name, w_size, w_offset, t_time):
                     # creating columns for information and labels
                     .assign(Dog = df.loc[s_time,'Dog'], 
                             DC = df.loc[s_time,'DC'], 
+                            Breed = df.loc[s_time,'Breed'], 
                             Type = df.loc[s_time,'Type'], 
                             Position = df.loc[s_time, 'Position']))
 
     # flatten the multiindex column to a simple columns
-    df_new.columns =  [".".join(v) for v in df_new.columns[:-4]] + \
-                        ['Dog', 'DC', 'Type', 'Position'] # adding the last 4 columns
+    df_new.columns =  [".".join(v) for v in df_new.columns[:-5]] + \
+                        ['Dog', 'DC', 'Breed', 'Type', 'Position'] # adding the last 5 columns
 
     print('Save df to csv')
     df_new.to_csv('%s\\%s.csv' % (df_dir, df_name))
 
     df_logger = log(df_name, log_file = '%s\\%s.log' % (df_dir, df_name))
-    df_logger.info('\n\t Dataset created with simple_feature parameters: \n\ndf_name: {}, w_size: {}, w_offset: {}us, t_time: {}us'.format(df_name, w_size, w_offset, t_time))
-    df_logger.info('\n\t Number of Examples in raw dataframe \n{} \n\n{}\n'.format(df_new['Position'].value_counts(), df_new['Type'].value_counts()))
+    df_logger.info('\n\t Dataset created with simple_feature parameters: \
+                \n\ndf_name: {}, w_size: {}, w_offset: {}us, t_time: {}us'.format(df_name, w_size, w_offset, t_time))
+                
+    df_logger.info('\n\t Number of Examples in raw dataframe \n{} \n\n{}\n'.format(
+                df_new['Position'].value_counts(), df_new['Type'].value_counts()))
+
     df_logger.info('\n\t Including data from  \n{}\n\n'.format( df_new.groupby(['Dog', 'DC']).size() ))
     logger.info('{}: Dataset created. See log for parameter details'.format(df_name))
 
@@ -232,34 +246,13 @@ def gravity_body_components(X):
         col_ba = X.name + '.BA'
         return pd.Series({col_ga: G, col_ba: B})
 
-def distribution (df, df_desc):
-
-    print(df_desc)
-    # checking the number dogs included
-    print('\n\nNumber of Dogs: {}'.format(df['Dog'].unique().size))
-    # checking the number DCs included
-    print('Number of DCs: {}\n'.format(df.groupby(['Dog' ,'DC']).size().count()))
-    df_dogs = df['Dog'].value_counts().reset_index(name= 'count')
-    df_dogs['percentage'] = df_dogs['count']*100 /df_dogs['count'].sum()
-    print(df_dogs)
-    # calculating the number of examples per category
-    df_sum = df['Position'].value_counts().reset_index(name= 'count')
-    # calculating the percentage of examples per category
-    df_sum['percentage'] = df_sum['count']*100 /df_sum['count'].sum()
-    print(df_sum)
-
-    print('Distribution of Positions per dog')
-    plt.figure(figsize=(10,5))
-    chart = sns.countplot(x="Position", hue="Dog", data = df, order = df['Position'].value_counts().index)
-    chart.set_title('Distribution of Positions per dog')
-    chart.set_xticklabels(chart.get_xticklabels(), rotation=45, horizontalalignment='right')
-    return(df.groupby(['Position', 'Dog']).size().reset_index(name='count'))
-
 def split (df, prop):
     '''
-        split the dataset into two sets
-        selects different dogs for each set
-        dogs with most diverse position set are placed in the second set
+        I was using this function to split datasets before starting taking into account the breed balance
+        This function splits the dataset into two sets, selecting different dogs for each set
+        The criteria ranks dogs according to the (1) number of different positions performed
+        and (2) number of total observations. 
+        Dogs with more variety in positions are placed in the second set (generally test set)
     
     '''
     df_counts = df.groupby(['Dog','Position']).size().reset_index(name = 'Counts')
@@ -268,6 +261,12 @@ def split (df, prop):
         .reset_index()
     df_summary.sort_values(['Position', 'Counts'], ascending = False, ignore_index = True, inplace = True)
     df_summary['Cum_Percentage'] = df_summary['Counts'].cumsum()/df_summary['Counts'].sum()
+
+    # adding a column Breed by mapping dog's name to dictionary
+    df_summary['Breed'] = df_summary['Dog'].map(dict(zip(df.Dog, df.Breed)))
+    # proportion of dogs per breed in the original dataframe
+    breed_prop = df_summary.groupby('Breed')['Breed'].count()/df_summary.shape[0]
+    
     idx = np.argmin(abs(df_summary['Cum_Percentage'] - prop))
     dogs_chunk = df_summary.Dog[0:idx+1].to_list()
     #print(dogs_chunk)
@@ -277,10 +276,6 @@ def split (df, prop):
 
     return(df1, df2)
 
-def stats(dfs):
-  sizes = list(map(len, dfs))
-  print(sizes)
-  print([size/sum(sizes) for size in sizes])
 
 def balance (df, label):
     '''

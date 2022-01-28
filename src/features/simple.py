@@ -23,7 +23,7 @@ parameters: window size, window offset and transition time
 '''
 dir_raw = 'C:\\Users\\marinara.marcato\\Project\\Scripts\\dog_posture\\data\\raw'
 
-dir_new = 'C:\\Users\\marinara.marcato\\Project\\Scripts\\dog_posture\\data\\processed'
+dir_new = 'C:\\Users\\marinara.marcato\\Project\\Scripts\\dog_posture\\data\\simple'
 df_name = 'df5_11'
 w_size = 100
 w_offset = timedelta(seconds = .25)
