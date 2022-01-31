@@ -22,6 +22,7 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import SelectFromModel
 
 import numpy as np
+from scipy.spatial import distance  
 
 
 # ------------------------------------------------------------------------- #
@@ -125,76 +126,6 @@ def df_prep(df, feat, label):
     return(X, y, groups, cv)
 
 
-
-# ------------------------------------------------------------------------- #
-#                                  Pipelines                                #    
-# ------------------------------------------------------------------------- # 
-
-'''
-    WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FILES
-'''
-
-def RF(feat):
-    pipe = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('estimator', RandomForestClassifier(random_state = 42) )       
-    ]) 
-    return(pipe)
-
-def SKB_RF(feat):
-    pipe = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('selection', SelectKBest(score_func= f_classif())),
-        ('estimator', RandomForestClassifier(random_state = 42) )       
-    ]) 
-    return(pipe)
-
-def SFM_SVC_RF(feat):
-    pipe = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('scaler', StandardScaler()),
-        ('selection', SelectFromModel(LinearSVC())),
-        ('estimator', RandomForestClassifier(random_state = 42) )       
-    ]) 
-    return(pipe)
-
-def SFM_ET_RF(feat):
-    pipe = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('scaler', StandardScaler()),
-        ('selection', SelectFromModel(())),
-        ('estimator', RandomForestClassifier(random_state = 42) )       
-    ]) 
-    return(pipe)
-
-def KNN(feat):
-    pipe = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('scaler', StandardScaler()),
-        ('estimator', KNeighborsClassifier(n_jobs=-1))
-    ])
-    return(pipe)
-
-def KNN_Selection(feat, memory):
-    pipe = Pipeline([
-        ('features', DataFrameSelector(feat,'float64')),
-        ('selection', [SelectFromModel(RandomForestClassifier(random_state = 42)),
-                        SelectKBest(score_func=f_classif),
-        ]),
-        ('scaler', StandardScaler()),
-        ('estimator', KNeighborsClassifier(n_jobs=-1))       
-    ], memory = memory ) 
-    return(pipe)
-
-
-def GB(feat):
-    GB = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('estimator', GradientBoostingClassifier(random_state = 42) )       
-    ])
-    return({'GB': GB})
-
-
 def DTW(a, b):
     '''
     Dynamic Time Warping 
@@ -217,27 +148,79 @@ def DTW(a, b):
 
     return cumdist[an, bn]
 
+# ------------------------------------------------------------------------- #
+#                Defining Techniques and Hyperparameters                    #
+# ------------------------------------------------------------------------- # 
+
+selector = {
+        'passthrough' : 'passthrough',
+        'SKB' : SelectKBest(score_func= f_classif),
+        'SVM': SelectFromModel(LinearSVC()), 
+        'RF' : SelectFromModel(RandomForestClassifier(random_state = 42))
+}
+
+selector_hyper = {
+
+        'SKB' : {
+                    'slt__k': [10, 15, 20, 30, 50, 80]},
+
+        'SVM' : {
+                    'slt__penalty': ['l1', 'l2'],
+                    'slt__C' : [0.01, 1, 100, 1000, 10000]},
+}
+
+classifier = {
+        # 'LogisticRegression'     : LogisticRegression(),
+        'RF' : RandomForestClassifier(),
+        'KNN' : KNeighborsClassifier(),
+        'GBT' : GradientBoostingClassifier(),
+        'KNN_DTW' : KNeighborsClassifier(metric=DTW)
+}
+
+classifier_hyper = {
+        
+        # 'LogisticRegression':{
+        #                             'penalty'     : ['l2'],
+        #                             'C'           : np.logspace(0, 4, 10),
+        #                             'solver'      : ['lbfgs', 'liblinear', 'saga'],
+        #                             'class_weight': ['balanced'],
+        #                             'random_state': [0]},
+        
+        # 'SVM':{
+        #                             'clf__C'           : [0.01, 0.1, 1, 10, 100, 1000],
+        #                             'clf__gamma'       : [1, 0.1, 0.01, 0.001, 0.0001],
+        #                             'clf__kernel'      : ['rbf', 'linear'],
+        #                             'clf__class_weight': ['balanced'],
+        #                             'clf__random_state': [0]},
+        
+        'RF':{
+                'clf__max_features': [None],
+                'clf__max_depth': [3, 5, 7, 10],
+                'clf__n_estimators': [25, 50, 100, 250, 500],
+                'clf__class_weight': ['balanced'],
+                'clf__random_state': [0]},
+       
+        'KNN':{
+                'clf__n_neighbors': [5, 10, 15, 20],
+                'clf__weights': ['uniform', 'distance']}                        
+}
+
+
+# ------------------------------------------------------------------------- #
+#                                Pipeline                                   #
+# ------------------------------------------------------------------------- #
+
+def pipe(feat, slt, clf):
+
+    params = { **selector_hyper[slt], **classifier_hyper[clf]}
+
+    pipe = Pipeline([ 
+        ('ft', DataFrameSelector(feat,'float64')),
+        ('scl', StandardScaler()), 
+        ('slt', selector[slt]),
+        ('clf', classifier[clf])], memory = memory)
+
+    return(pipe, params)
+
+
 #clf = GridSearchCV(KNeighborsClassifier(metric=DTW), parameters, cv=3, verbose=1)
-
-
-def pipes(feat):
-    '''
-        Simple Pipelines including feature selection, scaling and estimator (LR, RF or SV)    
-    params:
-        feat: list with name of columns to be used as features
-    '''
-    RF = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('scaler', 'passthrough'),
-        ('reduce_dim', 'passthrough'),
-        ('estimator', RandomForestClassifier() )       
-    ]) 
-    GB = Pipeline([
-        ('selector', DataFrameSelector(feat,'float64')),
-        ('scaler', 'passthrough'),
-        ('reduce_dim', 'passthrough'),
-        ('estimator', GradientBoostingClassifier())
-    ])
-    return ({'RF': RF, 'GB' : GB})
-
-

@@ -161,12 +161,31 @@ def label(df_info, df_pos, df_imu):
     return(df)
  
 def posture(df_dir, df_name = 'df_raw'):
-    return(pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), 
+    
+    df = pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), 
                 index_col = ['Timestamp'], 
                 parse_dates = ['Timestamp'],
                 dayfirst = True,
-                date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f'))
-                )
+                date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f')    )
+
+    # define all features 
+    feat_all = df.columns[:-5]
+    # define all features - magnetometer     
+    feat_mag = [x for x in feat_all if "Mag" not in x]
+
+    # split dataset taking dog and breed into account
+
+    # separating golden retriever 'Tosh'
+    df_gr = df.loc[df['Breed'] == 'GR']
+
+    # test set with 20% of observations, 60% LRxGR (Douglas, Elf, Goober) 40% LR (Meg, July)
+    df_test = df[df.Dog.isin(['Douglas', 'Elf', 'Goober', 'Meg', 'July'])]
+    # dogs for dev set for 80% observation, 60% LRxGR (Douglas, Elf, Goober) 40% LR (Meg, July) 
+    df_dev = df[~df.Dog.isin(['Tosh', 'Douglas', 'Elf', 'Goober', 'Meg', 'July'])]
+
+
+    return(df, df_dev, df_test, feat_all, feat_mag)
+
 
 def dogs(df_dir, df_name):
     df_dogs = pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), \

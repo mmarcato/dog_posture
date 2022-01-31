@@ -245,8 +245,9 @@ def gravity_body_components(X):
         col_ga = X.name + '.GA'
         col_ba = X.name + '.BA'
         return pd.Series({col_ga: G, col_ba: B})
-
-def split (df, prop):
+    
+# Unused / Under development
+def split_old (df, prop):
     '''
         I was using this function to split datasets before starting taking into account the breed balance
         This function splits the dataset into two sets, selecting different dogs for each set
@@ -275,7 +276,6 @@ def split (df, prop):
     df2 = df[df.Dog.isin(dogs_chunk)]
 
     return(df1, df2)
-
 
 def balance (df, label):
     '''
