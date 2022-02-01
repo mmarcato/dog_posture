@@ -10,6 +10,8 @@
 # general libraries
 import os
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns 
 
 # Caching Libraries
 import joblib
@@ -40,7 +42,7 @@ dir_df = (dir_base + '\\data\\simple')
 dir_model = (dir_base + '\\models')
 
 # ------------------------------------------------------------------------- #
-#                           Importing Datasets                              #    
+#                  Importing Datasets - Label 'Positions'                   #    
 # ------------------------------------------------------------------------- #
 # importing previously created dataset
 df_feat, df_dev, df_test, feat_all, feat_mag = imports.posture(dir_df, 'df5_11')  
@@ -48,6 +50,10 @@ df_feat, df_dev, df_test, feat_all, feat_mag = imports.posture(dir_df, 'df5_11')
 # select the dataframe and feature set for grid search
 feat = feat_mag
 df = df_dev
+
+# prepare dataframe for evaluation: select features, label,
+#   cv strategy (group = dogs, stractified folds labels proportion)
+X, y, groups, cv = learn.df_prep(df, feat, label = 'Position')
 
 # ------------------------------------------------------------------------- #
 #                      Exploratory Data Analysis                            #    
@@ -59,27 +65,60 @@ analyse.breed(df_test)
 analyse.breed(df_dev)
 
 # ------------------------------------------------------------------------- #
-#                Machine Learning - Label 'Positions'                       #    
+#                     Machine Learning - Random Forests                     #
 # ------------------------------------------------------------------------- # 
 
-# prepare dataframe for evaluation: select features, label,
-#   cv strategy (group = dogs, stractified folds labels proportion)
-X, y, groups, cv = learn.df_prep(df, feat, label = 'Position')
-
 # build pipeline and parameters
-pipe, params = learn.pipe('SKB', 'RF')
+pipe, params = learn.pipe(feat, 'SKB', 'RF')
 
 # evaluate grid search performance and save to pickle file
-gs = evaluate.gs_perf(pipe, params, X, y, groups, cv)
+gs_rf = evaluate.gs_perf(pipe, params, X, y, groups, cv)
 
 # saving the output of the grid search 
 run = 'GS-SKB-RF'
-joblib.dump(gs, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
+joblib.dump(gs_rf, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
 memory.clear(warn=False)
-rmtree(location)
-  
+rmtree(location)  
 
-evaluate.gs_output(gs)
+evaluate.gs_output(gs_rf)
+
+
+# ------------------------------------------------------------------------- #
+#                           Machine Learning - KNN                          #
+# ------------------------------------------------------------------------- # 
+
+# build pipeline and parameters
+pipe, params = learn.pipe(feat, 'SKB', 'KNN')
+
+# evaluate grid search performance and save to pickle file
+gs_knn = evaluate.gs_perf(pipe, params, X, y, groups, cv)
+
+# saving the output of the grid search 
+run = 'GS-SKB-KNN'
+joblib.dump(gs_rf, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
+memory.clear(warn=False)
+rmtree(location)  
+
+evaluate.gs_output(gs_knn)
+
+
+# ------------------------------------------------------------------------- #
+#              Machine Learning - Label 'Positions', 'RF'                   #
+# ------------------------------------------------------------------------- # 
+
+# build pipeline and parameters
+pipe, params = learn.pipe(feat, 'SKB', 'RF')
+
+# evaluate grid search performance and save to pickle file
+gs_rf = evaluate.gs_perf(pipe, params, X, y, groups, cv)
+
+# saving the output of the grid search 
+run = 'GS-SKB-RF'
+joblib.dump(gs_rf, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
+memory.clear(warn=False)
+rmtree(location)  
+
+evaluate.gs_output(gs_rf)
 
 
 # ------------------------------------------------------------------------- #
@@ -90,8 +129,6 @@ evaluate.gs_output(gs)
 run = 'RF-Test3'
 gs = joblib.load('{}/{}.pkl'.format(dir_model, run))
 evaluate.gs_output(gs)
-
-gs.cv_results_
 
 # Calculate mean test score value while maintaining one parameter constant at a time
 df_cv = pd.DataFrame(gs.cv_results_)
@@ -113,14 +150,19 @@ for depth in df_cv['param_estimator__max_depth'].unique():
 
 
 # Evaluate Random Forest feature importance
-df_ft = pd.DataFrame({'Feature': gs.best_estimator_['selector'].attribute_names, 
-        'Importance' : gs.best_estimator_['estimator'].feature_importances_})
+df_ft = pd.DataFrame({'Feature': gs_rf.best_estimator_['selector'].attribute_names, 
+        'Importance' : gs_rf.best_estimator_['slt'].scores_})
 df_ft.sort_values(by = 'Importance', ascending = False, inplace = True, ignore_index = True)
 
 # Plotting feature importance
-# plt.plot(df_ft.loc[:14,'Feature'],df_ft.loc[:14, 'Importance'])
-# plt.xticks(rotation = 45)
-
+slt_ft = gs_rf.best_params_['slt__k']
+plt.figure(figsize= (20, 8))
+plt.bar(df_ft.loc[:slt_ft,'Feature'],df_ft.loc[:slt_ft, 'Importance'])
+plt.xticks(rotation = 45)
+plt.title('Best {} Features and their importances using SKB'.format(slt_ft))
+plt.xlabel('Features')
+plt.ylabel('Importance')
+plt.savefig('{}/results/SKB-BestEstimator_BestFeatures'.format(dir_base))
 # important features from the best 
 rf_ft = list(df_ft.loc[:14, 'Feature'])
 
