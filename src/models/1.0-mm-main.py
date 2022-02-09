@@ -8,7 +8,7 @@
 #                                  Imports                                  #    
 # ------------------------------------------------------------------------- # 
 # general libraries
-import os
+import os, sys
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns 
@@ -95,7 +95,7 @@ gs_knn = evaluate.gs_perf(pipe, params, X, y, groups, cv)
 
 # saving the output of the grid search 
 run = 'GS-SKB-KNN'
-joblib.dump(gs_rf, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
+joblib.dump(gs_knn, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
 memory.clear(warn=False)
 rmtree(location)  
 
@@ -103,22 +103,22 @@ evaluate.gs_output(gs_knn)
 
 
 # ------------------------------------------------------------------------- #
-#              Machine Learning - Label 'Positions', 'RF'                   #
+#                      Machine Learning - SFM, RF                           #
 # ------------------------------------------------------------------------- # 
 
 # build pipeline and parameters
-pipe, params = learn.pipe(feat, 'SKB', 'RF')
+pipe, params = learn.pipe(feat, 'SVC', 'RF')
 
 # evaluate grid search performance and save to pickle file
-gs_rf = evaluate.gs_perf(pipe, params, X, y, groups, cv)
+gs = evaluate.gs_perf(pipe, params, X, y, groups, cv)
 
 # saving the output of the grid search 
-run = 'GS-SKB-RF'
-joblib.dump(gs_rf, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
+run = 'GS-SVC-RF'
+joblib.dump(gs, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
 memory.clear(warn=False)
 rmtree(location)  
 
-evaluate.gs_output(gs_rf)
+evaluate.gs_output(gs)
 
 
 # ------------------------------------------------------------------------- #

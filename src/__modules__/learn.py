@@ -155,7 +155,7 @@ def DTW(a, b):
 selector = {
         'passthrough' : 'passthrough',
         'SKB' : SelectKBest(score_func= f_classif),
-        'SVM': SelectFromModel(LinearSVC()), 
+        'SVC': SelectFromModel(LinearSVC()), 
         'RF' : SelectFromModel(RandomForestClassifier(random_state = 42))
 }
 
@@ -164,9 +164,9 @@ selector_hyper = {
         'SKB' : {
                     'slt__k': [10, 15, 20, 30, 50, 80]},
 
-        'SVM' : {
-                    'slt__penalty': ['l1', 'l2'],
-                    'slt__C' : [0.01, 1, 100, 1000, 10000]},
+        'SVC' : {
+                    'slt__estimator__penalty': ['l1', 'l2'],
+                    'slt__estimator__C' : [0.01, 1, 100, 1000, 10000]},
 }
 
 classifier = {
@@ -192,12 +192,17 @@ classifier_hyper = {
         #                             'clf__kernel'      : ['rbf', 'linear'],
         #                             'clf__class_weight': ['balanced'],
         #                             'clf__random_state': [0]},
-        
-        'RF':{
+        'GBT':{
                 'clf__max_features': [None],
+                'clf__random_state': [0],
+                'clt__learning_rate': ,
+                'clt__n_estimators': ,
+        },
+        'RF':{
                 'clf__max_depth': [3, 5, 7, 10],
                 'clf__n_estimators': [25, 50, 100, 250, 500],
                 'clf__class_weight': ['balanced'],
+                'clf__max_features': [None],
                 'clf__random_state': [0]},
        
         'KNN':{
@@ -221,6 +226,3 @@ def pipe(feat, slt, clf):
         ('clf', classifier[clf])], memory = memory)
 
     return(pipe, params)
-
-
-#clf = GridSearchCV(KNeighborsClassifier(metric=DTW), parameters, cv=3, verbose=1)
