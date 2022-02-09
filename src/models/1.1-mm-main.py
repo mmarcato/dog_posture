@@ -48,15 +48,32 @@ dir_model = (dir_base + '\\models')
 # ------------------------------------------------------------------------- #
 
 # importing previously created dataset
-df_feat = imports.posture(dir_df, 'df5_11')  
-np.random.seed(42)
-df_feat.insert(216, 'Random', np.random.rand(df_feat.shape[0]))
+df_feat, df_dev, df_test, feat_all, feat_mag = imports.posture(dir_df, 'df5_11')  
+
+# select the dataframe and feature set for grid search
+feat = feat_mag
+df = df_dev
 
 
 # ------------------------------------------------------------------------- #
-#                           Feature Selection                               #
-# ------------------------------------------------------------------------- #
+#                Machine Learning - Label 'Positions'                       #    
+# ------------------------------------------------------------------------- # 
 
+# prepare dataframe for evaluation: select features, label,
+#   cv strategy (group = dogs, stractified folds labels proportion)
 X, y, groups, cv = learn.df_prep(df, feat, label = 'Position')
 
-pipe = learn.RF(feat)
+# build pipeline and parameters
+pipe, params = learn.pipe(feat, 'SFM', 'RF')
+
+# evaluate grid search performance and save to pickle file
+gs = evaluate.gs_perf(pipe, params, X, y, groups, cv)
+
+# saving the output of the grid search 
+run = 'GS-SKB-RF'
+joblib.dump(gs, '{}/Paper/{}.pkl'.format(dir_model, run), compress = 1 )
+memory.clear(warn=False)
+rmtree(location)
+  
+
+evaluate.gs_output(gs)
