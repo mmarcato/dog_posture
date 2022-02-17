@@ -135,10 +135,10 @@ def features_tsfel(df_raw, df_dir, df_dogs, w_size, w_overlap, t_time):
     print('**Started processing TSFEL features**\n \
         w_size {}, w_overlap {}, t_time {}'.format(w_size, w_overlap, t_time))
             
-    # Finding transitions in posture
+    # Finding transitions in posture, adds 3 more columns to original dataframe
     df_raw = transitions(df_raw)
     # Selecting sensor columns
-    cols = df_raw.columns[:-7]
+    cols = df_raw.columns[:-8]
     # dropping Magnetometer Features
     cols = cols[~cols.str.contains('Mag')]
     
@@ -146,6 +146,7 @@ def features_tsfel(df_raw, df_dir, df_dogs, w_size, w_overlap, t_time):
     cfg = tsfel.get_features_by_domain()
 
     for (dog, dc) in zip(df_dogs['Dog'], df_dogs['DC']):
+        print(dog, dc)
         df_name = 'df-{}-{}'.format(dog, dc)
 
         print('\ndf_name: {}\n\n'.format(df_name))
@@ -162,35 +163,36 @@ def features_tsfel(df_raw, df_dir, df_dogs, w_size, w_overlap, t_time):
         # Iterating over the postures, taking the steady periods between transitions
         for (s_time, f_time) in zip(s_times, f_times):
 
-                if(df.loc[s_time:f_time].shape[0] >= w_size):
+            if(df.loc[s_time:f_time].shape[0] >= w_size):
 
-                        print('{}\t Start: {}\t Finish: {}'
-                                .format(df.loc[s_time, 'Position'], s_time, f_time))
+                print('{}\t Start: {}\t Finish: {}'
+                    .format(df.loc[s_time, 'Position'], s_time, f_time))
 
-                ############# FEATURE EXTRACTION USING TSFEL
-                        df_feat = df_feat.append(
-                                        tsfel.time_series_features_extractor(
-                                        # configuration file with features to be extracted 
-                                        dict_features = cfg,                            
-                                        # dataframe window to calculate features window on 
-                                        signal_windows = df.loc[s_time:f_time, cols ],   
-                                        # name of header columns
-                                        header_names = cols,
-                                        # sampling frequency of original signal
-                                        fs = 100,
-                                        # sliding window size
-                                        window_size = w_size, 
-                                        # overlap between subsequent sliding windows
-                                        overlap = w_overlap,
-                                        # do not create a progress bar
-                                        verbose = 0,
-                                        )
-                                        .assign(
-                                        Timestamp = s_time,
-                                        Dog = df.loc[s_time,'Dog'], 
-                                        DC = df.loc[s_time,'DC'], 
-                                        Type = df.loc[s_time,'Type'], 
-                                        Position = df.loc[s_time, 'Position']))
+                
+        ############# FEATURE EXTRACTION USING TSFEL
+                df_feat = df_feat.append(
+                                tsfel.time_series_features_extractor(
+                                # configuration file with features to be extracted 
+                                dict_features = cfg,                            
+                                # dataframe window to calculate features window on 
+                                signal_windows = df.loc[s_time:f_time, cols],   
+                                # name of header columns
+                                header_names = cols,
+                                # sampling frequency of original signal
+                                fs = 100,
+                                # sliding window size
+                                window_size = w_size, 
+                                # overlap between subsequent sliding windows
+                                overlap = w_overlap,
+                                # do not create a progress bar
+                                verbose = 0)
+                                .assign(
+                                Timestamp = s_time, 
+                                Breed = df.loc[s_time, 'Breed'],
+                                Dog = df.loc[s_time,'Dog'], 
+                                DC = df.loc[s_time,'DC'], 
+                                Type = df.loc[s_time,'Type'], 
+                                Position = df.loc[s_time, 'Position']))
 
         print('Save {}.csv'.format(df_name))
         df_feat.drop(0)
@@ -200,52 +202,52 @@ def features_tsfel(df_raw, df_dir, df_dogs, w_size, w_overlap, t_time):
     print('**Finished saving TSFEL features**')
 
 def gravity_body_components(X):
-        """
-        Separate acceleration gravity/body components column-wise.
+    """
+    Separate acceleration gravity/body components column-wise.
 
-        Uses an elliptic IIR low-pass filter according to Karantonis et
-        al. (2006).
+    Uses an elliptic IIR low-pass filter according to Karantonis et
+    al. (2006).
 
-        Parameters
-        ----------
-        X : (np.array [n,p])
-                matrix with the data
-        freq : (float)
-                Sampling frequency in Hertz.
+    Parameters
+    ----------
+    X : (np.array [n,p])
+            matrix with the data
+    freq : (float)
+            Sampling frequency in Hertz.
 
-        Returns
-        ----------
-        G (np.array [n,p]), B (np.array [n,p])
-        gravity and body acceleration, respectively.
+    Returns
+    ----------
+    G (np.array [n,p]), B (np.array [n,p])
+    gravity and body acceleration, respectively.
 
-        """
-        print('X:',X)
-        freq = 100
-        cutoff_hz = 0.25
-        nyq = 0.5 * freq
-        norm_cutoff = cutoff_hz / nyq
-        # Elliptic (Cauer) digital/analog filter, return filter coefficients
-        b, a = signal.ellip(
-                # order of the filter
-                N = 3, 
-                # normalised cutoff frequency
-                Wn=norm_cutoff, 
-                # ripple in the passband in dB
-                rp=0.01,
-                # attenuation stop band in dB 
-                rs=100, 
-                # type of filter lowpass
-                btype='lowpass')
-        def f(x):
-                return signal.lfilter(b, a, x)
-        G = np.apply_along_axis(func1d=f, axis=0, arr=X)
-        print('G:', G)
-        B = X.values - G
-        print('B:',B)
-        col_ga = X.name + '.GA'
-        col_ba = X.name + '.BA'
-        return pd.Series({col_ga: G, col_ba: B})
-    
+    """
+    print('X:',X)
+    freq = 100
+    cutoff_hz = 0.25
+    nyq = 0.5 * freq
+    norm_cutoff = cutoff_hz / nyq
+    # Elliptic (Cauer) digital/analog filter, return filter coefficients
+    b, a = signal.ellip(
+        # order of the filter
+        N = 3, 
+        # normalised cutoff frequency
+        Wn=norm_cutoff, 
+        # ripple in the passband in dB
+        rp=0.01,
+        # attenuation stop band in dB 
+        rs=100, 
+        # type of filter lowpass
+        btype='lowpass')
+    def f(x):
+            return signal.lfilter(b, a, x)
+    G = np.apply_along_axis(func1d=f, axis=0, arr=X)
+    print('G:', G)
+    B = X.values - G
+    print('B:',B)
+    col_ga = X.name + '.GA'
+    col_ba = X.name + '.BA'
+    return pd.Series({col_ga: G, col_ba: B})
+
 # Unused / Under development
 def split_old (df, prop):
     '''

@@ -5,7 +5,6 @@
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-
 from sklearn.feature_selection import f_classif
 
 from sklearn.dummy import DummyClassifier
@@ -162,7 +161,7 @@ selector = {
 selector_hyper = {
 
         'SKB' : {
-                    'slt__k': [10, 15, 20, 30, 50, 80]},
+                    'slt__k': [10, 15]},#, 20, 30, 50, 80]},
 
         'SVC' : {
                     'slt__estimator__penalty': ['l1', 'l2'],
@@ -171,14 +170,13 @@ selector_hyper = {
 
 classifier = {
         # 'LogisticRegression'     : LogisticRegression(),
-        'RF' : RandomForestClassifier(),
-        'KNN' : KNeighborsClassifier(),
+        'RF' : RandomForestClassifier(n_jobs = 1),
+        'KNN' : KNeighborsClassifier(n_jobs = 1),
         'GBT' : GradientBoostingClassifier(),
-        'KNN_DTW' : KNeighborsClassifier(metric=DTW)
+        'KNN_DTW' : KNeighborsClassifier(n_jobs = 1, metric=DTW)
 }
 
 classifier_hyper = {
-        
         # 'LogisticRegression':{
         #                             'penalty'     : ['l2'],
         #                             'C'           : np.logspace(0, 4, 10),
@@ -195,19 +193,24 @@ classifier_hyper = {
         'GBT':{
                 'clf__max_features': [None],
                 'clf__random_state': [0],
-                'clt__learning_rate': ,
-                'clt__n_estimators': ,
+                'clf__learning_rate': [0.01, 0.05, 0.1, 0.5, 1],
+                'clf__max_depth': [3, 5, 7, 10, 13],
+                'clf__n_estimators': [25, 50, 75, 100, 175, 250, 500],
         },
         'RF':{
-                'clf__max_depth': [3, 5, 7, 10],
-                'clf__n_estimators': [25, 50, 100, 250, 500],
+                'clf__max_depth': [3],
+                #clf__max_depth': [3, 5, 7, 10, 13],
+                'clf__n_estimators': [25],
+                #'clf__n_estimators': [25, 50, 75, 100, 175, 250, 500],
                 'clf__class_weight': ['balanced'],
                 'clf__max_features': [None],
                 'clf__random_state': [0]},
        
         'KNN':{
-                'clf__n_neighbors': [1,5,10,20,30,40,50,60,70,80],
-                'clf__weights': ['uniform', 'distance']}                        
+                'clf__n_neighbors': [1,5,10,20,30,40,50,60,70,80]}
+                # weights were commented out because they don't affect mean_test_score p=0.943 > 0.05                 
+                #'clf__weights': ['uniform', 'distance']}       
+                
 }
 
 

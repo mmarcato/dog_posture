@@ -12,7 +12,7 @@ import glob
 # ------------------------------------------------------------------------- # 
 
 
-def timestamps(df_data, base_dir): 
+def timestamps(df_data, df_dir): 
     """
     Imports data from timestamps files, organise them in dictionaries and return
 
@@ -20,7 +20,7 @@ def timestamps(df_data, base_dir):
         -------
         df_data : DataFrame
             columns are subjects, dcs: unique combinations of dog name & dc number
-        base_dir : str
+        df_dir : str
             directory where timestamps are located
 
     Returns
@@ -41,7 +41,7 @@ def timestamps(df_data, base_dir):
         df_ep[subj], df_pos[subj] = {},{}
         for dc in df_data.loc[df_data['Dog'] == subj, 'DC']:
             df_ep[subj][dc], df_pos[subj][dc] = None, None
-            f_name = '%s\\%s\\%s_Timestamps.csv' % (base_dir, subj, dc) 
+            f_name = '%s\\%s\\%s_Timestamps.csv' % (df_dir, subj, dc) 
             # if the timestamp file is found 
             if os.path.exists(f_name):            
                 # Read the information about the behaviour test 
@@ -90,7 +90,7 @@ def timestamps(df_data, base_dir):
 
     return(df_info, df_pos, df_ep)
 
-def actigraph(df_info, base_dir):
+def actigraph(df_info, df_dir):
     df_imu = {}
     bps = ['Back', 'Chest', 'Neck']
     print('\nStarted Importing Actigraph files')
@@ -102,11 +102,11 @@ def actigraph(df_info, base_dir):
             df_list= []
             df_imu[subj][dc] = None
             # If this the path to data exists
-            if os.path.isdir('%s\\%s\\%s_Actigraph' % (base_dir, subj, dc)):
+            if os.path.isdir('%s\\%s\\%s_Actigraph' % (df_dir, subj, dc)):
                 # Looping through all bps
                 for bp in bps:   
                         # Find file path for each bp
-                        f_name =  glob.glob('%s\\%s\\%s_Actigraph\\*_%s.csv' % (base_dir, subj, dc, bp))
+                        f_name =  glob.glob('%s\\%s\\%s_Actigraph\\*_%s.csv' % (df_dir, subj, dc, bp))
                         df_list.append(pd.read_csv(f_name[0], 
                                                     index_col = ['Timestamp'], 
                                                     parse_dates = [0],
@@ -161,18 +161,15 @@ def label(df_info, df_pos, df_imu):
     return(df)
  
 def posture(df_dir, df_name = 'df_raw'):
-    
-    df = pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), 
+    df_path = os.path.join(df_dir, "{}.csv".format(df_name))
+    df = pd.read_csv( df_path, 
                 index_col = ['Timestamp'], 
                 parse_dates = ['Timestamp'],
                 dayfirst = True,
                 date_parser = lambda x: pd.to_datetime(x, format = '%Y-%m-%d %H:%M:%S.%f')    )
+    return(df)
 
-    # define all features 
-    feat_all = df.columns[:-5]
-    # define all features - magnetometer     
-    feat_mag = [x for x in feat_all if "Mag" not in x]
-
+def split(df, df_dir, df_name):
     # split dataset taking dog and breed into account
 
     # separating golden retriever 'Tosh'
@@ -180,12 +177,15 @@ def posture(df_dir, df_name = 'df_raw'):
 
     # test set with 20% of observations, 60% LRxGR (Douglas, Elf, Goober) 40% LR (Meg, July)
     df_test = df[df.Dog.isin(['Douglas', 'Elf', 'Goober', 'Meg', 'July'])]
+
     # dogs for dev set for 80% observation, 60% LRxGR (Douglas, Elf, Goober) 40% LR (Meg, July) 
     df_dev = df[~df.Dog.isin(['Tosh', 'Douglas', 'Elf', 'Goober', 'Meg', 'July'])]
 
+    df_dev.to_csv(os.path.join(df_dir, df_name +'-dev.csv'))
+    df_test.to_csv(os.path.join(df_dir, df_name + '-test.csv'))
+    df_gr.to_csv(os.path.join(df_dir,df_name+ '-gr.csv'))
 
-    return(df, df_dev, df_test, feat_all, feat_mag)
-
+    return(df_dev, df_test, df_gr)
 
 def dogs(df_dir, df_name):
     df_dogs = pd.read_csv( '%s\\%s.csv' % (df_dir, df_name), \

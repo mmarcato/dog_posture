@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"python.defaultInterpreterPath" : "C:\\Users\\marinara.marcato\\Project\\Scripts\\dog_posture\\venv\\Scripts\\python.exe",
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"jupyter.jupyterServerType": "local"
 	}
 }

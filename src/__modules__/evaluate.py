@@ -86,30 +86,6 @@ def gs_perf (gs_pipe, gs_params, X, y, groups, cv):# dir_model, run):
 
     return(gs_results(gs))
 
-def gs_perf_nosave (gs_pipe, gs_params, X, y, groups, cv):
-    '''
-        WORK IN PROGRESS - IM NOT SURE IF IT IS WORTH SEPARATING THE STEPS INTO DIFFERENT FUNCTIONS
-    '''
-
-
-    start_time = time.time()
-    gs = GridSearchCV(gs_pipe, param_grid = gs_params, 
-            scoring = 'f1_weighted', \
-            n_jobs = -1, cv = cv, return_train_score = True)
-    gs.fit(X,y, groups = groups)
-    end_time = time.time()
-    duration = end_time - start_time
-    print("--- %s seconds ---" % (duration))
-        
-    # location = 'cachedir'
-    # memory = joblib.Memory(location=location , verbose=10)
-    
-    # joblib.dump(gs, '{}/{}.pkl'.format(dir_model, run), compress = 1 )
-    # memory.clear(warn=False)
-    # rmtree(location)
-
-    return(gs_results(gs))
-
 def pipe_perf (df, feat, label, pipes):     
     '''
         Evaluate pipes and plots

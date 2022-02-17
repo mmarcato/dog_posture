@@ -1,0 +1,11 @@
+
+	 To load the default (base) conda environment, for python 2, use the following command. 
+		 source activate
+ 
+	 To list other available environments, use the following command
+		 conda info --envs
+ 
+	 To load a non-default environment, e.g. for python3,  use the following command
+		 source activate python3
+ 
+python3: can't open file '/src/models/1.0-mm-main.py': [Errno 2] No such file or directory

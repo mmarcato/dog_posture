@@ -1,0 +1,46 @@
+
+	 To load the default (base) conda environment, for python 2, use the following command. 
+		 source activate
+ 
+	 To list other available environments, use the following command
+		 conda info --envs
+ 
+	 To load a non-default environment, e.g. for python3,  use the following command
+		 source activate python3
+ 
+pipeline Pipeline(memory=Memory(location=cachedir/joblib),
+         steps=[('ft',
+                 DataFrameSelector(attribute_names=['Back.Acc.X.min',
+                                                    'Back.Acc.X.max',
+                                                    'Back.Acc.X.mean',
+                                                    'Back.Acc.X.std',
+                                                    'Back.Acc.X.median',
+                                                    'Back.Acc.X.sum',
+                                                    'Back.Acc.X.skew',
+                                                    'Back.Acc.X.kurt',
+                                                    'Back.Acc.Y.min',
+                                                    'Back.Acc.Y.max',
+                                                    'Back.Acc.Y.mean',
+                                                    'Back.Acc.Y.std',
+                                                    'Back.Acc.Y.median',
+                                                    'Back.Acc.Y.sum',
+                                                    'Back...
+                                                    'Back.Acc.Z.min',
+                                                    'Back.Acc.Z.max',
+                                                    'Back.Acc.Z.mean',
+                                                    'Back.Acc.Z.std',
+                                                    'Back.Acc.Z.median',
+                                                    'Back.Acc.Z.sum',
+                                                    'Back.Acc.Z.skew',
+                                                    'Back.Acc.Z.kurt',
+                                                    'Back.Gyr.X.min',
+                                                    'Back.Gyr.X.max',
+                                                    'Back.Gyr.X.mean',
+                                                    'Back.Gyr.X.std',
+                                                    'Back.Gyr.X.median',
+                                                    'Back.Gyr.X.sum', ...],
+                                   dtype='float64')),
+                ('scl', StandardScaler()), ('slt', SelectKBest()),
+                ('clf', RandomForestClassifier(n_jobs=-1))])
+params {'slt__k': [10, 15, 20, 30, 50, 80], 'clf__max_depth': [3, 5, 7, 10, 13], 'clf__n_estimators': [25, 50, 100, 250, 500], 'clf__class_weight': ['balanced'], 'clf__max_features': [None], 'clf__random_state': [0]}
+slurmstepd: error: *** JOB 896055 ON n6 CANCELLED AT 2022-02-10T11:25:27 DUE TO TIME LIMIT ***
