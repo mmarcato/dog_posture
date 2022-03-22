@@ -1,0 +1,13 @@
+
+	 To load the default (base) conda environment, for python 2, use the following command. 
+		 source activate
+ 
+	 To list other available environments, use the following command
+		 conda info --envs
+ 
+	 To load a non-default environment, e.g. for python3,  use the following command
+		 source activate python3
+ 
+Number of Logical processors:  40
+--- 35545.83055949211 seconds ---
+/ichec/home/users/mmarcato/dog_posture/models/simple/direct-SKB-GBT.pkl

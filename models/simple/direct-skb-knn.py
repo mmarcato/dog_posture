@@ -22,12 +22,9 @@ from sklearn.model_selection import GroupKFold, GridSearchCV
 
 # Caching Libraries
 import joblib
-# from shutil import rmtree
-# location = 'cachedir'
-# memory = joblib.Memory(location=location, verbose=10)
 
 import multiprocessing as mp
-print("Number of Laptop Logical processors: ", mp.cpu_count())
+print("Number of Logical processors: ", mp.cpu_count())
 
 # ------------------------------------------------------------------------- #
 #                             Local Imports                                 #    
@@ -65,58 +62,6 @@ class DataFrameSelector(BaseEstimator, TransformerMixin):
             return X_selected.astype(self.dtype).values
         return X_selected.values
 
-class CorrelationThreshold(BaseEstimator, TransformerMixin):
-    
-    """Feature selector that removes all correlated features.
-
-    This feature selection algorithm looks only at the features (X), not the
-    desired outputs (y), and can thus be used for unsupervised learning.
-    
-    Parameters
-    ----------
-    threshold : float, default=0.95
-        Features with a training-set correlation higher than this threshold will
-        be removed. The default is to keep all features with non-zero variance,
-        i.e. remove the features that have the same value in all samples.
-
-    Returns
-    ----------
-    selected_features_ : list, shape (n_features)
-        Returns a list with the selected feature names.
-
-    """
-
-    def __init__(self, threshold = 0.95):
-        self.threshold = threshold
-        self.to_drop = None
-        self.to_keep = None
-
-    def fit (self, X, y = None ): 
-        '''
-        Parameters
-        ----------
-        X : {array-like, sparse matrix}, shape (n_samples, n_features)
-            Sample vectors from which to compute variances.
-        y : any, default=None
-            Ignored. This parameter exists only for compatibility with
-            sklearn.pipeline.Pipeline.
-        Returns
-        -------
-        self
-        '''
-        corr_matrix = np.abs(X.corr())
-        upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
-        self.to_drop = [column for column in upper.columns if any(upper[column] > self.threshold)]
-        self.to_keep = list(set(X.columns) - set(self.to_drop))
-        return self
-        
-    def transform(self, X, y = None):
-        X_selected = X[self.to_keep]
-        return X_selected
-    
-    def get_support(self):
-        return self.to_keep
-
 class gs_results:
     # Storing Grid Search results
     def __init__(self, gs):
@@ -130,7 +75,9 @@ class gs_results:
 #                  Importing Datasets - Label 'Positions'                   #
 # ------------------------------------------------------------------------- #
 # importing previously created dataset
-df = pd.read_csv( os.path.join(dir_df, 'df5_12-dev.csv'), 
+df_name = 'df5_12-dev.csv'
+print(df_name)
+df = pd.read_csv( os.path.join(dir_df, df_name), 
                 index_col = ['Timestamp'], 
                 parse_dates = ['Timestamp'],
                 dayfirst = True,
@@ -154,7 +101,6 @@ groups = df.loc[:,'Dog']
 pipe = Pipeline([ 
     ('ft', DataFrameSelector(feat,'float64')),
     ('scl', StandardScaler()), 
-    #('cth', CorrelationThreshold()),
     ('slt', SelectKBest(score_func= f_classif)),
     ('clf', KNeighborsClassifier(n_jobs = 1))])
 
@@ -167,7 +113,7 @@ cv = GroupKFold(n_splits = 10).split(X, y, groups = groups)
 
 start_time = time()
 gs = GridSearchCV(pipe, param_grid = params, 
-        scoring = 'f1_weighted', \
+        scoring = 'f1_macro', \
         n_jobs = 40, cv = cv, return_train_score = True)
 gs.fit(X,y, groups = groups)
 end_time = time()
@@ -175,6 +121,6 @@ duration = end_time - start_time
 print("--- %s seconds ---" % (duration))
 
 # save gs results to pickle file
-gs_path = os.path.join(dir_current, run)
+gs_path = os.path.join(dir_current, 'f1_macro', run)
 print(gs_path)
 joblib.dump(gs_results(gs), gs_path, compress = 1 )

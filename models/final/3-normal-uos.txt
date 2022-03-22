@@ -1,0 +1,25 @@
+
+	 To load the default (base) conda environment, for python 2, use the following command. 
+		 source activate
+ 
+	 To list other available environments, use the following command
+		 conda info --envs
+ 
+	 To load a non-default environment, e.g. for python3,  use the following command
+		 source activate python3
+ 
+Number of Logical processors:  40
+(24766, 3336)
+standing      0.376195
+walking       0.260006
+sitting       0.206450
+lying down    0.157349
+Name: Position, dtype: float64
+Traceback (most recent call last):
+  File "3-normal-uos.py", line 104, in <module>
+    class_weight = 'balanced', random_state = 0))]
+  File "/ichec/work/tieng028c/venv/lib/python3.7/site-packages/sklearn/pipeline.py", line 148, in __init__
+    self._validate_steps()
+  File "/ichec/work/tieng028c/venv/lib/python3.7/site-packages/sklearn/pipeline.py", line 211, in _validate_steps
+    "'%s' (type %s) doesn't" % (t, type(t))
+TypeError: All intermediate steps should be transformers and implement fit and transform or be the string 'passthrough' 'SMOTE(random_state=0)' (type <class 'imblearn.over_sampling._smote.base.SMOTE'>) doesn't

@@ -12,16 +12,15 @@ from datetime import timedelta
 #                           Importing Local Modules                         #
 # ------------------------------------------------------------------------- #
 
-dir_current = os.path.dirname(os.path.realpath(__file__))
+dir_current = os.getcwd()
 dir_parent = os.path.dirname(dir_current)
 dir_base = os.path.dirname(dir_parent)
 dir_modules = os.path.join(dir_base, 'src', '__modules__')
 # Set path variable
 sys.path.append(dir_modules)
 
-# Local Modules
-# %load_ext autoreload
-# %autoreload 2
+%load_ext autoreload
+%autoreload 2
 import imports, process
 
 
@@ -32,7 +31,7 @@ import imports, process
 # directory to retrieve raw file
 dir_raw = os.path.join(dir_base, 'data', 'raw')
 # importing created raw dataset 
-df_raw = imports.posture(dir_raw, 'df_raw5')
+df_raw = imports.posture(dir_raw, 'df_gr')
 
 
 # ------------------------------------------------------------------------- #
@@ -76,5 +75,5 @@ print("Number of dogs: ", len(df_dogs['Dog'].unique()))
 
 # There is a bug in this package with the progress bar
 # it won't run in the interactive window
-process.features_tsfel(df_raw, dir_new, df_dogs, w_size, w_overlap, t_time)
+df_tsfel = process.features_tsfel(df_raw, dir_new, df_dogs, w_size, w_overlap, t_time)
 

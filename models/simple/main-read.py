@@ -56,8 +56,8 @@ class gs_results:
 # Loading Grid Search Results from Pickle file
 
 # run name
-run = 'direct-SKB-RF.pkl'
-gs_path = os.path.join(dir_base, 'models', 'simple', run)
+run = 'direct-SKB-KNN.pkl'
+gs_path = os.path.join(dir_base, 'models', 'simple', 'f1_macro', run)
 gs = joblib.load(gs_path)
 print("Evaluate Grid Search output\n")
 # print best estimator results
@@ -76,19 +76,25 @@ print(df_cv.shape)
 
 ## SELECT K BEST ANALYSIS
 print("SELECT K BEST ANALYSIS\n\nUnique K values, test and train scores: ")
-print(df_cv.groupby(['param_slt__k'])[['mean_test_score', 'mean_train_score']].mean())
+print(df_cv.groupby(['param_slt__k'])[['mean_test_score', 'mean_train_score', 'train_test_gap']].mean())
 
 
 ## K NEAREST NEIGHBOURS ANALYSIS
 print("K NEAREST NEIGHBOURS ANALYSIS\n\nUnique n_neighbor values, test and train scores: ")
-print(df_cv.groupby(['param_clf__n_neighbors'])[['mean_test_score', 'mean_train_score']].mean())
+print(df_cv.groupby(['param_clf__n_neighbors'])[['mean_test_score', 'mean_train_score', 'train_test_gap']].mean())
 
 
 ## RANDOM FOREST ANALYSIS
 # Calculate mean test score value while maintaining one parameter constant at a time
 print("RANDOM FOREST ANALYSIS\n\nUnique values, test and train scores: ")
-print(df_cv.groupby(['param_clf__max_depth'])[['mean_test_score', 'mean_train_score']].mean())
-print(df_cv.groupby(['param_clf__n_estimators'])[['mean_test_score', 'mean_train_score']].mean())
+print(df_cv.groupby(['param_clf__max_depth'])[['mean_test_score', 'mean_train_score', 'train_test_gap']].mean())
+print(df_cv.groupby(['param_clf__n_estimators'])[['mean_test_score', 'mean_train_score', 'train_test_gap']].mean())
+
+## GRADIENT BOOSTED TREES
+# Calculate mean test score value while maintaining one parameter constant at a time
+print("GRADIENT BOOSTED TREES ANALYSIS\n\nUnique values, test and train scores: ")
+print(df_cv.groupby(['param_clf__max_depth'])[['mean_test_score', 'mean_train_score', 'train_test_gap']].mean())
+print(df_cv.groupby(['param_clf__n_estimators'])[['mean_test_score', 'mean_train_score', 'train_test_gap']].mean())
 
 # test whether there is a significant difference between
 # different selected values for a hyperparameter

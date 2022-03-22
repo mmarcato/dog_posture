@@ -15,6 +15,7 @@ from sklearn.decomposition import PCA
 from sklearn.model_selection import ShuffleSplit, GroupKFold
 from sklearn.model_selection import cross_val_score, cross_validate, cross_val_predict
 from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.metrics import ConfusionMatrixDisplay, f1_score
 
 from sklearn.model_selection import GridSearchCV
 
@@ -48,7 +49,7 @@ def gs_output(gs):
         gs.cv_results_['std_test_score'][best_idx_],
         gs.cv_results_['mean_train_score'][best_idx_],  
         gs.cv_results_['std_train_score'][best_idx_],
-        gs.best_params_)) #
+        gs.best_params_))
         
 def gs_dump(gs, gs_name, gs_dir, memory, location):    
     ''' 
@@ -214,3 +215,186 @@ def plot_perf_old (pipes, perf, parameters, title):
     plt.show()
 
     return (perf)  
+
+def metrics(y_final):
+    
+    # defining variables for performance evaluation
+    y_true = y_final['Position']
+    y_pred = y_final['Predicted']
+    labels = np.sort(y_true.unique())
+    
+    # Calculate metrics from confusion matrix
+    cnf_matrix = confusion_matrix(y_true, y_pred, labels  = labels)
+
+    FP = cnf_matrix.sum(axis=0) - np.diag(cnf_matrix) 
+    FN = cnf_matrix.sum(axis=1) - np.diag(cnf_matrix)
+    TP = np.diag(cnf_matrix)
+    TN = cnf_matrix.sum() - (FP + FN + TP)
+    FP = FP.astype(float)
+    FN = FN.astype(float)
+    TP = TP.astype(float)
+    TN = TN.astype(float)
+    # Sensitivity, hit rate, recall, or true positive rate
+    TPR = TP/(TP+FN)
+    # Specificity or true negative rate
+    TNR = TN/(TN+FP) 
+    # Precision or positive predictive value
+    PPV = TP/(TP+FP)
+    # Negative predictive value
+    NPV = TN/(TN+FN)
+    # Fall out or false positive rate
+    FPR = FP/(FP+TN)
+    # False negative rate
+    FNR = FN/(TP+FN)
+    # False discovery rate
+    FDR = FP/(TP+FP)
+    # Overall accuracy for each class
+    ACC = (TP+TN)/(TP+FP+FN+TN)
+
+    # Create dataframe with metrics
+    df_metrics = pd.DataFrame({
+        'label':  labels,
+        'TPR': TPR, 'TNR': TNR, 'ACC': ACC, 'PPV': PPV,
+        'f1_score': f1_score(y_true, y_pred, labels = labels, average = None)
+    })
+
+    print(df_metrics)
+    print('\nf1 scores')
+    print('macro: {:0.4f}'.format(f1_score(y_true, y_pred, average = 'macro')))
+    print('micro: {:0.4f}'.format(f1_score(y_true, y_pred, average = 'micro')))
+    print('weighted: {:0.4f}'.format(f1_score(y_true, y_pred, average = 'weighted')))
+
+    # Confusion matrix - normalised by rows (true)
+    ConfusionMatrixDisplay.from_predictions(y_true, y_pred,
+        normalize = 'true', values_format ='.2f', cmap='Blues', 
+        display_labels=labels, xticks_rotation = 45)
+    return(df_metrics)
+
+def model(X_true, y_true, model):    
+    y_pred = model.predict(X_true)
+    y_pred = pd.Series(y_pred, index = X_true.index)
+
+
+    labels = np.sort(y_true.unique())
+    ## Calculate f1-scores
+    df_f1_class = pd.DataFrame({
+        'label':  labels,
+        'f1_score': f1_score(y_true, y_pred, labels = labels, average = None)
+    })
+
+    print(df_f1_class)
+    print('\nf1 scores')
+    print('macro: {:0.4f}'.format(f1_score(y_true, y_pred, average = 'macro')))
+    print('micro: {:0.4f}'.format(f1_score(y_true, y_pred, average = 'micro')))
+    print('weighted: {:0.4f}'.format(f1_score(y_true, y_pred, average = 'weighted')))
+
+
+def exp1(df_test, gs_direct):
+    
+    # print models dev set performance
+    print('Development set performance')
+    gs_output(gs_direct)
+    
+    # select test data for prediction
+    X_true = df_test.iloc[:,1:-6]
+    y_true = df_test.Position
+
+    # DIRECT
+    y_pred = gs_direct.best_estimator_.predict(X_true)
+    y_pred = pd.Series(y_pred, index = X_true.index)
+
+    # merge True and Predicted ys 
+    # ensure rows are aligned (same timestamp)
+    y_final = df_test[['Timestamp', 'Dog', 'DC', 'Position']].merge(
+            y_pred.rename('Predicted'), 
+            left_index = True, right_index = True, how = 'left')
+
+    ## cheking error by date and dog/dc
+    y_final['Error'] = np.where(y_final.Position == y_final.Predicted, 0, 1)
+    print(y_final.groupby([y_final.Timestamp.dt.date])['Error'].mean())
+    print(y_final.groupby([y_final['Dog'], y_final['DC']])['Error'].count())
+    
+    return(y_final)
+
+def exp2(df_test, gs_type, gs_static, gs_dynamic):
+
+    # print models dev set performance
+    print('Development set performance')
+    gs_output(gs_type)
+    gs_output(gs_static)
+    gs_output(gs_dynamic)
+
+    # select test data for prediction
+    X_true = df_test.iloc[:,1:-6]
+
+    # TYPE MODEL
+    y_type = gs_type.best_estimator_.predict(X_true)
+    y_type = pd.Series(y_type, index = X_true.index)
+
+    # STATIC MODEL
+    X_static = X_true[y_type == 'static']
+    y_static = gs_static.best_estimator_.predict(X_static)
+    y_static = pd.Series(y_static, index = X_static.index)
+
+    # DYNAMIC
+    X_dynamic = X_true[y_type == 'dynamic']
+    y_dynamic = gs_dynamic.best_estimator_.predict(X_dynamic)
+    if isinstance(y_dynamic[0], np.int32):
+        y_dynamic = np.where(y_dynamic == -1, "body shake", "walking")
+    y_dynamic = pd.Series(y_dynamic, index = X_dynamic.index)
+
+    # combine static and dynamic predictions
+    y_pred = pd.concat([y_static, y_dynamic])
+
+    # merge True and Predicted ys 
+    # ensure rows are aligned (same timestamp)
+    y_final = df_test[['Timestamp','Dog', 'DC', 'Position']].merge(
+            y_pred.rename('Predicted'), 
+            left_index = True, right_index = True, how = 'left')
+        
+    ## cheking error by date and dog/dc
+    y_final['Error'] = np.where(y_final.Position == y_final.Predicted, 0, 1)
+    y_final.groupby([y_final.Timestamp.dt.date])['Error'].mean()
+    y_final.groupby([y_final['Dog'], y_final['DC']])['Error'].count()
+    
+    return(y_final)
+
+def exp3(df_test, gs_anomaly, gs_normal):
+    # print models dev set performance
+    print('Development set performance')
+    gs_output(gs_anomaly)
+    gs_output(gs_normal)
+
+    # select test data for prediction
+    X_true = df_test.iloc[:,1:-6]
+    y_true = df_test.Shake
+
+    # Use best estimator to predict on test set
+    y_anomaly = gs_anomaly.best_estimator_.predict(X_true)
+    y_anomaly = pd.Series(y_anomaly, index = X_true.index)
+
+    # select rows with abnormal behaviour and replace -1 with body shake
+    y_shake = y_anomaly[y_anomaly == -1].replace(-1, 'body shake')
+
+    # select rows with normal behaviour
+    X_pos = df_test.iloc[y_anomaly[y_anomaly == 1].index, 1:-6]
+    y_pos = gs_normal.best_estimator_.predict(X_pos)
+    y_pos = pd.Series(y_pos, index = X_pos.index)
+    print("Position dataframe shape:", y_pos.shape)
+    print("Position dataframe labels:", y_pos.unique())
+
+    y_pred = pd.concat([y_shake, y_pos])
+    print("Predicted dataframe shape:" , y_pred.shape)
+
+    # merge True and Predicted ys - ensure rows are aligned (same timestamp)
+    y_final = df_test[['Timestamp','Dog', 'DC', 'Position']].merge(
+            y_pred.rename('Predicted'), 
+            left_index = True, right_index = True, how = 'left')
+    
+        
+    ## cheking error by date and dog/dc
+    y_final['Error'] = np.where(y_final.Position == y_final.Predicted, 0, 1)
+    y_final.groupby([y_final.Timestamp.dt.date])['Error'].mean()
+    y_final.groupby([y_final['Dog'], y_final['DC']])['Error'].count()
+    
+    return(y_final)

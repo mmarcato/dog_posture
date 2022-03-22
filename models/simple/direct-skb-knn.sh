@@ -3,7 +3,7 @@
 # Slurm flags
 #SBATCH -p ProdQ
 #SBATCH -N 1
-#SBATCH -t 10:00:00
+#SBATCH -t 8:00:00
 #SBATCH --job-name=MM-direct-SKB-KNN
 
 # Charge job to myproject

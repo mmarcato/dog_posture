@@ -20,6 +20,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import SelectFromModel
 
+import pandas as pd
 import numpy as np
 from scipy.spatial import distance  
 
@@ -79,7 +80,9 @@ class CorrelationThreshold(BaseEstimator, TransformerMixin):
         -------
         self
         '''
-        corr_matrix = np.abs(X.corr())
+        X = pd.DataFrame(X)
+        # original code wasn't working because X is converted to numpy array
+        corr_matrix = X.corr().abs()
         upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
         self.to_drop = [column for column in upper.columns if any(upper[column] > self.threshold)]
         self.to_keep = list(set(X.columns) - set(self.to_drop))

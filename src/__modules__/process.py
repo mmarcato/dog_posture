@@ -7,8 +7,6 @@ import numpy as np
 from datetime import timedelta
 from scipy import signal
 import tsfel 
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 from setup import log
 
@@ -154,8 +152,8 @@ def features_tsfel(df_raw, df_dir, df_dogs, w_size, w_overlap, t_time):
         # selecting dog and dc
         df = df_raw[(df_raw['Dog'] == dog) & (df_raw['DC'] == dc)]
 
-        # dataframe to add the new features
-        df_feat = pd.DataFrame()
+        # list to add tsfel dataframes
+        df_list = []
         # Start and Finish Timestamps for each position
         s_times = df.loc[df['Transition'] == True].index[:-1] + t_time 
         f_times = df.loc[df['Transition'].shift(-1) == True].index - t_time
@@ -165,13 +163,10 @@ def features_tsfel(df_raw, df_dir, df_dogs, w_size, w_overlap, t_time):
 
             if(df.loc[s_time:f_time].shape[0] >= w_size):
 
-                print('{}\t Start: {}\t Finish: {}'
+                print('{}\n\tStart: {}\t Finish: {}'
                     .format(df.loc[s_time, 'Position'], s_time, f_time))
 
-                
-        ############# FEATURE EXTRACTION USING TSFEL
-                df_feat = df_feat.append(
-                                tsfel.time_series_features_extractor(
+                df_list.append(tsfel.time_series_features_extractor(
                                 # configuration file with features to be extracted 
                                 dict_features = cfg,                            
                                 # dataframe window to calculate features window on 
@@ -185,21 +180,23 @@ def features_tsfel(df_raw, df_dir, df_dogs, w_size, w_overlap, t_time):
                                 # overlap between subsequent sliding windows
                                 overlap = w_overlap,
                                 # do not create a progress bar
-                                verbose = 0)
-                                .assign(
+                                verbose = 0).assign(
                                 Timestamp = s_time, 
                                 Breed = df.loc[s_time, 'Breed'],
                                 Dog = df.loc[s_time,'Dog'], 
                                 DC = df.loc[s_time,'DC'], 
                                 Type = df.loc[s_time,'Type'], 
                                 Position = df.loc[s_time, 'Position']))
-
-        print('Save {}.csv'.format(df_name))
+                
+        df_feat = pd.concat(df_list)
+        print(df_feat.columns)
         df_feat.drop(0)
         df_feat.set_index('Timestamp', inplace = True)
+        print('Save {}.csv'.format(df_name))
         df_feat.to_csv('%s\\%s.csv' % (df_dir, df_name))
 
     print('**Finished saving TSFEL features**')
+    return(df_feat)
 
 def gravity_body_components(X):
     """
