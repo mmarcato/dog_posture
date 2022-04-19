@@ -108,7 +108,7 @@ y_golden.to_csv(os.path.join(dir_base, 'results', 'exp3-best-golden-predictions.
 
 y_tg = evaluate.exp3(df_tg, gs_anomaly, gs_normal)
 df_tg_metrics = evaluate.metrics(y_tg)  
-# y_golden.to_csv(os.path.join(dir_base, 'results', 'exp3-best-golden-predictions.csv'))
+y_tg.to_csv(os.path.join(dir_base, 'results', 'exp3-tg-predictions.csv'))
 
 # ------------------------------------------------------------------------- #
 #                                  Random                                   #    

@@ -41,7 +41,7 @@ dir_parent = os.path.dirname(dir_current)
 dir_base = os.path.dirname(dir_parent)
 
 # directory where the dataset is located
-dir_df = os.path.join(dir_base, 'data', ft)
+df_dir = os.path.join(dir_base, 'data', ft)
 # directory to save the model
 dir_model = os.path.join(dir_base, 'models', ft)
 
@@ -74,7 +74,7 @@ class gs_results:
 #                              Importing Dataset                            #
 # ------------------------------------------------------------------------- #
 # importing previously created dataset
-df = pd.read_csv(os.path.join(dir_df, 'df-all-dev.csv'), 
+df = pd.read_csv(os.path.join(df_dir, 'df-all-dev.csv'), 
                 index_col = ['Timestamp'], 
                 parse_dates = ['Timestamp'],
                 dayfirst = True,
