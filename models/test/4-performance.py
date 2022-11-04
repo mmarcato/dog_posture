@@ -54,7 +54,7 @@ class gs_results:
 # ------------------------------------------------------------------------- #
 
 # select dataset  
-ft = 'final'
+ft = 'test'
 # select model parameters
 exp = 4
 mdl = 'imbalanced'
@@ -65,7 +65,7 @@ param = 1
 run = '{}-{}-{}-{}-{}.pkl'.format(exp, mdl, slt, clf, param)
 
 # load grid search results from pickle file
-gs_path = os.path.join(dir_base, 'models', 'final')
+gs_path = os.path.join(dir_base, 'models', 'test')
 gs_imb =  joblib.load(os.path.join(gs_path, run))
 print('Evaluate Grid Search output\n')
 evaluate.gs_output(gs_imb)
@@ -75,7 +75,7 @@ evaluate.gs_output(gs_imb)
 # ------------------------------------------------------------------------- #
 print('\n\nImport Test Set\n')
 # directory where the datasets are located
-df_dir = os.path.join(dir_base, 'data', 'final')
+df_dir = os.path.join(dir_base, 'data', 'test')
 
 # select test dataframe and label according to model
 # EXPERIMENT 1 - DEFAULT

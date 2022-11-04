@@ -1,8 +1,8 @@
 .vscode/
 data/
 venv/
-src/sebastian
 venv-tsfel/
+src/sebastian
 models/initial/GS-KNN-df_32.pkl
 **/__pycache__/
 **/cachedir/
